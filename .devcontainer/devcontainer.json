@@ -1,0 +1,25 @@
+{
+    "name": "Personal RAG-LLM Development",
+    "dockerComposeFile": ["docker/docker-compose.yml", "docker/docker-compose.dev.yml"],
+    "service": "processor",
+    "workspaceFolder": "/workspace",
+    "customizations": {
+      "vscode": {
+        "extensions": [
+          "ms-python.python",
+          "golang.go",
+          "ms-azuretools.vscode-docker",
+          "graphql.vscode-graphql",
+          "dbaeumer.vscode-eslint",
+          "esbenp.prettier-vscode"
+        ],
+        "settings": {
+          "python.linting.enabled": true,
+          "python.linting.pylintEnabled": true,
+          "go.useLanguageServer": true,
+          "editor.formatOnSave": true
+        }
+      }
+    },
+    "remoteUser": "vscode"
+  }

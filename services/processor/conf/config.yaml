@@ -1,0 +1,33 @@
+# @package _global_
+
+defaults:
+  - _self_
+  - extractors: default
+  - classifiers: default
+  - embedders: default
+  - storage: default
+  - override hydra/job_logging: colorlog
+  - override hydra/hydra_logging: colorlog
+
+hydra:
+  run:
+    dir: outputs/${now:%Y-%m-%d}/${now:%H-%M-%S}
+  sweep:
+    dir: multirun/${now:%Y-%m-%d}/${now:%H-%M-%S}
+    subdir: ${hydra.job.num}
+
+# General settings
+data_dir: "${oc.env:DATA_DIR,/app/data}"
+cache_dir: "${oc.env:CACHE_DIR,/app/cache}"
+log_level: "INFO"
+
+# Box integration
+box:
+  sync_interval_minutes: 60
+  folder_id: "${oc.env:BOX_FOLDER_ID}"
+
+# Document processing
+processing:
+  max_workers: 4
+  chunk_size: 512
+  chunk_overlap: 128

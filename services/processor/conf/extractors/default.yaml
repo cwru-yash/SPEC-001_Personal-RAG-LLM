@@ -1,0 +1,47 @@
+# # DuckDB configuration
+# duckdb:
+#   database: "${data_dir}/metadata.db"
+  
+# # Vector store (Chroma)
+# vector_store:
+#   type: "chroma"
+#   host: "chroma"
+#   port: 8000
+#   collection: "document_chunks"
+  
+# # Graph database (Neo4j)
+# graph_db:
+#   type: "neo4j"
+#   uri: "bolt://neo4j:7687"
+#   user: "neo4j"
+#   password: "${oc.env:NEO4J_PASSWORD,password}"
+#   database: "documents"
+
+# PDF extraction
+pdf:
+  engine: "pymupdf"  # Options: pymupdf, pdfplumber
+  extract_images: true
+  perform_ocr: true
+
+# OCR settings
+ocr:
+  engine: "tesseract"
+  language: "eng"
+  preprocess_image: true
+
+# Email extraction
+email:
+  engine: "extract-msg"
+  extract_attachments: true
+
+# Image processing
+image:
+  engine: "tesseract"
+  preprocess: true
+  
+# Office documents
+office:
+  engines:
+    docx: "python-docx"
+    pptx: "python-pptx"
+    xlsx: "openpyxl"

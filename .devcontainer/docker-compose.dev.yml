@@ -1,0 +1,19 @@
+version: '3.8'
+
+services:
+  processor:
+    volumes:
+      - ..:/workspace:cached
+    command: sleep infinity
+    environment:
+      - PYTHONPATH=/workspace
+    
+  api:
+    volumes:
+      - ..:/workspace:cached
+    command: sleep infinity
+    
+  llm:
+    volumes:
+      - ..:/workspace:cached
+    command: sleep infinity

@@ -1,0 +1,95 @@
+# version: '3.8'
+
+services:
+  # Database services
+  # duckdb:
+  #   image: duckdb/duckdb:latest
+  #   volumes:
+  #     - duckdb_data:/data
+  #   ports:
+  #     - "3000:3000"
+  duckdb-service:
+    image: python:3.11-slim
+    volumes:
+      - duckdb_data:/data
+    ports:
+      - "3000:3000"
+    command: >
+      bash -c "pip install duckdb fastapi uvicorn &&
+              python -c 'import duckdb; conn = duckdb.connect(\"/data/metadata.db\"); print(\"DuckDB initialized\")' &&
+              sleep infinity"
+
+  chroma:
+    image: ghcr.io/chroma-core/chroma:latest
+    volumes:
+      - chroma_data:/chroma/data
+    ports:
+      - "8000:8000"
+
+  neo4j:
+    image: neo4j:5.13.0
+    environment:
+      - NEO4J_AUTH=neo4j/password
+    volumes:
+      - neo4j_data:/data
+    ports:
+      - "7474:7474"  # HTTP
+      - "7687:7687"  # Bolt
+
+  # Application services
+  api:
+    build:
+      context: ../services/api
+      dockerfile: Dockerfile
+    depends_on:
+      - duckdb-service  # This was changed from 'duckdb' to 'duckdb-service'
+      - chroma
+      - neo4j
+    ports:
+      - "4000:4000"  # GraphQL API
+    volumes:
+      - ../conf:/app/conf
+
+  processor:
+    build:
+      context: ../services/processor
+      dockerfile: Dockerfile
+    depends_on:
+      - duckdb-service  # This was changed from 'duckdb' to 'duckdb-service'
+      - chroma
+      - neo4j
+    volumes:
+      - ../data:/app/data
+      - ../conf:/app/conf
+
+  llm:
+    build:
+      context: ../services/llm
+      dockerfile: Dockerfile
+    volumes:
+      - ../models:/app/models
+      - ../conf:/app/conf
+    ports:
+      - "5000:5000"  # LLM API
+
+  box-sync:
+    build:
+      context: ../services/box-sync
+      dockerfile: Dockerfile
+    volumes:
+      - ../data:/app/data
+      - ../conf:/app/conf
+
+  frontend:
+    build:
+      context: ../frontend
+      dockerfile: Dockerfile
+    ports:
+      - "8080:80"  # Web UI
+    depends_on:
+      - api
+
+volumes:
+  duckdb_data:
+  chroma_data:
+  neo4j_data:

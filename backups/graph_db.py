@@ -5,14 +5,6 @@ import uuid
 import json
 from datetime import datetime
 
-# Fix the import path for Docker environment
-try:
-    # Try container path first
-    from src.models.document import Document
-except ImportError:
-    # Fall back to development path
-    from services.processor.src.models.document import Document
-
 class GraphDBStorage:
     """Storage interface for Neo4j graph database to model document relationships."""
     
@@ -337,66 +329,25 @@ class GraphDBStorage:
                         "ref_type": ref_type
                     })
     
-    # def find_related_documents(self, doc_id: str, max_depth: int = 2) -> List[Dict[str, Any]]:
-    #     """Find documents related to the given document."""
-    #     try:
-    #         with self.driver.session(database=self.database) as session:
-    #             # Query for related documents through various relationships
-    #             result = session.run("""
-    #                 MATCH (d:Document {doc_id: $doc_id})
-    #                 CALL apoc.path.expand(d, 
-    #                     'CONTAINS|AUTHORED_BY|BELONGS_TO|REFERENCES|HAS_PARTICIPANT', 
-    #                     'Document', 
-    #                     1, $max_depth) YIELD path
-    #                 WITH LAST(NODES(path)) as related
-    #                 WHERE related:Document AND related.doc_id <> $doc_id
-    #                 RETURN related.doc_id as doc_id, 
-    #                        related.file_name as file_name,
-    #                        related.content_type as content_type,
-    #                        related.created_at as created_at,
-    #                        related.author as author,
-    #                        COUNT(path) as relevance
-    #                 ORDER BY relevance DESC
-    #                 LIMIT 10
-    #             """, {
-    #                 "doc_id": doc_id,
-    #                 "max_depth": max_depth
-    #             })
-                
-    #             # Process results
-    #             related_docs = []
-    #             for record in result:
-    #                 related_docs.append({
-    #                     "doc_id": record["doc_id"],
-    #                     "file_name": record["file_name"],
-    #                     "content_type": record["content_type"],
-    #                     "created_at": record["created_at"],
-    #                     "author": record["author"],
-    #                     "relevance_score": record["relevance"]
-    #                 })
-                    
-    #             return related_docs
-                
-    #     except Exception as e:
-    #         print(f"Error finding related documents: {e}")
-    #         return []
-    
     def find_related_documents(self, doc_id: str, max_depth: int = 2) -> List[Dict[str, Any]]:
         """Find documents related to the given document."""
         try:
             with self.driver.session(database=self.database) as session:
                 # Query for related documents through various relationships
-                # Fixed query that doesn't reference undefined 'path' variable
                 result = session.run("""
                     MATCH (d:Document {doc_id: $doc_id})
-                    MATCH (d)-[r1]-(related:Document)
-                    WHERE related.doc_id <> $doc_id
+                    CALL apoc.path.expand(d, 
+                        'CONTAINS|AUTHORED_BY|BELONGS_TO|REFERENCES|HAS_PARTICIPANT', 
+                        'Document', 
+                        1, $max_depth) YIELD path
+                    WITH LAST(NODES(path)) as related
+                    WHERE related:Document AND related.doc_id <> $doc_id
                     RETURN related.doc_id as doc_id, 
-                        related.file_name as file_name,
-                        related.content_type as content_type,
-                        related.created_at as created_at,
-                        related.author as author,
-                        COUNT(r1) as relevance
+                           related.file_name as file_name,
+                           related.content_type as content_type,
+                           related.created_at as created_at,
+                           related.author as author,
+                           COUNT(path) as relevance
                     ORDER BY relevance DESC
                     LIMIT 10
                 """, {
@@ -421,6 +372,7 @@ class GraphDBStorage:
         except Exception as e:
             print(f"Error finding related documents: {e}")
             return []
+    
     def get_document_graph(self, doc_id: str, include_topics: bool = True) -> Dict[str, Any]:
         """Get document and its immediate relationships as a subgraph."""
         try:

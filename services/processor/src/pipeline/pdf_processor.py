@@ -5,10 +5,16 @@ import fitz  # PyMuPDF
 from typing import Dict, List, Optional, Any
 from datetime import datetime
 
-from src.models.document import Document
-from src.pipeline.content_detector import ContentTypeDetector
-from src.pipeline.ocr.element_detector import VisualElementDetector
-from src.pipeline.ocr.tesseract import TesseractOCR
+# from src.models.document import Document
+from services.processor.src.models.document import Document
+# from src.pipeline.content_detector import ContentTypeDetector
+from services.processor.src.pipeline.content_detector import ContentTypeDetector
+# from src.pipeline.ocr.element_detector import VisualElementDetector
+# from src.pipeline.ocr.tesseract import TesseractOCR
+from services.processor.src.pipeline.ocr.element_detector import VisualElementDetector
+from services.processor.src.pipeline.ocr.tesseract import TesseractOCR
+
+
 
 class PDFProcessor:
     """Main processor for PDF documents with mixed content types."""

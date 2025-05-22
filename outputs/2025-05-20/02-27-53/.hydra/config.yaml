@@ -1,0 +1,187 @@
+app_name: personal-rag-llm
+app_version: 0.1.0
+data_dir: ${oc.env:DATA_DIR,/app/data}
+cache_dir: ${oc.env:CACHE_DIR,/app/cache}
+log_level: ${oc.env:LOG_LEVEL,INFO}
+processing:
+  input_dir: ${data_dir}/input
+  output_dir: ${data_dir}/processed
+  max_workers: 4
+  chunk_size: 512
+  chunk_overlap: 128
+  supported_file_types:
+  - pdf
+  - docx
+  - pptx
+  - msg
+indexing:
+  batch_size: 32
+  embedding_model: sentence-transformers/all-MiniLM-L6-v2
+  vector_dimension: 384
+box:
+  enabled: ${oc.env:BOX_ENABLED,false}
+  sync_interval_minutes: ${oc.env:SYNC_INTERVAL_MINUTES,60}
+  folder_id: ${oc.env:BOX_FOLDER_ID,0}
+llm:
+  model_path: ${oc.env:MODEL_PATH,/app/models/llama3}
+  model_id: llama3.3-8b
+  max_tokens: 2048
+  temperature: 0.7
+  max_context_length: 8192
+api:
+  host: 0.0.0.0
+  port: 4000
+  timeout_seconds: 30
+  enable_cors: true
+security:
+  require_approval_for_external_llm: true
+  store_auth_tokens: false
+  encryption_key: ${oc.env:ENCRYPTION_KEY,}
+extractors:
+  pdf:
+    engine: pymupdf
+    extract_images: true
+    perform_ocr: true
+  ocr:
+    engine: tesseract
+    language: eng
+    preprocess_image: true
+  email:
+    engine: extract-msg
+    extract_attachments: true
+  image:
+    engine: tesseract
+    preprocess: true
+  office:
+    engines:
+      docx: python-docx
+      pptx: python-pptx
+      xlsx: openpyxl
+classifiers: {}
+embedders: {}
+storage:
+  duckdb:
+    database: ${data_dir}/metadata.db
+    schema: personal_rag
+    tables:
+      documents:
+        columns:
+        - name: doc_id
+          type: VARCHAR
+          primary_key: true
+        - name: file_name
+          type: VARCHAR
+          index: true
+        - name: file_extension
+          type: VARCHAR
+        - name: content_type
+          type: VARCHAR[]
+        - name: created_at
+          type: TIMESTAMP
+        - name: author
+          type: VARCHAR
+        - name: metadata
+          type: JSON
+        - name: persuasion_tags
+          type: VARCHAR[]
+        - name: text_content
+          type: TEXT
+      chunks:
+        columns:
+        - name: chunk_id
+          type: VARCHAR
+          primary_key: true
+        - name: doc_id
+          type: VARCHAR
+          foreign_key: documents.doc_id
+        - name: text_chunk
+          type: TEXT
+        - name: tag_context
+          type: VARCHAR[]
+      pipeline_events:
+        columns:
+        - name: event_id
+          type: VARCHAR
+          primary_key: true
+        - name: doc_id
+          type: VARCHAR
+          foreign_key: documents.doc_id
+        - name: event_type
+          type: VARCHAR
+        - name: event_timestamp
+          type: TIMESTAMP
+        - name: event_data
+          type: JSON
+  vector_store:
+    type: chroma
+    host: chroma
+    port: 8000
+    collections:
+      document_chunks:
+        embedding_function: sentence-transformers/all-MiniLM-L6-v2
+        dimension: 384
+        metadata_fields:
+        - doc_id
+        - chunk_id
+        - content_type
+        - tag_context
+        - source_page
+        - creation_date
+      query_history:
+        embedding_function: sentence-transformers/all-MiniLM-L6-v2
+        dimension: 384
+  graph_db:
+    type: neo4j
+    uri: bolt://neo4j:7687
+    user: neo4j
+    password: ${oc.env:NEO4J_PASSWORD,password}
+    database: documents
+    nodes:
+      Document:
+        properties:
+        - doc_id
+        - file_name
+        - content_type
+        - created_at
+        - author
+      EmailThread:
+        properties:
+        - thread_id
+        - subject
+        - participant_count
+      Person:
+        properties:
+        - name
+        - email
+        - role
+      Topic:
+        properties:
+        - name
+        - relevance_score
+    relationships:
+      CONTAINS:
+        from: Document
+        to: Topic
+        properties:
+        - relevance_score
+      AUTHORED_BY:
+        from: Document
+        to: Person
+        properties:
+        - timestamp
+      REPLIES_TO:
+        from: Document
+        to: Document
+        properties:
+        - timestamp
+      REFERENCES:
+        from: Document
+        to: Document
+        properties:
+        - reference_type
+        - relevance
+      BELONGS_TO:
+        from: Document
+        to: EmailThread
+        properties:
+        - position_in_thread

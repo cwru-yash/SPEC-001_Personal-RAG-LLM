@@ -98,25 +98,6 @@
 
 services:
   # Database services
-  # duckdb-service:
-  #   image: python:3.11-slim
-  #   volumes:
-  #     - duckdb_data:/data
-  #   ports:
-  #     - "3000:3000"
-  #   environment:
-  #     - PYTHONUNBUFFERED=1
-  #   command: >
-  #     bash -c "pip install duckdb fastapi uvicorn &&
-  #             python -c 'import duckdb; conn = duckdb.connect(\"/data/metadata.db\"); print(\"DuckDB initialized\")' &&
-  #             uvicorn duckdb_service:app --host 0.0.0.0 --port 3000"
-  #   healthcheck:
-  #     test: ["CMD", "curl", "-f", "http://localhost:3000/health"]
-  #     interval: 30s
-  #     timeout: 10s
-  #     retries: 3
-  #     start_period: 40s
-
   duckdb-service:
     image: python:3.11-slim
     volumes:
@@ -127,101 +108,29 @@ services:
       - PYTHONUNBUFFERED=1
     command: >
       bash -c "pip install duckdb fastapi uvicorn &&
-              mkdir -p /data &&
               python -c 'import duckdb; conn = duckdb.connect(\"/data/metadata.db\"); print(\"DuckDB initialized\")' &&
-              sleep infinity"
+              uvicorn duckdb_service:app --host 0.0.0.0 --port 3000"
     healthcheck:
-      test: ["CMD", "echo", "DuckDB is healthy"]
+      test: ["CMD", "curl", "-f", "http://localhost:3000/health"]
       interval: 30s
       timeout: 10s
       retries: 3
-      start_period: 5s
-
-  # chroma:
-  #   image: ghcr.io/chroma-core/chroma:latest
-  #   volumes:
-  #     - chroma_data:/chroma/data
-  #   ports:
-  #     - "8000:8000"
-  #   environment:
-  #     - CHROMA_DB_IMPL=duckdb+parquet
-  #     - CHROMA_PERSIST_DIRECTORY=/chroma/data
-  #   healthcheck:
-  #     test: ["CMD", "curl", "-f", "http://localhost:8000/api/v1/heartbeat"]
-  #     interval: 30s
-  #     timeout: 10s
-  #     retries: 3
-
-  # chroma:
-  #   image: ghcr.io/chroma-core/chroma:latest
-  #   volumes:
-  #     - chroma_data:/chroma/data
-  #   ports:
-  #     - "8000:8000"
-  #   environment:
-  #     - CHROMA_DB_IMPL=duckdb+parquet
-  #     - CHROMA_PERSIST_DIRECTORY=/chroma/data
-  #   healthcheck:
-  #     test: ["CMD", "curl", "-f", "http://localhost:8000/api/v1/heartbeat"]
-  #     interval: 30s
-  #     timeout: 10s
-  #     retries: 3
-  #     start_period: 20s
-
-  # chroma:
-  #   image: ghcr.io/chroma-core/chroma:latest
-  #   volumes:
-  #     - chroma_data:/chroma/chroma_data
-  #   ports:
-  #     - "8000:8000"
-  #   environment:
-  #     - PERSIST_DIRECTORY=/chroma/chroma_data
-  #   healthcheck:
-  #     test: ["CMD-SHELL", "wget -q --spider http://localhost:8000/api/v1/heartbeat || exit 1"]
-  #     interval: 10s
-  #     timeout: 5s
-  #     retries: 5
-  #     start_period: 40s
-
-  # chroma:
-  #   image: ghcr.io/chroma-core/chroma:latest
-  #   volumes:
-  #     - chroma_data:/chroma/chroma
-  #   ports:
-  #     - "8000:8000"
-  #   environment:
-  #     - PERSIST_DIRECTORY=/chroma/chroma
-  #   command: "--host=0.0.0.0 --port=8000"
-  #   healthcheck:
-  #     disable: true
-
-  # chroma:
-  #   image: ghcr.io/chroma-core/chroma:latest
-  #   ports:
-  #     - "8080:8000"  # Try a different port on host
-  #   volumes:
-  #     - ./data/chroma:/chroma/chroma_data
-  #   environment:
-  #     - ALLOW_RESET=True
-  #     - ANONYMIZED_TELEMETRY=False
-  #   healthcheck:
-  #     disable: true
+      start_period: 40s
 
   chroma:
     image: ghcr.io/chroma-core/chroma:latest
-    ports:
-      - "8000:8000"  # Change back to 8000
     volumes:
-      - ./data/chroma:/chroma/chroma_data
+      - chroma_data:/chroma/data
+    ports:
+      - "8000:8000"
     environment:
-      - ALLOW_RESET=True
-      - ANONYMIZED_TELEMETRY=False
+      - CHROMA_DB_IMPL=duckdb+parquet
+      - CHROMA_PERSIST_DIRECTORY=/chroma/data
     healthcheck:
-      test: ["CMD-SHELL", "curl -s -o /dev/null -w '%{http_code}' http://localhost:8000/api/v2/heartbeat | grep 200"]
-      interval: 10s
-      timeout: 5s
-      retries: 5
-      start_period: 20s
+      test: ["CMD", "curl", "-f", "http://localhost:8000/api/v1/heartbeat"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
 
   neo4j:
     image: neo4j:5.13.0
@@ -244,21 +153,13 @@ services:
     build:
       context: ../services/api
       dockerfile: Dockerfile
-    # depends_on:
-    #   duckdb-service:
-    #     condition: service_healthy
-    #   chroma:
-    #     condition: service_healthy
-    #   neo4j:
-    #     condition: service_healthy
     depends_on:
       duckdb-service:
         condition: service_healthy
+      chroma:
+        condition: service_healthy
       neo4j:
         condition: service_healthy
-      chroma:
-        condition: service_started
-
     ports:
       - "4000:4000"  # GraphQL API
     volumes:
@@ -276,26 +177,17 @@ services:
     build:
       context: ../services/processor
       dockerfile: Dockerfile
-    # depends_on:
-    #   duckdb-service:
-    #     condition: service_healthy
-    #   chroma:
-    #     condition: service_healthy
-    #   neo4j:
-    #     condition: service_healthy
     depends_on:
       duckdb-service:
         condition: service_healthy
+      chroma:
+        condition: service_healthy
       neo4j:
         condition: service_healthy
-      chroma:
-        condition: service_started
-
     volumes:
       - ../data:/app/data
       - ../conf:/app/conf
     environment:
-      - PYTHONPATH=/app
       - PYTHONUNBUFFERED=1
       - DATA_DIR=/app/data
       - CACHE_DIR=/app/cache

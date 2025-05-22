@@ -1,0 +1,8 @@
+fastapi>=0.104.1
+pydantic>=2.4.2
+uvicorn>=0.23.2
+graphql-core>=3.2.0
+strawberry-graphql>=0.205.0
+duckdb>=0.9.2
+neo4j>=5.13.0
+chromadb>=0.4.22

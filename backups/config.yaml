@@ -40,10 +40,8 @@ defaults:
   - classifiers: default
   - embedders: default
   - storage: default
-  # - override hydra/job_logging: colorlog
-  # - override hydra/hydra_logging: colorlog
-  - override hydra/job_logging: default
-  - override hydra/hydra_logging: default
+  - override hydra/job_logging: colorlog
+  - override hydra/hydra_logging: colorlog
 
 hydra:
   run:

@@ -5,13 +5,7 @@ from typing import Dict, List, Any, Optional
 import duckdb
 from datetime import datetime
 
-# Fix the import path for Docker environment
-try:
-    # Try container path first
-    from src.models.document import Document
-except ImportError:
-    # Fall back to development path
-    from services.processor.src.models.document import Document
+from src.models.document import Document
 
 class DuckDBStorage:
     """Storage interface for DuckDB database to store document metadata."""
@@ -87,39 +81,40 @@ class DuckDBStorage:
     def store_document(self, document: Document) -> bool:
         """Store document metadata in DuckDB."""
         try:
-            # Create array literals for lists - fix to handle content_type correctly
-            if document.content_type:
-                content_type_array = f"ARRAY[{', '.join(repr(item) for item in document.content_type)}]"
-            else:
-                content_type_array = "ARRAY[]::VARCHAR[]"
-                
-            if document.persuasion_tags:
-                persuasion_tags_array = f"ARRAY[{', '.join(repr(item) for item in document.persuasion_tags)}]"
-            else:
-                persuasion_tags_array = "ARRAY[]::VARCHAR[]"
+            # Convert content_type and persuasion_tags lists to arrays
+            content_type_array = f"ARRAY{json.dumps(document.content_type)}"
+            persuasion_tags_array = f"ARRAY{json.dumps(document.persuasion_tags)}"
             
             # Convert metadata to JSON
             metadata_json = json.dumps(document.metadata)
             
-            # Insert document with proper SQL syntax
+            # Insert document
             self.conn.execute(f"""
                 INSERT INTO {self.schema_name}.documents 
                 (doc_id, file_name, file_extension, content_type, created_at, author, 
                  metadata, persuasion_tags, text_content)
                 VALUES (?, ?, ?, {content_type_array}, ?, ?, ?, {persuasion_tags_array}, ?)
+                ON CONFLICT (doc_id) DO UPDATE SET
+                file_name = excluded.file_name,
+                file_extension = excluded.file_extension,
+                content_type = excluded.content_type,
+                created_at = excluded.created_at,
+                author = excluded.author,
+                metadata = excluded.metadata,
+                persuasion_tags = excluded.persuasion_tags,
+                text_content = excluded.text_content
             """, (
                 document.doc_id,
                 document.file_name,
                 document.file_extension,
                 document.created_at if document.created_at else datetime.now(),
-                document.author if document.author else None,
+                document.author,
                 metadata_json,
                 document.text_content
             ))
             
             # Store chunks
-            if document.chunks:
-                self.store_chunks(document.doc_id, document.chunks)
+            self.store_chunks(document.doc_id, document.chunks)
             
             # Log the event
             self._log_event(
@@ -132,8 +127,6 @@ class DuckDBStorage:
             
         except Exception as e:
             print(f"Error storing document: {e}")
-            import traceback
-            traceback.print_exc()
             return False
     
     def store_chunks(self, doc_id: str, chunks: List[Dict[str, Any]]) -> bool:
@@ -150,11 +143,7 @@ class DuckDBStorage:
             
             # Insert new chunks
             for chunk in chunks:
-                # Fix array creation for tag_context
-                if chunk.get('tag_context'):
-                    tag_context_array = f"ARRAY[{', '.join(repr(item) for item in chunk.get('tag_context', []))}]"
-                else:
-                    tag_context_array = "ARRAY[]::VARCHAR[]"
+                tag_context_array = f"ARRAY{json.dumps(chunk.get('tag_context', []))}"
                 
                 self.conn.execute(f"""
                     INSERT INTO {self.schema_name}.chunks 
@@ -175,8 +164,6 @@ class DuckDBStorage:
             # Rollback on error
             self.conn.execute("ROLLBACK")
             print(f"Error storing chunks: {e}")
-            import traceback
-            traceback.print_exc()
             return False
     
     def get_document(self, doc_id: str) -> Optional[Dict[str, Any]]:
@@ -232,6 +219,56 @@ class DuckDBStorage:
             
         except Exception as e:
             print(f"Error retrieving chunks: {e}")
+            return []
+    
+    def search_documents(self, query: Dict[str, Any]) -> List[Dict[str, Any]]:
+        """Search documents by various criteria."""
+        try:
+            # Build WHERE clause
+            where_clauses = []
+            params = []
+            
+            if "content_type" in query:
+                where_clauses.append(f"array_contains(content_type, ?)")
+                params.append(query["content_type"])
+                
+            if "author" in query:
+                where_clauses.append("author LIKE ?")
+                params.append(f"%{query['author']}%")
+                
+            if "created_after" in query:
+                where_clauses.append("created_at >= ?")
+                params.append(query["created_after"])
+                
+            if "created_before" in query:
+                where_clauses.append("created_at <= ?")
+                params.append(query["created_before"])
+                
+            if "text_search" in query:
+                where_clauses.append("text_content LIKE ?")
+                params.append(f"%{query['text_search']}%")
+            
+            # Construct query
+            sql = f"SELECT doc_id, file_name, file_extension, content_type, created_at, author FROM {self.schema_name}.documents"
+            
+            if where_clauses:
+                sql += " WHERE " + " AND ".join(where_clauses)
+                
+            # Execute query
+            results = self.conn.execute(sql, params).fetchall()
+            
+            # Convert to list of dicts
+            columns = ["doc_id", "file_name", "file_extension", "content_type", "created_at", "author"]
+            documents = []
+            
+            for row in results:
+                doc_dict = {columns[i]: row[i] for i in range(len(columns))}
+                documents.append(doc_dict)
+                
+            return documents
+            
+        except Exception as e:
+            print(f"Error searching documents: {e}")
             return []
     
     def _log_event(self, doc_id: str, event_type: str, event_data: Dict[str, Any]) -> None:

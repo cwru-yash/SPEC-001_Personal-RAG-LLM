@@ -1,0 +1,71 @@
+2025-05-23 01:44:58,544 - INFO - Initialized processor with temp dir: /var/folders/q_/w29h3cts0gv3f_5r904qxn0w0000gn/T/dataset_processing_8gs7_i45
+2025-05-23 01:44:58,545 - INFO - Starting dataset processing: /Users/yashm/Documents/GitHub/SPEC-001_Personal-RAG-LLM/SPEC-001_Personal-RAG-LLM/data/input -> /Users/yashm/Documents/GitHub/SPEC-001_Personal-RAG-LLM/SPEC-001_Personal-RAG-LLM/data/processed_output
+2025-05-23 01:44:58,546 - INFO - Found 50 ZIP files across 5 categories
+2025-05-23 01:44:58,546 - INFO - Processing category 'Images' with 10 ZIP files
+2025-05-23 01:44:58,573 - INFO - ✅ Successfully processed: mkdg0257.zip
+2025-05-23 01:44:58,574 - INFO - ✅ Successfully processed: nkdg0257.zip
+2025-05-23 01:44:58,574 - INFO - ✅ Successfully processed: lkdg0257.zip
+2025-05-23 01:44:58,578 - INFO - ✅ Successfully processed: jhgp0256.zip
+2025-05-23 01:44:58,582 - INFO - ✅ Successfully processed: pkdg0257.zip
+2025-05-23 01:44:58,593 - INFO - ✅ Successfully processed: qkdg0257.zip
+2025-05-23 01:44:58,593 - INFO - ✅ Successfully processed: spww0257.zip
+2025-05-23 01:44:58,593 - INFO - ✅ Successfully processed: qydw0257.zip
+2025-05-23 01:44:58,596 - INFO - ✅ Successfully processed: thnw0257.zip
+2025-05-23 01:44:58,600 - INFO - ✅ Successfully processed: ykdg0257.zip
+2025-05-23 01:44:58,600 - INFO - Processing category 'Emails' with 10 ZIP files
+2025-05-23 01:44:58,606 - INFO - ✅ Successfully processed: lkdw0256.zip
+2025-05-23 01:44:58,610 - INFO - ✅ Successfully processed: ltcf0256.zip
+2025-05-23 01:44:58,616 - INFO - ✅ Successfully processed: htjw0256.zip
+2025-05-23 01:44:58,620 - INFO - ✅ Successfully processed: mxcw0256.zip
+2025-05-23 01:44:58,620 - INFO - ✅ Successfully processed: rpww0256.zip
+2025-05-23 01:44:58,624 - INFO - ✅ Successfully processed: sknw0257.zip
+2025-05-23 01:44:58,638 - INFO - ✅ Successfully processed: yldx0256.zip
+2025-05-23 01:44:58,638 - INFO - ✅ Successfully processed: yxcw0256.zip
+2025-05-23 01:44:58,646 - INFO - ✅ Successfully processed: nxcw0256.zip
+2025-05-23 01:44:58,650 - INFO - ✅ Successfully processed: trbw0256.zip
+2025-05-23 01:44:58,650 - INFO - Processing category 'Spreadsheets' with 10 ZIP files
+2025-05-23 01:44:58,654 - WARNING - ⚠️ Partial processing: lxnw0257.zip
+2025-05-23 01:44:58,654 - WARNING -    Errors: Expected 2 PDFs, found 1
+2025-05-23 01:44:58,654 - WARNING - ⚠️ Partial processing: jrxf0257.zip
+2025-05-23 01:44:58,654 - WARNING -    Errors: Expected 2 PDFs, found 1
+2025-05-23 01:44:58,654 - WARNING - ⚠️ Partial processing: mjnw0257.zip
+2025-05-23 01:44:58,654 - WARNING -    Errors: Expected 2 PDFs, found 1
+2025-05-23 01:44:58,655 - WARNING - ⚠️ Partial processing: kxnw0257.zip
+2025-05-23 01:44:58,655 - WARNING -    Errors: Expected 2 PDFs, found 1
+2025-05-23 01:44:58,656 - WARNING - ⚠️ Partial processing: phnw0257.zip
+2025-05-23 01:44:58,657 - WARNING -    Errors: Expected 2 PDFs, found 1
+2025-05-23 01:44:58,657 - WARNING - ⚠️ Partial processing: qgjf0257.zip
+2025-05-23 01:44:58,657 - WARNING -    Errors: Expected 2 PDFs, found 1
+2025-05-23 01:44:58,657 - WARNING - ⚠️ Partial processing: mxnw0257.zip
+2025-05-23 01:44:58,657 - WARNING -    Errors: Expected 2 PDFs, found 1
+2025-05-23 01:44:58,657 - WARNING - ⚠️ Partial processing: nxnw0257.zip
+2025-05-23 01:44:58,657 - WARNING -    Errors: Expected 2 PDFs, found 1
+2025-05-23 01:44:58,658 - WARNING - ⚠️ Partial processing: qhnw0257.zip
+2025-05-23 01:44:58,658 - WARNING -    Errors: Expected 2 PDFs, found 1
+2025-05-23 01:44:58,658 - WARNING - ⚠️ Partial processing: yxnw0257.zip
+2025-05-23 01:44:58,659 - WARNING -    Errors: Expected 2 PDFs, found 1
+2025-05-23 01:44:58,659 - INFO - Processing category 'Presentations' with 10 ZIP files
+2025-05-23 01:44:58,703 - INFO - ✅ Successfully processed: gygg0257.zip
+2025-05-23 01:44:58,753 - INFO - ✅ Successfully processed: hffg0257.zip
+2025-05-23 01:44:58,808 - INFO - ✅ Successfully processed: ffgg0257.zip
+2025-05-23 01:44:58,825 - INFO - ✅ Successfully processed: fjnw0257.zip
+2025-05-23 01:44:58,856 - INFO - ✅ Successfully processed: hgfg0257.zip
+2025-05-23 01:44:58,903 - INFO - ✅ Successfully processed: hyfg0257.zip
+2025-05-23 01:44:58,903 - INFO - ✅ Successfully processed: hjnw0257.zip
+2025-05-23 01:44:58,923 - INFO - ✅ Successfully processed: qxnw0257.zip
+2025-05-23 01:44:58,932 - INFO - ✅ Successfully processed: kjnw0257.zip
+2025-05-23 01:44:58,952 - INFO - ✅ Successfully processed: txnw0257.zip
+2025-05-23 01:44:58,952 - INFO - Processing category 'Documents' with 10 ZIP files
+2025-05-23 01:44:58,960 - INFO - ✅ Successfully processed: kjxw0257.zip
+2025-05-23 01:44:58,966 - INFO - ✅ Successfully processed: kjvf0257.zip
+2025-05-23 01:44:58,986 - INFO - ✅ Successfully processed: frdx0256.zip
+2025-05-23 01:44:58,993 - INFO - ✅ Successfully processed: klcg0257.zip
+2025-05-23 01:44:59,015 - INFO - ✅ Successfully processed: gqwg0257.zip
+2025-05-23 01:44:59,032 - INFO - ✅ Successfully processed: nqbg0257.zip
+2025-05-23 01:44:59,131 - INFO - ✅ Successfully processed: qxwd0282.zip
+2025-05-23 01:44:59,135 - INFO - ✅ Successfully processed: ykcg0257.zip
+2025-05-23 01:44:59,147 - INFO - ✅ Successfully processed: mqbg0257.zip
+2025-05-23 01:44:59,174 - INFO - ✅ Successfully processed: shnw0257.zip
+2025-05-23 01:44:59,189 - INFO - Results saved to: /Users/yashm/Documents/GitHub/SPEC-001_Personal-RAG-LLM/SPEC-001_Personal-RAG-LLM/data/processed_output/processing_results_20250523_014459.json
+2025-05-23 01:44:59,189 - INFO - Text files saved to: /Users/yashm/Documents/GitHub/SPEC-001_Personal-RAG-LLM/SPEC-001_Personal-RAG-LLM/data/processed_output/extracted_texts
+2025-05-23 01:44:59,190 - INFO - Cleaned up temporary directory: /var/folders/q_/w29h3cts0gv3f_5r904qxn0w0000gn/T/dataset_processing_8gs7_i45

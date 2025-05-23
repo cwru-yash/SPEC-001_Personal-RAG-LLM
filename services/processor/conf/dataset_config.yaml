@@ -1,0 +1,353 @@
+# services/processor/conf/dataset_config.yaml
+# Configuration optimized for ZIP-based paired PDF datasets
+
+defaults:
+  - _self_
+  - extractors: enhanced
+  - classifiers: default
+  - embedders: default
+  - storage: default
+
+hydra:
+  run:
+    dir: outputs/dataset_processing/${now:%Y-%m-%d}/${now:%H-%M-%S}
+
+# Application metadata
+app_name: "personal-rag-llm-dataset"
+app_version: "0.2.0"
+data_dir: "${oc.env:DATA_DIR,/data}"
+cache_dir: "${oc.env:CACHE_DIR,/data/cache}"
+log_level: "${oc.env:LOG_LEVEL,INFO}"
+
+# Dataset-specific processing settings
+dataset_processing:
+  # Input structure
+  input_root: "${data_dir}/input"
+  output_dir: "${data_dir}/processed_results"
+  
+  # Expected categories (based on your folder structure)
+  expected_categories:
+    - "Documents"
+    - "Emails" 
+    - "Images"
+    - "Presentations"
+    - "Spreadsheets"
+  
+  # Processing configuration
+  max_workers: 4
+  max_file_size_mb: 200  # Increased for potentially large academic papers
+  
+  # ZIP file processing
+  zip_processing:
+    extract_to_temp: true
+    cleanup_after_processing: true
+    validate_pdf_pairs: true
+    
+    # PDF pair identification
+    metadata_patterns:
+      - "*-info.pdf"
+      - "*_info.pdf"
+      - "*-metadata.pdf"
+      - "*_metadata.pdf"
+    
+    # Size-based fallback (metadata usually smaller)
+    size_based_identification: true
+
+# Enhanced PDF processing for academic/research content
+pdf:
+  engine: "pymupdf"
+  extract_images: true
+  perform_ocr: true
+  
+  # Academic document processing
+  academic_mode: true
+  extract_citations: true
+  extract_figures: true
+  extract_tables: true
+  
+  # OCR settings optimized for research papers
+  ocr:
+    engine: "tesseract"
+    languages: "eng"
+    tesseract_config: "--psm 1 -c tessedit_char_whitelist=0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz.,;:!?()[]{}\"'-+=/\\@#$%^&*<>|`~_ "
+    preprocess_image: true
+    enhance_resolution: true
+
+# Category-specific processing
+category_processing:
+  # Document-specific settings
+  Documents:
+    chunk_size: 600
+    chunk_overlap: 100
+    extract_structure: true
+    detect_sections: true
+    
+  # Email-specific settings  
+  Emails:
+    chunk_size: 300
+    chunk_overlap: 50
+    extract_thread_structure: true
+    parse_headers: true
+    
+  # Image-specific settings
+  Images:
+    chunk_size: 400
+    chunk_overlap: 60
+    ocr_confidence_threshold: 70
+    preprocess_images: true
+    
+  # Presentation-specific settings
+  Presentations:
+    chunk_size: 250
+    chunk_overlap: 40
+    extract_slide_structure: true
+    preserve_slide_boundaries: true
+    
+  # Spreadsheet-specific settings
+  Spreadsheets:
+    chunk_size: 500
+    chunk_overlap: 80
+    extract_table_structure: true
+    include_formulas: false
+
+# Enhanced chunking for paired documents
+chunker:
+  # Different strategies for content vs metadata
+  content_document:
+    default_chunk_size: 500
+    default_chunk_overlap: 75
+    preserve_paragraphs: true
+    adaptive_chunking: true
+    
+  metadata_document:
+    default_chunk_size: 300
+    default_chunk_overlap: 50
+    preserve_structure: true
+    
+  # Relationship preservation
+  maintain_document_links: true
+
+# Document classification for research content
+classifier:
+  enabled: true
+  
+  # Academic content classification
+  academic_classification:
+    enabled: true
+    detect_paper_sections: true
+    extract_keywords: true
+    identify_methodology: true
+    
+  # Content type detection
+  content_type_detection:
+    confidence_threshold: 0.8
+    multi_label: true
+    
+  # Metadata extraction
+  metadata_extraction:
+    extract_authors: true
+    extract_dates: true
+    extract_institutions: true
+    extract_doi: true
+
+# Quality assessment for research documents
+quality_assessment:
+  enabled: true
+  
+  # Research-specific quality checks
+  research_quality:
+    min_abstract_length: 100
+    min_content_length: 500
+    check_citation_format: true
+    validate_academic_structure: true
+    
+  # Paired document validation
+  pair_validation:
+    check_metadata_completeness: true
+    validate_content_metadata_match: true
+    cross_reference_validation: true
+
+# Storage configuration for paired documents
+storage:
+  # Enhanced DuckDB schema for paired documents
+  duckdb:
+    database: "${data_dir}/research_metadata.db"
+    schema: "research_rag"
+    
+    # Additional tables for research content
+    tables:
+      document_pairs:
+        columns:
+          - name: "pair_id"
+            type: "VARCHAR"
+            primary_key: true
+          - name: "content_doc_id"
+            type: "VARCHAR"
+          - name: "metadata_doc_id" 
+            type: "VARCHAR"
+          - name: "category"
+            type: "VARCHAR"
+          - name: "base_name"
+            type: "VARCHAR"
+          - name: "relationship_strength"
+            type: "FLOAT"
+            
+      research_metadata:
+        columns:
+          - name: "doc_id"
+            type: "VARCHAR"
+            primary_key: true
+          - name: "authors"
+            type: "VARCHAR[]"
+          - name: "institutions"
+            type: "VARCHAR[]"
+          - name: "keywords"
+            type: "VARCHAR[]"
+          - name: "doi"
+            type: "VARCHAR"
+          - name: "publication_date"
+            type: "DATE"
+  
+  # Vector store optimized for research content
+  vector_store:
+    type: "chroma"
+    host: "chroma"
+    port: 8000
+    
+    collections:
+      research_content:
+        embedding_function: "sentence-transformers/all-MiniLM-L6-v2"
+        dimension: 384
+        metadata_fields:
+          - "doc_id"
+          - "pair_id"
+          - "category"
+          - "document_type"  # content vs metadata
+          - "authors"
+          - "section_type"
+          
+      research_metadata:
+        embedding_function: "sentence-transformers/all-MiniLM-L6-v2"
+        dimension: 384
+        metadata_fields:
+          - "doc_id"
+          - "describes_document"
+          - "category"
+  
+  # Graph database for research relationships
+  graph_db:
+    type: "neo4j"
+    uri: "bolt://neo4j:7687"
+    user: "neo4j"
+    password: "${oc.env:NEO4J_PASSWORD,password}"
+    database: "research_documents"
+    
+    # Research-specific node types
+    nodes:
+      ResearchDocument:
+        properties:
+          - "doc_id"
+          - "title"
+          - "authors"
+          - "category"
+          - "doi"
+          
+      MetadataDocument:
+        properties:
+          - "doc_id"
+          - "describes_document"
+          - "metadata_type"
+          
+      Author:
+        properties:
+          - "name"
+          - "institution"
+          - "orcid"
+          
+      Institution:
+        properties:
+          - "name"
+          - "country"
+    
+    # Research-specific relationships
+    relationships:
+      DESCRIBES:
+        from: "MetadataDocument"
+        to: "ResearchDocument"
+        properties:
+          - "completeness_score"
+          
+      AUTHORED_BY:
+        from: "ResearchDocument"
+        to: "Author"
+        properties:
+          - "author_order"
+          
+      CITES:
+        from: "ResearchDocument"
+        to: "ResearchDocument"
+        properties:
+          - "citation_context"
+
+# Monitoring and logging for dataset processing
+monitoring:
+  enabled: true
+  
+  # Progress tracking
+  progress_reporting:
+    enabled: true
+    report_interval: 10  # Every 10 documents
+    save_intermediate_results: true
+    
+  # Performance monitoring
+  performance_tracking:
+    track_processing_times: true
+    track_memory_usage: true
+    alert_slow_processing: true
+    slow_processing_threshold: 60  # seconds
+  
+  # Error handling
+  error_handling:
+    max_retries_per_zip: 3
+    retry_delay: 2.0
+    save_failed_extractions: true
+    detailed_error_logging: true
+
+# Integration settings for research workflow
+research_integration:
+  # Citation processing
+  citations:
+    extract_bibliography: true
+    parse_citation_format: true
+    link_internal_citations: true
+    
+  # Figure and table processing
+  figures:
+    extract_captions: true
+    ocr_figure_text: true
+    preserve_figure_context: true
+    
+  # Cross-referencing
+  cross_references:
+    link_related_documents: true
+    detect_follow_up_papers: true
+    identify_data_supplements: true
+
+# Export and output formats
+output:
+  formats:
+    - "json"
+    - "csv"
+    - "parquet"  # For large datasets
+    
+  # Research-specific exports
+  research_exports:
+    bibliography_export: true
+    author_network_export: true
+    citation_graph_export: true
+    
+  # Structured output
+  structured_output:
+    separate_by_category: true
+    include_relationships: true
+    export_quality_metrics: true

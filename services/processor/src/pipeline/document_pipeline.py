@@ -8,11 +8,18 @@ from datetime import datetime
 import logging
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
-from src.models.document import Document
-from src.pipeline.content_detector import ContentTypeDetector
-from src.pipeline.pdf_processor import PDFProcessor
-from src.pipeline.chunkers.text_chunker import ContentAwareChunker
-from src.pipeline.classifier import DocumentClassifier
+# from src.models.document import Document
+# from src.pipeline.content_detector import ContentTypeDetector
+# from src.pipeline.pdf_processor import PDFProcessor
+# from src.pipeline.chunkers.text_chunker import ContentAwareChunker
+# from src.pipeline.classifier import DocumentClassifier
+
+# Fix the imports to use relative paths
+from ..models.document import Document
+from .content_detector import ContentTypeDetector
+from .pdf_processor import PDFProcessor
+from .chunkers.text_chunker import ContentAwareChunker
+from .classifier import DocumentClassifier
 
 @dataclass
 class ProcessingResult:
@@ -82,6 +89,21 @@ class DocumentProcessingPipeline:
         pdf_config = self.config.get("pdf", {})
         pdf_processor = PDFProcessor(pdf_config)
         self.processor_registry.register_processor("pdf", pdf_processor.process_pdf)
+
+            
+    # Add new extractors
+        from src.pipeline.extractors.office_extractor import OfficeExtractor
+        from src.pipeline.extractors.image_extractor import ImageExtractor
+        
+        # Office documents
+        office_extractor = OfficeExtractor(self.config.get("office", {}))
+        for ext in ["xlsx", "xls", "docx", "doc", "pptx", "ppt"]:
+            self.processor_registry.register_processor(ext, office_extractor.extract)
+        
+        # Images
+        image_extractor = ImageExtractor(self.config.get("image", {}))
+        for ext in ["png", "jpg", "jpeg", "tiff", "bmp"]:
+            self.processor_registry.register_processor(ext, image_extractor.extract)
         
         # Add validators
         self.processor_registry.register_validator("pdf", self._validate_pdf)

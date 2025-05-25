@@ -1,462 +1,97 @@
-# # # @package _global_
-
-# # defaults:
-# #   - _self_
-# #   - extractors: default
-# #   - classifiers: default
-# #   - embedders: default
-# #   - storage: default
-# #   - override hydra/job_logging: colorlog
-# #   - override hydra/hydra_logging: colorlog
-
-# # hydra:
-# #   run:
-# #     dir: outputs/${now:%Y-%m-%d}/${now:%H-%M-%S}
-# #   sweep:
-# #     dir: multirun/${now:%Y-%m-%d}/${now:%H-%M-%S}
-# #     subdir: ${hydra.job.num}
-
-# # # General settings
-# # data_dir: "${oc.env:DATA_DIR,/app/data}"
-# # cache_dir: "${oc.env:CACHE_DIR,/app/cache}"
-# # log_level: "INFO"
-
-# # # Box integration
-# # box:
-# #   sync_interval_minutes: 60
-# #   folder_id: "${oc.env:BOX_FOLDER_ID}"
-
-# # # Document processing
-# # processing:
-# #   max_workers: 4
-# #   chunk_size: 512
-# #   chunk_overlap: 128
-
-# # @package _global_
-
-# defaults:
-#   - _self_
-#   - extractors: default
-#   - classifiers: default
-#   - embedders: default
-#   - storage: default
-#   # - override hydra/job_logging: colorlog
-#   # - override hydra/hydra_logging: colorlog
-#   - override hydra/job_logging: default
-#   - override hydra/hydra_logging: default
-
-# hydra:
-#   run:
-#     dir: outputs/${now:%Y-%m-%d}/${now:%H-%M-%S}
-#   sweep:
-#     dir: multirun/${now:%Y-%m-%d}/${now:%H-%M-%S}
-#     subdir: ${hydra.job.num}
-
-# # General settings
-# app_name: "personal-rag-llm"
-# app_version: "0.1.0"
-# data_dir: "${oc.env:DATA_DIR,/app/data}"
-# cache_dir: "${oc.env:CACHE_DIR,/app/cache}"
-# log_level: "${oc.env:LOG_LEVEL,INFO}"
-
-# # PDF processing settings
-# processing:
-#   input_dir: "${data_dir}/input"
-#   output_dir: "${data_dir}/processed"
-#   max_workers: 4
-#   chunk_size: 512
-#   chunk_overlap: 128
-#   supported_file_types:
-#     - pdf
-#     - docx
-#     - pptx
-#     - msg
-  
-# # Indexing settings
-# indexing:
-#   batch_size: 32
-#   embedding_model: "sentence-transformers/all-MiniLM-L6-v2"
-#   vector_dimension: 384
-
-# # Box sync integration
-# box:
-#   enabled: ${oc.env:BOX_ENABLED,false}
-#   sync_interval_minutes: ${oc.env:SYNC_INTERVAL_MINUTES,60}
-#   folder_id: "${oc.env:BOX_FOLDER_ID,0}"
-
-# # LLM settings
-# llm:
-#   model_path: "${oc.env:MODEL_PATH,/app/models/llama3}"
-#   model_id: "llama3.3-8b"
-#   max_tokens: 2048
-#   temperature: 0.7
-#   max_context_length: 8192
-  
-# # API settings
-# api:
-#   host: "0.0.0.0"
-#   port: 4000
-#   timeout_seconds: 30
-#   enable_cors: true
-  
-# # Security settings
-# security:
-#   require_approval_for_external_llm: true
-#   store_auth_tokens: false
-#   encryption_key: "${oc.env:ENCRYPTION_KEY,}"
-
-
-# services/processor/conf/config.yaml
-# Enhanced configuration for modular document processing pipeline
-
+# services/processor/conf/enhanced_config.yaml
 defaults:
   - _self_
   - extractors: enhanced
   - classifiers: default
   - embedders: default
   - storage: default
-  - override hydra/job_logging: default
-  - override hydra/hydra_logging: default
 
-hydra:
-  run:
-    dir: outputs/${now:%Y-%m-%d}/${now:%H-%M-%S}
-
-# Application metadata
-app_name: "personal-rag-llm"
-app_version: "0.2.0"
-data_dir: "${oc.env:DATA_DIR,/app/data}"
-cache_dir: "${oc.env:CACHE_DIR,/app/cache}"
-log_level: "${oc.env:LOG_LEVEL,INFO}"
-
-# Enhanced document processing settings
+# Enhanced processing configuration
 processing:
   input_dir: "${data_dir}/input"
   output_dir: "${data_dir}/processed"
   max_workers: 4
-  max_file_size_mb: 100  # Maximum file size in MB
-  save_results: true
+  max_file_size_mb: 200
   
-  # File type support configuration
+  # Extended file type support
   supported_file_types:
     # Documents
     - pdf
     - docx
     - doc
-    - pptx
-    - ppt
+    # Spreadsheets
     - xlsx
     - xls
-    
-    # Text formats
-    - txt
-    - md
     - csv
-    - json
-    - xml
-    - html
-    - htm
-    
+    # Presentations
+    - pptx
+    - ppt
     # Images
     - png
     - jpg
     - jpeg
     - tiff
     - bmp
-    
-    # Email
-    - msg
-    
-    # Code files
-    - py
-    - js
-    - ts
-    - java
-    - cpp
-    - c
-    - h
-    - go
-    - rs
-    - php
-    
-    # Config files
-    - conf
-    - ini
-    - env
-    - properties
-    - cfg
-    - yaml
-    - yml
-    - toml
-
-# PDF processing configuration
-pdf:
-  engine: "pymupdf"  # Options: pymupdf, pdfplumber
-  extract_images: true
-  perform_ocr: true
-  enable_document_extractor: true
-  enable_email_extractor: true
-  enable_presentation_extractor: true
-  
-  # OCR settings for PDFs
-  ocr:
-    engine: "tesseract"
-    languages: "eng"
-    tesseract_config: "--psm 3"
-    preprocess_image: true
+    # Text
+    - txt
+    - md
 
 # Image processing configuration
 image:
   ocr:
     engine: "tesseract"
-    languages: "eng+fra+deu"  # Multiple languages
-    tesseract_config: "--psm 3 -c tessedit_char_whitelist=0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz "
+    languages: "eng"
+    tesseract_config: "--oem 3 --psm 11"
     preprocess: true
-  
-  # Image preprocessing
-  preprocessing:
-    resize_threshold: 300  # Minimum dimension in pixels
-    enhance_contrast: true
-    remove_noise: false
+  analysis:
+    detect_charts: true
+    detect_diagrams: true
+    detect_floor_plans: true
+    extract_data_from_charts: true
 
-# Office documents configuration
+# Office document configuration
 office:
-  engines:
-    docx: "python-docx"
-    pptx: "python-pptx"
-    xlsx: "openpyxl"
-  
-  # Word documents
+  excel:
+    extract_all_sheets: true
+    include_formulas: false
+    max_preview_rows: 100
+    extract_statistics: true
   word:
     extract_tables: true
-    extract_images: false
-    preserve_formatting: false
-  
-  # PowerPoint
-  powerpoint:
-    extract_slide_notes: true
-    extract_slide_images: false
-  
-  # Excel
-  excel:
-    max_rows_per_sheet: 1000
-    include_formulas: false
-    include_hidden_sheets: false
-
-# Text processing configuration  
-text:
-  encoding_fallbacks:
-    - "utf-8"
-    - "latin-1"
-    - "cp1252"
-    - "ascii"
-  
-  # CSV specific settings
-  csv:
-    max_preview_rows: 100
-    auto_detect_delimiter: true
-    include_headers: true
-  
-  # JSON specific settings
-  json:
-    max_depth: 10
-    preserve_structure: true
-  
-  # Markdown specific settings
-  markdown:
     extract_metadata: true
-    preserve_links: true
-    extract_code_blocks: true
+  powerpoint:
+    extract_notes: true
+    extract_charts: true
+    detect_visual_slides: true
 
-# Email processing configuration
-email:
-  msg:
-    extract_attachments: false
-    attachment_info_only: true
-    decode_subjects: true
-
-# Code file processing
-code:
-  languages:
-    python:
-      comment_patterns: ["#"]
-      docstring_patterns: ['"""', "'''"]
-    javascript:
-      comment_patterns: ["//", "/*"]
-    java:
-      comment_patterns: ["//", "/*"]
-    cpp:
-      comment_patterns: ["//", "/*"]
-  
-  analysis:
-    extract_functions: false
-    extract_classes: false
-    count_complexity: false
-
-# Enhanced chunking configuration
+# Enhanced chunking for different content types
 chunker:
+  # Image content chunking
+  image_chunk_size: 1000  # Larger for image descriptions
+  image_chunk_overlap: 200
+  
+  # Spreadsheet chunking
+  spreadsheet_chunk_size: 800
+  spreadsheet_chunk_overlap: 100
+  preserve_table_structure: true
+  
+  # Default chunking
   default_chunk_size: 500
   default_chunk_overlap: 50
-  
-  # Content-specific chunking
-  email_chunk_size: 300
-  email_chunk_overlap: 30
-  
-  presentation_chunk_size: 250
-  presentation_chunk_overlap: 25
-  
-  code_chunk_size: 800
-  code_chunk_overlap: 100
-  
-  # Adaptive chunking
-  adaptive_chunking: true
-  min_chunk_size: 100
-  max_chunk_size: 1000
 
-# Document classification configuration
-classifier:
-  enabled: true
-  
-  # Content type classification
-  content_classification:
-    enabled: true
-    confidence_threshold: 0.7
-  
-  # Persuasion strategy detection
-  persuasion_analysis:
-    enabled: false  # Requires additional NLP models
-    strategies:
-      - "authority"
-      - "social_proof"
-      - "scarcity"
-      - "reciprocity"
-      - "commitment"
-      - "liking"
-
-# Quality assessment configuration
-quality_assessment:
-  enabled: true
-  
-  # Quality checks
-  checks:
-    min_content_length: 50
-    max_extraction_errors: 3
-    text_density_threshold: 0.1
-  
-  # Scoring weights
-  weights:
-    content_presence: 0.4
-    extraction_success: 0.3
-    metadata_completeness: 0.2
-    file_integrity: 0.1
-
-# Processing hooks configuration
-hooks:
-  enabled: true
-  
-  # Pre-processing hooks
-  pre_process:
-    - name: "file_validation"
-      enabled: true
-      priority: 100
-    - name: "virus_scan"
-      enabled: false
-      priority: 90
-  
-  # Post-extraction hooks
-  post_extract:
-    - name: "content_validation"
-      enabled: true
-      priority: 100
-    - name: "language_detection"
-      enabled: false
-      priority: 80
-    - name: "content_enhancement"
-      enabled: true
-      priority: 50
-  
-  # Post-chunking hooks
-  post_chunk:
-    - name: "chunk_validation"
-      enabled: true
-      priority: 100
-  
-  # Post-classification hooks
-  post_classify:
-    - name: "quality_assessment"
-      enabled: true
-      priority: 100
-    - name: "content_tagging"
-      enabled: false
-      priority: 50
-
-# Error handling configuration
-error_handling:
-  max_retries: 3
-  retry_delay: 1.0  # seconds
-  
-  # Fallback strategies
-  fallbacks:
-    ocr_failure: "skip"  # Options: skip, retry, manual
-    encoding_error: "replace"  # Options: skip, replace, strict
-    extraction_failure: "partial"  # Options: skip, partial, retry
-  
-  # Error logging
-  log_errors: true
-  save_failed_files: true
-
-# Performance monitoring
-monitoring:
-  enabled: true
-  
-  # Metrics to track
-  metrics:
-    - "processing_time"
-    - "memory_usage"
-    - "success_rate"
-    - "throughput"
-  
-  # Alerting thresholds
-  thresholds:
-    max_processing_time: 300  # seconds
-    min_success_rate: 0.8
-    max_memory_usage: 1024  # MB
-
-# Caching configuration
-caching:
-  enabled: true
-  cache_dir: "${cache_dir}/processing"
-  
-  # Cache strategies
-  cache_extractions: true
-  cache_ocr_results: true
-  cache_classifications: false
-  
-  # Cache expiration
-  extraction_cache_ttl: 86400  # 24 hours
-  ocr_cache_ttl: 604800  # 7 days
-
-# Debugging and development
-debug:
-  enabled: false
-  save_intermediate_results: false
-  verbose_logging: false
-  profile_performance: false
-
-# Integration settings
-integrations:
-  # Box sync
-  box:
-    enabled: ${oc.env:BOX_ENABLED,false}
-    sync_interval_minutes: ${oc.env:SYNC_INTERVAL_MINUTES,60}
-    folder_id: "${oc.env:BOX_FOLDER_ID,0}"
-  
-  # External APIs
-  apis:
-    language_detection:
-      enabled: false
-      provider: "detectlanguage"  # Options: detectlanguage, google, azure
+# Storage configuration
+storage:
+  duckdb:
+    database: "${data_dir}/enhanced_metadata.db"
+    schema: "rag_system"
     
-    content_moderation:
-      enabled: false
-      provider: "azure"  # Options: azure, aws, google
+  vector_store:
+    host: "chroma"
+    port: 8000
+    embedding_model: "sentence-transformers/all-MiniLM-L6-v2"
+    
+  graph_db:
+    uri: "bolt://neo4j:7687"
+    user: "neo4j"
+    password: "${oc.env:NEO4J_PASSWORD,password}"
+    database: "documents"

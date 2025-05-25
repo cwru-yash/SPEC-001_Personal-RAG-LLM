@@ -252,6 +252,18 @@ class ZipDatasetProcessor:
         
         return extraction_path
     
+    def _find_content_files(self, extraction_path: str) -> List[str]:
+        """Find all processable content files (not just PDFs)."""
+        content_files = []
+        supported_extensions = ['.pdf', '.xlsx', '.xls', '.csv', '.docx', '.pptx', '.jpg', '.png']
+        
+        for root, _, files in os.walk(extraction_path):
+            for file in files:
+                if any(file.lower().endswith(ext) for ext in supported_extensions):
+                    content_files.append(os.path.join(root, file))
+        
+        return content_files
+
     def _find_pdf_files(self, extraction_path: str) -> List[str]:
         """Find all PDF files in the extracted directory."""
         

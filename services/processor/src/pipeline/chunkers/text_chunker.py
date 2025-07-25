@@ -22,6 +22,18 @@ class ContentAwareChunker:
         self.presentation_chunk_size = self.config.get("presentation_chunk_size", 250)
         self.presentation_chunk_overlap = self.config.get("presentation_chunk_overlap", 25)
     
+    # def chunk_document(self, document: Document) -> Document:
+    #     """Chunk document based on its content type."""
+    #     # Determine chunking strategy based on content type
+    #     if "email" in document.content_type:
+    #         document = self._chunk_email(document)
+    #     elif "presentation" in document.content_type:
+    #         document = self._chunk_presentation(document)
+    #     else:
+    #         document = self._chunk_regular_document(document)
+            
+    #     return document
+
     def chunk_document(self, document: Document) -> Document:
         """Chunk document based on its content type."""
         # Determine chunking strategy based on content type
@@ -29,9 +41,66 @@ class ContentAwareChunker:
             document = self._chunk_email(document)
         elif "presentation" in document.content_type:
             document = self._chunk_presentation(document)
+        elif "image" in document.content_type:
+            document = self._chunk_image(document)
         else:
             document = self._chunk_regular_document(document)
             
+        return document
+
+    def _chunk_image(self, document: Document) -> Document:
+        """Chunk an image document with content awareness."""
+        text = document.text_content
+        chunks = []
+        
+        if not text.strip():
+            # Empty text - create empty chunk
+            chunk = DocumentChunk(
+                chunk_id=str(uuid.uuid4()),
+                doc_id=document.doc_id,
+                text_chunk="",
+                tag_context=document.persuasion_tags + ["image"]
+            )
+            chunks.append(chunk.__dict__)
+            document.chunks = chunks
+            return document
+        
+        # For images, we might have OCR text from different visual elements
+        # Split by visual element markers if present
+        if "[Visual Element" in text:
+            elements = re.split(r'\[Visual Element[^\]]*\]:', text)
+            
+            # First element might be general text
+            if elements[0].strip():
+                chunk = DocumentChunk(
+                    chunk_id=str(uuid.uuid4()),
+                    doc_id=document.doc_id,
+                    text_chunk=elements[0].strip(),
+                    tag_context=document.persuasion_tags + ["image", "general"]
+                )
+                chunks.append(chunk.__dict__)
+            
+            # Process each visual element
+            for i, element in enumerate(elements[1:], 1):
+                if element.strip():
+                    chunk = DocumentChunk(
+                        chunk_id=str(uuid.uuid4()),
+                        doc_id=document.doc_id,
+                        text_chunk=element.strip(),
+                        tag_context=document.persuasion_tags + ["image", f"visual_element_{i}"]
+                    )
+                    chunks.append(chunk.__dict__)
+        else:
+            # No visual elements marked - create single chunk
+            chunk = DocumentChunk(
+                chunk_id=str(uuid.uuid4()),
+                doc_id=document.doc_id,
+                text_chunk=text.strip(),
+                tag_context=document.persuasion_tags + ["image"]
+            )
+            chunks.append(chunk.__dict__)
+        
+        document.chunks = chunks
         return document
     
     def _chunk_regular_document(self, document: Document) -> Document:

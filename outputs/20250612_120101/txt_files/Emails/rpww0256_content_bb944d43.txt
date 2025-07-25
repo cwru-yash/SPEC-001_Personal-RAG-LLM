@@ -1,0 +1,9 @@
+STATUS: SUCCESS
+Document: Emails/rpww0256.zip/rpww0256.pdf
+Category: Emails
+Processed: 2025-06-12T12:01:01.477842
+Method: pymupdf+ocr
+==================================================
+
+=== Page 1 ===
+Source:  https://www.industrydocuments.ucsf.edu/docs/rpww0256

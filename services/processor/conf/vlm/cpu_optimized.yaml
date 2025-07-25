@@ -1,0 +1,143 @@
+# services/processor/conf/vlm/cpu_optimized.yaml
+# Configuration optimized for CPU-based VLM processing
+
+vlm:
+  enabled: true
+  processor_type: "cpu_optimized"  # Identifies this as CPU-specific config
+  
+  # === TIMEOUT CONFIGURATION ===
+  # These values are based on typical CPU performance characteristics
+  # Start conservative and let adaptive timeout system learn your hardware's rhythm
+  
+  base_timeout: 180           # 3 minutes initial timeout (conservative starting point)
+  min_timeout: 60            # 1 minute minimum (even simple responses need this on CPU)
+  max_timeout: 600           # 10 minutes absolute maximum (prevents infinite waits)
+  
+  # Adaptive timeout system - learns from your hardware's actual performance
+  adaptive_timeouts: true     # Enable learning system
+  timeout_multiplier: 1.8    # Buffer factor: timeout = avg_response_time * 1.8
+                             # 1.8 gives good balance between patience and responsiveness
+  
+  # === RETRY CONFIGURATION ===
+  # CPU processing is more prone to variability, so we need smart retry logic
+  
+  max_retries: 2             # Maximum retry attempts (3 total tries)
+                            # More retries = longer total wait time on CPU
+  
+  retry_backoff_base: 2      # Exponential backoff: wait 2^attempt seconds
+  retry_backoff_max: 30      # Cap backoff at 30 seconds (prevents very long waits)
+  
+  # === CPU-SPECIFIC OPTIMIZATIONS ===
+  # These settings reduce computational load to improve processing speed
+  
+  # Document processing limits (reduces total processing time)
+  max_pages_per_document: 3   # Limit pages during development/testing
+  max_documents_parallel: 1   # Process documents one at a time on CPU
+  
+  # Image processing optimizations (smaller images = faster processing)
+  image_size_limit: [1024, 1024]  # Resize large images to this max size
+  image_compression_quality: 85    # Slightly compress images for speed
+  
+  # Model response optimizations (shorter responses = faster generation)
+  use_simplified_prompts: true     # Use shorter, focused prompts
+  max_response_tokens: 512         # Limit response length
+  
+  # === PROGRESS MONITORING ===
+  # These help you understand what's happening during long processing times
+  
+  enable_progress_logging: true    # Log detailed progress information
+  log_performance_metrics: true   # Track timing statistics
+  log_timeout_adjustments: true   # Show when timeouts are adapted
+  
+  # === MODEL CONFIGURATION ===
+  # Ollama/LLaVA settings optimized for CPU usage
+  
+  llava:
+    model: "llava:7b"                    # 7B model is good balance for CPU
+    api_endpoint: "http://localhost:11434"  # Change to "http://ollama:11434" for Docker
+    
+    # Model-specific CPU optimizations
+    model_options:
+      temperature: 0.1        # Low temperature = more consistent, faster responses
+      top_p: 0.9             # Focused sampling for consistency
+      repeat_penalty: 1.1    # Prevent repetitive responses
+      num_ctx: 2048          # Reduced context window = less memory, faster processing
+      num_predict: 512       # Limit response length = faster generation
+      num_thread: 4          # Use 4 CPU threads (adjust based on your CPU)
+  
+  # === FALLBACK CONFIGURATION ===
+  # When VLM processing takes too long or fails, fall back gracefully
+  
+  fallback:
+    enabled: true                    # Always enable fallback for reliability
+    confidence_threshold: 0.3        # Use VLM result if confidence > 30%
+    timeout_fallback: true          # Fall back on timeout
+    error_fallback: true            # Fall back on errors
+    
+    # Fallback decision criteria
+    min_content_length: 20          # VLM response must have some meaningful content
+    max_processing_time_ratio: 2.0  # Don't use VLM if it takes 2x expected time
+  
+  # === PROMPT OPTIMIZATION FOR CPU ===
+  # Shorter, more focused prompts process faster on CPU
+  
+  prompts:
+    # Simplified prompt for faster processing
+    simplified: |
+      Analyze this document page and respond with JSON only:
+      
+      {
+        "type": "email|report|presentation|chart|table|mixed",
+        "confidence": 0.8,
+        "content": "main content summary in 1-2 sentences"
+      }
+      
+      Keep response brief.
+    
+    # Standard prompt for when you have more time
+    standard: |
+      Analyze this document page and provide structured information.
+      
+      Return JSON format:
+      {
+        "content_type": "email|presentation|report|chart|table|mixed",
+        "confidence": 0.8,
+        "layout": "brief layout description",
+        "text_content": "key text content",
+        "visual_elements": [{"type": "table", "description": "brief description"}]
+      }
+      
+      Focus on accuracy over detail.
+  
+  # === PERFORMANCE MONITORING ===
+  # Track system performance to optimize over time
+  
+  performance_tracking:
+    enabled: true
+    track_response_times: true
+    track_success_rates: true
+    track_timeout_effectiveness: true
+    
+    # Performance targets (used for optimization)
+    target_success_rate: 0.8        # Aim for 80% success rate
+    target_avg_response_time: 120    # Aim for 2 minutes average
+    
+    # Adjustment triggers
+    adjust_timeouts_after: 5         # Adjust timeouts after 5 attempts
+    increase_timeout_if_success_below: 0.6  # Increase timeout if success < 60%
+    decrease_timeout_if_success_above: 0.9  # Decrease timeout if success > 90%
+
+# === DEVELOPMENT VS PRODUCTION SETTINGS ===
+# Easy switches for different environments
+
+development:
+  # Even more conservative settings for development
+  max_pages_per_document: 1         # Test with single pages
+  enable_detailed_logging: true     # Extra logging for debugging
+  timeout_multiplier: 2.0          # Extra patient during development
+  
+production:
+  # Production-ready settings (once you've tested and optimized)
+  max_pages_per_document: 10       # Process more pages in production
+  enable_detailed_logging: false   # Reduce log volume
+  timeout_multiplier: 1.5          # More aggressive timeouts

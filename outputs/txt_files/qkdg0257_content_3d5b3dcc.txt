@@ -1,0 +1,8 @@
+Document: Images/qkdg0257.zip/qkdg0257.pdf
+Category: Images
+Processed: 2025-06-12T11:26:53.798461
+Method: pymupdf+ocr
+==================================================
+
+=== Page 1 ===
+Source:  https://www.industrydocuments.ucsf.edu/docs/qkdg0257

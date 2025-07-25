@@ -1,0 +1,11 @@
+{
+  "file_path": "/Users/yashm/Documents/GitHub/SPEC-001_Personal-RAG-LLM/SPEC-001_Personal-RAG-LLM/data/input/test.txt",
+  "file_name": "test.txt",
+  "file_extension": "txt",
+  "file_size": 24,
+  "processed_at": "2025-06-11T17:04:45.174216",
+  "extracted_text": "This is a test document\n",
+  "extraction_method": "text_utf-8",
+  "success": true,
+  "errors": []
+}

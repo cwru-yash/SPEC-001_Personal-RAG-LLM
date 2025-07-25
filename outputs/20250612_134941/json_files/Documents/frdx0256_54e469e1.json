@@ -1,0 +1,23 @@
+{
+  "document_id": "54e469e1",
+  "zip_file": "frdx0256.zip",
+  "category": "Documents",
+  "content_file": {
+    "file_name": "frdx0256.pdf",
+    "file_path": "Documents/frdx0256.zip/frdx0256.pdf",
+    "extracted_text": "=== Page 1 ===\nSource:  https://www.industrydocuments.ucsf.edu/docs/frdx0256\n\n\n=== Page 2 ===\nSource:  https://www.industrydocuments.ucsf.edu/docs/frdx0256\n",
+    "extraction_method": "pymupdf+ocr",
+    "errors": [],
+    "success": true
+  },
+  "metadata_file": {
+    "file_name": "frdx0256-info.pdf",
+    "file_path": "Documents/frdx0256.zip/frdx0256-info.pdf",
+    "extracted_text": "=== Page 1 ===\nnull - frdx0256 - Downloaded 31/03/2025 11:15:12 AM\nDocument Information\nTitle: FW: URGENT - Payments Needed\nURL: https://www.industrydocuments.ucsf.edu/docs/frdx0256\nAuthor: Holly Spreeman\nDocument Date: 2020 September 15\nType: Document\nGenre: Adobe Portable Document Format;Edoc\nPages: 2\nID: frdx0256\nCollection: McKinsey Documents\nRecipient: Holly Spreeman\nDrug: opioids\nAvailability: public; no restrictions\nBates Number: MCK-MAAG-4772038\nDate Added UCSF: 2022 June 06\nCite This Document\nAuthor. Title. Date. Year. Collection. Source. https://www.industrydocuments.ucsf.edu/docs/[ID]\nHolly Spreeman. FW: URGENT - Payments Needed. 2020 September 15. McKinsey \nDocuments. Unknown. https://www.industrydocuments.ucsf.edu/docs/frdx0256\n",
+    "extraction_method": "pymupdf+ocr",
+    "errors": [],
+    "success": true
+  },
+  "processed_at": "2025-06-12T13:49:41.979084",
+  "overall_success": true
+}

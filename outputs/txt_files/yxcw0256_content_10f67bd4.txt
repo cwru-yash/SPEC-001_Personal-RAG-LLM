@@ -1,0 +1,8 @@
+Document: Emails/yxcw0256.zip/yxcw0256.pdf
+Category: Emails
+Processed: 2025-06-11T22:37:52.006140
+Method: pymupdf+ocr
+==================================================
+
+=== Page 1 ===
+Source:  https://www.industrydocuments.ucsf.edu/docs/yxcw0256

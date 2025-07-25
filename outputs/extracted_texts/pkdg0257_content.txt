@@ -1,0 +1,4 @@
+Format: pdf
+Method: pymupdf
+==================================================
+Source:  https://www.industrydocuments.ucsf.edu/docs/pkdg0257

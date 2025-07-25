@@ -1,0 +1,13 @@
+STATUS: SUCCESS
+Document: Emails/mxcw0256.zip/mxcw0256.pdf
+Category: Emails
+Processed: 2025-06-12T12:01:01.524514
+Method: pymupdf+ocr
+==================================================
+
+=== Page 1 ===
+Source:  https://www.industrydocuments.ucsf.edu/docs/mxcw0256
+
+
+=== Page 2 ===
+Source:  https://www.industrydocuments.ucsf.edu/docs/mxcw0256

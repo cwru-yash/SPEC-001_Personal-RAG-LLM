@@ -1,0 +1,33 @@
+Document: Images/spww0257.zip/spww0257.pdf
+Category: Images
+Processed: 2025-06-12T11:49:24.043386
+Method: pymupdf+enhanced_ocr
+Text Length: 449 chars
+==================================================
+
+=== Page 1 ===
+Source:  https://www.industrydocuments.ucsf.edu/docs/spww0257
+
+=== Page 1 Image 1 (OCR) ===
+Market Share August Adding Cardinal 10% |Adding CVS 20% |Both Cardinal and CVS 30%
+
+Hydro APAP
+
+MCK-MAAG-1357415
+
+=== Page 1 (Full Page OCR) ===
+Product
+
+Market Share August
+
+Adding Cardinal 10% |Adding CVS 20% [Both Cardinal and CVS 30%
+
+Iyydroapap | aa] se] St] BH
+
+rce: https://www.industrydo
+
+ments
+
+f.edu/docs/spww0257
+
+MCK-MAAG- 1357415

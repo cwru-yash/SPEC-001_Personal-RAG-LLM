@@ -8,13 +8,6 @@ from datetime import datetime
 import logging
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
-# from src.models.document import Document
-# from src.pipeline.content_detector import ContentTypeDetector
-# from src.pipeline.pdf_processor import PDFProcessor
-# from src.pipeline.chunkers.text_chunker import ContentAwareChunker
-# from src.pipeline.classifier import DocumentClassifier
-
-# Fix the imports to use relative paths
 from ..models.document import Document
 from .content_detector import ContentTypeDetector
 from .pdf_processor import PDFProcessor
@@ -42,17 +35,9 @@ class DocumentProcessor:
         self._processors[file_extension.lower()] = processor
         logging.info(f"Registered processor for {file_extension} files")
     
-    def register_validator(self, file_extension: str, validator: Callable):
-        """Register a validator for a specific file extension."""
-        self._validators[file_extension.lower()] = validator
-    
     def get_processor(self, file_extension: str) -> Optional[Callable]:
         """Get processor for file extension."""
         return self._processors.get(file_extension.lower())
-    
-    def get_validator(self, file_extension: str) -> Optional[Callable]:
-        """Get validator for file extension."""
-        return self._validators.get(file_extension.lower())
     
     def supported_types(self) -> List[str]:
         """Get list of supported file types."""
@@ -83,27 +68,76 @@ class DocumentProcessingPipeline:
             "by_type": {}
         }
     
+    # def _setup_default_processors(self):
+    #     """Setup default processors for common file types."""
+    #     # PDF processor
+    #     pdf_config = self.config.get("pdf", {})
+    #     pdf_processor = PDFProcessor(pdf_config)
+    #     self.processor_registry.register_processor("pdf", pdf_processor.process_pdf)
+        
+    #     # Register image processors
+    #     self._register_image_processors()
+        
+    #     # Register office processors (includes presentations)
+    #     self._register_office_processors()
+        
+    #     # Register text processors
+    #     self._register_text_processors()
+    
+    # def _register_image_processors(self):
+    #     """Register processors for image files."""
+    #     try:
+    #         from .extractors.image_extractor import ImageExtractor
+    #         image_extractor = ImageExtractor(self.config.get("image", {}))
+            
+    #         # Register for all supported image formats
+    #         for ext in ["png", "jpg", "jpeg", "tiff", "bmp", "gif"]:
+    #             self.processor_registry.register_processor(ext, image_extractor.extract)
+                
+    #         self.logger.info("✅ Image processors registered")
+                
+    #     except ImportError as e:
+    #         self.logger.warning(f"⚠️ Image extractor not available: {e}")
+    #         self.logger.warning("Install dependencies: pip install Pillow pytesseract")
+    #     except Exception as e:
+    #         self.logger.error(f"❌ Error registering image processors: {e}")
+    
+    # def _register_office_processors(self):
+    #     """Register processors for Office documents including presentations."""
+    #     try:
+    #         from .extractors.office_extractor import OfficeExtractor
+    #         office_extractor = OfficeExtractor(self.config.get("office", {}))
+            
+    #         # Register for all Office formats
+    #         office_extensions = {
+    #             # Presentations
+    #             "pptx": "PowerPoint presentation",
+    #             "ppt": "PowerPoint presentation (legacy)",
+    #             # Spreadsheets
+    #             "xlsx": "Excel workbook", 
+    #             "xls": "Excel workbook (legacy)",
+    #             # Documents
+    #             "docx": "Word document",
+    #             "doc": "Word document (legacy)"
+    #         }
+            
+    #         for ext, description in office_extensions.items():
+    #             self.processor_registry.register_processor(ext, office_extractor.extract)
+    #             self.logger.debug(f"Registered {ext} processor ({description})")
+                
+    #         self.logger.info("✅ Office processors registered (presentations, spreadsheets, documents)")
+                
+    #     except ImportError as e:
+    #         self.logger.warning(f"⚠️ Office extractor not available: {e}")
+    #         self.logger.warning("Install dependencies: pip install python-pptx python-docx openpyxl")
+    #     except Exception as e:
+    #         self.logger.error(f"❌ Error registering office processors: {e}")
     def _setup_default_processors(self):
         """Setup default processors for common file types."""
         # PDF processor
         pdf_config = self.config.get("pdf", {})
         pdf_processor = PDFProcessor(pdf_config)
         self.processor_registry.register_processor("pdf", pdf_processor.process_pdf)
-
-            
-    # Add new extractors
-        from src.pipeline.extractors.office_extractor import OfficeExtractor
-        from src.pipeline.extractors.image_extractor import ImageExtractor
-        
-        # Office documents
-        office_extractor = OfficeExtractor(self.config.get("office", {}))
-        for ext in ["xlsx", "xls", "docx", "doc", "pptx", "ppt"]:
-            self.processor_registry.register_processor(ext, office_extractor.extract)
-        
-        # Images
-        image_extractor = ImageExtractor(self.config.get("image", {}))
-        for ext in ["png", "jpg", "jpeg", "tiff", "bmp"]:
-            self.processor_registry.register_processor(ext, image_extractor.extract)
         
         # Add validators
         self.processor_registry.register_validator("pdf", self._validate_pdf)
@@ -112,7 +146,7 @@ class DocumentProcessingPipeline:
         self._register_office_processors()
         self._register_image_processors()
         self._register_text_processors()
-    
+
     def _register_office_processors(self):
         """Register processors for Office documents."""
         try:
@@ -124,9 +158,11 @@ class DocumentProcessingPipeline:
                 self.processor_registry.register_processor(ext, office_extractor.extract)
                 self.processor_registry.register_validator(ext, self._validate_office)
                 
-        except ImportError:
-            self.logger.warning("Office extractor not available - install python-docx, python-pptx, openpyxl")
-    
+            self.logger.info("Registered Office document processors")
+        except Exception as e:
+            self.logger.warning(f"Failed to register Office processors: {e}")
+            self.logger.warning("Install requirements: pip install python-docx python-pptx openpyxl")
+
     def _register_image_processors(self):
         """Register processors for image files."""
         try:
@@ -137,24 +173,29 @@ class DocumentProcessingPipeline:
                 self.processor_registry.register_processor(ext, image_extractor.extract)
                 self.processor_registry.register_validator(ext, self._validate_image)
                 
-        except ImportError:
-            self.logger.warning("Image extractor not available - install Pillow")
-    
+            self.logger.info("Registered image processors")
+        except Exception as e:
+            self.logger.warning(f"Failed to register image processors: {e}")
+            self.logger.warning("Install requirements: pip install Pillow pytesseract")
     def _register_text_processors(self):
         """Register processors for text files."""
-        from src.pipeline.extractors.text_extractor import TextExtractor
-        text_extractor = TextExtractor(self.config.get("text", {}))
-        
-        for ext in ["txt", "md", "csv", "json", "xml", "html"]:
-            self.processor_registry.register_processor(ext, text_extractor.extract)
-            self.processor_registry.register_validator(ext, self._validate_text)
+        try:
+            from .extractors.text_extractor import TextExtractor
+            text_extractor = TextExtractor(self.config.get("text", {}))
+            
+            for ext in ["txt", "md", "csv", "json", "xml", "html"]:
+                self.processor_registry.register_processor(ext, text_extractor.extract)
+                
+            self.logger.info("✅ Text processors registered")
+            
+        except ImportError as e:
+            self.logger.warning(f"⚠️ Text extractor not available: {e}")
+        except Exception as e:
+            self.logger.error(f"❌ Error registering text processors: {e}")
     
-    def register_custom_processor(self, file_extension: str, processor: Callable, validator: Optional[Callable] = None):
+    def register_custom_processor(self, file_extension: str, processor: Callable):
         """Register a custom processor for specific file types."""
         self.processor_registry.register_processor(file_extension, processor)
-        if validator:
-            self.processor_registry.register_validator(file_extension, validator)
-        
         self.logger.info(f"Registered custom processor for {file_extension} files")
     
     def process_file(self, file_path: str, metadata: Optional[Dict[str, Any]] = None) -> ProcessingResult:
@@ -179,15 +220,7 @@ class DocumentProcessingPipeline:
             if not processor:
                 return ProcessingResult(
                     success=False,
-                    error=f"Unsupported file type: {file_extension}"
-                )
-            
-            # Validate file
-            validator = self.processor_registry.get_validator(file_extension)
-            if validator and not validator(file_path):
-                return ProcessingResult(
-                    success=False,
-                    error=f"File validation failed: {file_path}"
+                    error=f"Unsupported file type: {file_extension}. Supported: {self.processor_registry.supported_types()}"
                 )
             
             # Check file size limits
@@ -197,6 +230,8 @@ class DocumentProcessingPipeline:
                     success=False,
                     error=f"File too large: {file_size} bytes (max: {max_file_size})"
                 )
+            
+            self.logger.debug(f"Processing {file_extension} file: {os.path.basename(file_path)}")
             
             # Process the document
             document = processor(file_path)
@@ -238,7 +273,8 @@ class DocumentProcessingPipeline:
             
         except Exception as e:
             processing_time = (datetime.now() - start_time).total_seconds()
-            self._update_stats(file_extension, processing_time, success=False)
+            self._update_stats(file_extension if 'file_extension' in locals() else "unknown", 
+                             processing_time, success=False)
             
             self.logger.error(f"Error processing {file_path}: {str(e)}")
             return ProcessingResult(
@@ -271,6 +307,7 @@ class DocumentProcessingPipeline:
                         files_to_process.append(file_path)
         
         self.logger.info(f"Found {len(files_to_process)} files to process")
+        self.logger.info(f"Supported types: {supported_extensions}")
         
         # Process files in parallel
         with ThreadPoolExecutor(max_workers=max_workers) as executor:
@@ -286,36 +323,12 @@ class DocumentProcessingPipeline:
                     results.append(result)
                     
                     if result.success:
-                        self.logger.info(f"Successfully processed: {file_path}")
+                        self.logger.info(f"✅ Successfully processed: {os.path.basename(file_path)}")
                     else:
-                        self.logger.error(f"Failed to process {file_path}: {result.error}")
+                        self.logger.error(f"❌ Failed to process {os.path.basename(file_path)}: {result.error}")
                         
                 except Exception as e:
-                    self.logger.error(f"Exception processing {file_path}: {str(e)}")
-                    results.append(ProcessingResult(
-                        success=False,
-                        error=str(e)
-                    ))
-        
-        return results
-    
-    def process_batch(self, file_paths: List[str], max_workers: int = 4) -> List[ProcessingResult]:
-        """Process a batch of files."""
-        results = []
-        
-        with ThreadPoolExecutor(max_workers=max_workers) as executor:
-            future_to_file = {
-                executor.submit(self.process_file, file_path): file_path 
-                for file_path in file_paths
-            }
-            
-            for future in as_completed(future_to_file):
-                file_path = future_to_file[future]
-                try:
-                    result = future.result()
-                    results.append(result)
-                except Exception as e:
-                    self.logger.error(f"Exception processing {file_path}: {str(e)}")
+                    self.logger.error(f"❌ Exception processing {file_path}: {str(e)}")
                     results.append(ProcessingResult(
                         success=False,
                         error=str(e)
@@ -361,56 +374,3 @@ class DocumentProcessingPipeline:
             "by_file_type": self.stats["by_type"],
             "supported_types": self.processor_registry.supported_types()
         }
-    
-    def reset_statistics(self):
-        """Reset processing statistics."""
-        self.stats = {
-            "processed": 0,
-            "failed": 0,
-            "total_time": 0.0,
-            "by_type": {}
-        }
-    
-    # Validation methods
-    def _validate_pdf(self, file_path: str) -> bool:
-        """Validate PDF file."""
-        try:
-            import fitz
-            doc = fitz.open(file_path)
-            doc.close()
-            return True
-        except:
-            return False
-    
-    def _validate_office(self, file_path: str) -> bool:
-        """Validate Office document."""
-        try:
-            # Basic file existence and extension check
-            return os.path.exists(file_path) and os.path.getsize(file_path) > 0
-        except:
-            return False
-    
-    def _validate_image(self, file_path: str) -> bool:
-        """Validate image file."""
-        try:
-            from PIL import Image
-            with Image.open(file_path) as img:
-                img.verify()
-            return True
-        except:
-            return False
-    
-    def _validate_text(self, file_path: str) -> bool:
-        """Validate text file."""
-        try:
-            with open(file_path, 'r', encoding='utf-8') as f:
-                f.read(1024)  # Read first 1KB to check if it's readable
-            return True
-        except:
-            try:
-                # Try with different encoding
-                with open(file_path, 'r', encoding='latin-1') as f:
-                    f.read(1024)
-                return True
-            except:
-                return False

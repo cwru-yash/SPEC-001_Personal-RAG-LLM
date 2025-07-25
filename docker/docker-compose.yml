@@ -223,16 +223,33 @@ services:
       retries: 5
       start_period: 20s
 
+  # neo4j:
+  #   image: neo4j:5.13.0
+  #   environment:
+  #     - NEO4J_AUTH=neo4j/password
+  #     - NEO4J_PLUGINS=["apoc"]
+  #   volumes:
+  #     - neo4j_data:/data
+  #   ports:
+  #     - "7474:7474"  # HTTP
+  #     - "7687:7687"  # Bolt
+
   neo4j:
-    image: neo4j:5.13.0
+    # image: neo4j:5.13.0
+    image: neo4j:5.13.0-community
     environment:
       - NEO4J_AUTH=neo4j/password
-      - NEO4J_PLUGINS=["apoc"]
+      - NEO4J_apoc_export_file_enabled=true
+      - NEO4J_apoc_import_file_enabled=true
+      - NEO4J_dbms_memory_heap_initial__size=512m
+      - NEO4J_dbms_memory_heap_max__size=1G
+      - NEO4J_dbms_memory_pagecache_size=512m
+      - NEO4J_ACCEPT_LICENSE_AGREEMENT=yes
     volumes:
       - neo4j_data:/data
     ports:
-      - "7474:7474"  # HTTP
-      - "7687:7687"  # Bolt
+      - "7474:7474"
+      - "7687:7687"
     healthcheck:
       test: ["CMD", "wget", "-O", "/dev/null", "-q", "http://localhost:7474"]
       interval: 30s

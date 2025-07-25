@@ -1,0 +1,23 @@
+{
+  "document_id": "71ca54dd",
+  "zip_file": "kjxw0257.zip",
+  "category": "Documents",
+  "content_file": {
+    "file_name": "kjxw0257.pdf",
+    "file_path": "Documents/kjxw0257.zip/kjxw0257.pdf",
+    "extracted_text": "=== Page 1 ===\nSource:  https://www.industrydocuments.ucsf.edu/docs/kjxw0257\n",
+    "extraction_method": "pymupdf+ocr",
+    "errors": [],
+    "success": true
+  },
+  "metadata_file": {
+    "file_name": "kjxw0257-info.pdf",
+    "file_path": "Documents/kjxw0257.zip/kjxw0257-info.pdf",
+    "extracted_text": "=== Page 1 ===\nnull - kjxw0257 - Downloaded 31/03/2025 11:15:26 AM\nDocument Information\nTitle: Purdue Engagements Descriptions for Engagements Without SOWs.pdf\nURL: https://www.industrydocuments.ucsf.edu/docs/kjxw0257\nAuthor: Matos, Julie G.\nDocument Date: 2020 August 27\nType: Document\nGenre: Adobe Portable Document Format;Edoc\nPages: 1\nID: kjxw0257\nCollection: McKinsey Documents\nDrug: Oxycodone\nAvailability: public; no restrictions\nBates Number: MCK-MAAG-1392564\nDate Added UCSF: 2022 June 06\nCite This Document\nAuthor. Title. Date. Year. Collection. Source. https://www.industrydocuments.ucsf.edu/docs/[ID]\nMatos, Julie G.. Purdue Engagements Descriptions for Engagements Without SOWs.pdf. 2020 \nAugust 27. McKinsey Documents. Unknown. https://www.industrydocuments.ucsf.edu/docs/\nkjxw0257\n",
+    "extraction_method": "pymupdf+ocr",
+    "errors": [],
+    "success": true
+  },
+  "processed_at": "2025-06-12T12:01:02.140902",
+  "overall_success": true
+}

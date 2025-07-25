@@ -1,0 +1,63 @@
+Document: Emails/lkdw0256.zip/lkdw0256.pdf
+Category: Emails
+Processed: 2025-06-12T11:51:11.300435
+Method: pymupdf+enhanced_ocr
+Text Length: 639 chars
+==================================================
+
+=== Page 1 ===
+Source:  https://www.industrydocuments.ucsf.edu/docs/lkdw0256
+
+=== Page 1 Image 1 (OCR) ===
+Contact
+
+Full Name:
+
+James O'Brien;"O'Brien, James";"O'Brien, James" <James.O'Brien@pharma.com>
+
+Last Name:
+
+O'Brien
+
+First Name:
+
+James
+
+Business
+
+Address:
+
+Home Address:
+
+E-mail:
+
+James.O'Brien@pharma.com
+
+MCK-MAAG-2713652
+
+=== Page 1 (Full Page OCR) ===
+Contact
+
+Full Name
+
+James O'Brien,"O'Brien, James”,“O'Brien, James” <James.O'Brien@pharma.com>
+
+Last Name:
+
+O'Brien
+
+First Name:
+
+James
+
+Business
+
+Address
+
+Home Address
+
+E-mail:
+
+James.O'Brien@pharma.com
+
+https://www. industrydocuments.ucsf.edu/docs/Ikdw0256 MCK-MAAG-2713652

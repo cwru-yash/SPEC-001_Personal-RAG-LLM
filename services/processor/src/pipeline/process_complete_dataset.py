@@ -283,7 +283,7 @@ def create_enhanced_config():
                     "max_preview_rows": 100,
                     "auto_detect_delimiter": True
                 }
-            },
+            },     
             
             # Chunking strategy
             "chunker": {
@@ -314,7 +314,45 @@ def create_enhanced_config():
                 "password": "password",
                 "database": "neo4j"  # Use default database
             }
+        },
+        # Add VLM configuration
+        "vlm": {
+            "enabled": True,  # Set to False to disable VLM
+            "primary_model": "llava",
+            "llava": {
+                "model": "llava:7b",
+                "api_endpoint": "http://localhost:11434",  # Change to "http://ollama:11434" for Docker
+                "timeout": 60,
+                "max_retries": 2
+            },
+            "strategy": "vlm_first",
+            "fallback": {
+                "enabled": True,
+                "timeout_threshold": 30,
+                "confidence_threshold": 0.5
+            },
+            "prompts": {
+                "universal": """Analyze this document page and provide structured information.
+                
+                Identify:
+                1. Content type: email, presentation, report, chart, table, academic_paper, mixed, or other
+                2. Layout and structure description
+                3. All text content (preserve formatting)
+                4. Visual elements like tables, charts, diagrams
+                5. Your confidence level (0.0 to 1.0)
+                
+                Respond in JSON format:
+                {
+                  "content_type": "string",
+                  "confidence": 0.0,
+                  "layout": "description",
+                  "text_content": "all text",
+                  "visual_elements": [{"type": "table", "description": "..."}],
+                  "metadata": {}
+                }"""
+            }
         }
+        
     }
     
     return config

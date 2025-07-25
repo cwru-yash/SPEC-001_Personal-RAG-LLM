@@ -1,0 +1,12 @@
+Document: Documents/frdx0256.zip/frdx0256.pdf
+Category: Documents
+Processed: 2025-06-12T11:26:54.524894
+Method: pymupdf+ocr
+==================================================
+
+=== Page 1 ===
+Source:  https://www.industrydocuments.ucsf.edu/docs/frdx0256
+
+
+=== Page 2 ===
+Source:  https://www.industrydocuments.ucsf.edu/docs/frdx0256

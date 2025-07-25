@@ -1,0 +1,36 @@
+# Development-friendly VLM configuration
+vlm:
+  enabled: true
+  primary_model: "llava"
+  
+  llava:
+    model: "llava:7b"
+    api_endpoint: "http://localhost:11434"
+    timeout: 300  # 5 minutes - generous for CPU
+    max_retries: 1  # Single retry to save time during development
+    
+  strategy: "vlm_first"
+  
+  fallback:
+    enabled: true
+    timeout_threshold: 240  # 4 minutes before fallback
+    confidence_threshold: 0.3  # Lower threshold for testing
+    
+  # Development optimizations
+  development:
+    max_pages_per_document: 2  # Limit pages during testing
+    enable_progress_logging: true
+    
+  prompts:
+    universal: |
+      Analyze this document page concisely.
+      
+      Return JSON:
+      {
+        "content_type": "email|presentation|report|chart|table|mixed",
+        "confidence": 0.8,
+        "text_content": "key text here",
+        "visual_elements": []
+      }
+      
+      Keep response brief for faster processing.

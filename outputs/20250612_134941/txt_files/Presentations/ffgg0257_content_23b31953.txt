@@ -1,0 +1,2682 @@
+STATUS: SUCCESS
+Document: Presentations/ffgg0257.zip/ffgg0257.pdf
+Category: Presentations
+Processed: 2025-06-12T13:49:41.448257
+Method: pymupdf+ocr
+==================================================
+
+=== Page 1 ===
+PROPRIETARY AND 
+CONFIDENTIAL
+PROPRIETARY AND 
+CONFIDENTIAL
+High level assessment of potential strategic options for Oxycontin
+1 Only include Commercial and Part D accounts
+2 Assuming decline of branded Oxycodone ER at -1% YoY, and Xtampza losing 60-70%% of the market share due to exclusion
+2 Assuming decline of branded Oxycodone ER at -1% YoY, and Xtampza share grow by 10-40% YoY
+3 Assuming  Oxycontin share drops by 65%  in 2020  and by 30% YoY in 2021 and 2022 due to exclusion, and Xtampza captures 75% of the share drop from Oxycontin
+Key assumptions, 2022
+3 year financial projection of net sales1 (after rebates and other GtN 
+reductions)
+Maintaining current access status could offer highest cumulative net 
+sales in the longer term 
+13
+%2 
+2%4
+10
+%3
+Oxycontin 
+Share
+Oxycontin 
+rebate
+Commercial: 
+50%
+Medicare: 
+70%
+0%
+Commercial: 
+45%
+Medicare: 
+69%
+(assuming 
+2% increase 
+YoY)
+Oxycontin net sales1 ($M) 
+Xtampza net sales1 ($M)
+273
+227
+202
+702
+Secure 
+exclusive 
+position 
+across all 
+contracted 
+accounts 
+Maintain 
+current 
+access 
+status with 
+increasing 
+rebates
+Pull away 
+rebates 
+from all 
+accounts
+xx
+3 year 
+total
+297
+240
+206
+270
+179
+128
+2020
+21
+2022
+743
+577
+146
+199
+348
+44
+55
+47
+66
+65
+69
+120
+115
+113
+21
+2020
+2022
+Source:  https://www.industrydocuments.ucsf.edu/docs/ffgg0257
+
+
+=== Page 2 ===
+PROPRIETARY AND 
+CONFIDENTIAL
+PROPRIETARY AND 
+CONFIDENTIAL
+• OxyContin and Hysingla ER maintain strong access on Envision’s formularies, with OxyContin maintaining preferred status on 66% of 
+lives 
+• Collegium’s products are nearly completely excluded on all Envision formularies
+1 Defined as percentage of lives that are either preferred or covered (including PA/ST)
+Current access status: OxyContin is preferred for 66% of lives on Envision Part D formularies
+2
+SOURCE: MMIT
+25
+466
+203
+27
+51
+Not 
+Covered
+Preferre
+d
+Covered 
+(PA/ST)
+Not 
+Covered
+Not 
+Covered
+Not 
+Covered
+Covered 
+(PA/ST)
+Preferre
+d
+Not 
+Covered
+Not 
+Covered
+Not 
+Covered
+Not 
+Covered
+Privileged: This presentation contains draft proposals for discussion by Management and are subject to appropriate Purdue legal 
+and regulatory review before they can be considered final. These materials are confidential and proprietary.
+MCS Classicare II
+HealthSun MediMax 
+Preferre
+d
+Not 
+Covered
+Preferre
+d
+Not 
+Covered
+EnvisionRxPlus PDP
+Covered
+Not 
+Covered
+Not 
+Covered
+Covered 
+(PA/ST)
+74%
+1%
+92%
+0%
+65%
+EnvisionRxPlus Hybrid PDP
+HealthTeam Advantage Plan
+Covered 
+(PA/ST)
+Not 
+Covered
+Not 
+Covered
+Not 
+Covered
+Not 
+Covered
+Lives, K
+Overall formulary 
+status
+Lives, 
+%
+Hysingl
+a ER
+Xtampz
+a ER
+OxyCo
+ntin
+Nucynt
+a ER
+Zohydr
+o ER
+Largest formulary
+Purdue 
+preferred, 
+Zohydro covered
+Only Oxycontin 
+covered
+Purdue portfolio 
+exclusive 
+coverage 
+Only branded 
+hydrocodone 
+coverage
+Only Hysingla ER 
+covered
+Overall covered 
+lives %1
+59
+%
+26
+%
+7%
+3%
+3%
+Oxycontin Covered
+Not covered
+Coverage status of leading ERO brands, 
+Nov 2018
+ENVISION
+789
+Total
+Source:  https://www.industrydocuments.ucsf.edu/docs/ffgg0257
+
+
+=== Page 3 ===
+PROPRIETARY AND 
+CONFIDENTIAL
+PROPRIETARY AND 
+CONFIDENTIAL
+We defined potential 2020 access scenarios for Oxycontin vs. Xtampza
+2020 Share shift assumptions under different scenarios, 2020 Q4 
+2020 access 
+scenarios
+Continue current 
+access status as  
+exclusive preferred 
+oxycodone ER
+1
+Both Oxycontin and 
+Xtampza preferred 
+2
+Xtampza preferred, 
+Oxycontin non-
+preferred
+3
+Xtampza replaces 
+Oxycontin as 
+exclusive preferred 
+with 
+grandfathering
+4
+Oxycontin Excluded 
+without 
+grandfathering
+5
+5
+1
+22
+6
+15
+8
+7
+8
+3
+12
+9
+5
+4
+11
+22
+8
+9
+22
+6
+8
+6
+9
+8
+9
+7
+6
+9
+3
+10
+22
+22
+22
+22
+22
+22
+7
+Oxycontin
+Xtampza
+Other brands
+Share by products (exit share) 
+Share shift vs. 
+status quo 
+Low
+Hig
+h
+Low
+Hig
+h
+Low
+Hig
+h
+Low
+Hig
+h
+20%
+40%
+30%
+68%
+50%
+70%
+60%
+80%
+0%
+PRIME
+Source:  https://www.industrydocuments.ucsf.edu/docs/ffgg0257
+
+
+=== Page 4 ===
+PROPRIETARY AND 
+CONFIDENTIAL
+PROPRIETARY AND 
+CONFIDENTIAL
+We modeled out the economics for Xtampza, Payor and Oxycontin in different access scenarios
+1 Minimum rebate rate required for plan sponsor to favor contracting with Oxycontin vs. exclusive deal with Xtampza, based on plan sponsor net cost analysis; “low share shift”
+2  Maximum rebate rate that Oxycontin could pay so that net sales is higher or equal to the net sales in the “walk-away” scenario where Oxycontin is excluded without grandfathering  
+10.8
+11.0
+11.5
+13.2
+7.2
+6.2
+11.2
+7.9
+10.2
+6.6
+2020 access 
+scenarios
+Both 
+Oxycontin and 
+Xtampza 
+preferred 
+Xtampza 
+preferred, 
+Oxycontin 
+non-preferred
+Continue 
+current access 
+status as  
+exclusive 
+preferred
+oxycodone ER
+Xtampza 
+replacing 
+Oxycontin as 
+exclusive 
+preferred with 
+grandfathering
+Oxycontin 
+Excluded 
+without 
+grandfatherin
+g
+Xtampza net 
+sales ($M)
+1
+2
+3
+4
+0%
+40%
+50%
+70%
+70%
+Assumed 
+Xtampza 
+rebate
+Implication on Oxycontin bidding strategy
+s to maintain current access status assuming no increase, or reasonable increase in rebate rate – payor would be better off maintaining current access vs. 
+2.1
+3.2
+0.8
+2.9
+1.6
+1.1
+1.8
+1.6
+Share by 
+product, 2020 
+Q4
+Other brand 
+net sales ($M)
+5
+3
+22
+9
+8
+7
+12
+22
+6
+4
+5
+9
+6
+8
+11
+9
+7
+6
+8
+22
+8
+5
+9
+8
+9
+7
+10
+3
+22
+22
+22
+22
+22
+8.0
+7.3
+7.7
+8.8
+8.4
+8.8
+9.2
+9.6
+Oxycontin
+Other brands
+Xtampza
+PRIME
+0.7
+22
+6
+1
+15
+6.5
+Low
+High
+Low
+High
+Low
+High
+Low
+High
+Low
+High
+Shar
+e 
+shift
+Break-
+even 
+rebate2 
+37%
+48%
+32%
+37%
+N/A
+30%
+44%
+60%
+45%
+Net sales at min 
+rebate ($M)
+42%
+Rebate rate to keep 
+Prime whole1 
+30%
+44%
+27%
+40%
+N/A
+24%
+36%
+32%
+Theoretic
+al – 
+unlikely 
+able to 
+lower 
+current 
+rate 
+(40%)
+Source:  https://www.industrydocuments.ucsf.edu/docs/ffgg0257
+
+
+=== Page 5 ===
+PROPRIETARY AND 
+CONFIDENTIAL
+PROPRIETARY AND 
+CONFIDENTIAL
+Long term view: 2020-2022 financial impact under different access scenarios
+1 Minimum rebate rate required for plan sponsor to favor contracting with Oxycontin vs. exclusive deal with Xtampza, based on plan sponsor net cost analysis; “low share shift”
+2  Maximum rebate rate that Oxycontin could pay so that net sales is higher or equal to the net sales in the “walk-away” scenario where Oxycontin is excluded without grandfathering  
+20.3
+17.3
+10.2
+14.5
+16.0
+19.4
+12.5
+19.2
+Access scenarios
+Both Oxycontin 
+and Xtampza 
+preferred 
+Xtampza 
+preferred, 
+Oxycontin non-
+preferred
+Continue current 
+access status as  
+exclusive preferred
+oxycodone ER
+Xtampza replacing 
+Oxycontin as 
+exclusive preferred 
+with grandfathering
+60%
+50%
+43%
+5%
+0%
+Oxycontin 
+Excluded without 
+grandfathering
+2020
+1
+2
+3
+4
+Assumed 
+Oxycontin 
+rebate, 2022
+3 year total ($M)
+Share 
+shift
+Maintaining  current access status could maximize net sales in the longer term as well, assuming reasonable increase in rebate rate
+6.6
+10.6
+9.6
+8.7
+10.2
+7.5
+10.6
+11.1
+Share by 
+product, 2022 
+Q4
+2021
+5
+20
+3
+5
+20
+4
+8
+20
+9
+7
+10
+7
+8
+8
+5
+9
+7
+9
+9
+9
+2
+9
+20
+10
+20
+1
+20
+9
+1
+9
+1
+20
+20
+3.4
+6.0
+2.6
+5.6
+6.4
+4.8
+3.4
+5.1
+Oxycontin
+Other brands
+Xtampza
+PRIME
+10.8
+0 6
+13
+20
+7.3
+Low
+High
+Low
+High
+Low
+High
+Low
+High
+Low
+High
+Oxycontin net sales ($M)
+2022
+4.3
+2.8
+3.3
+1.5
+2.5
+1.6
+2.4
+1.0
+2.0
+22.4
+Source:  https://www.industrydocuments.ucsf.edu/docs/ffgg0257
+
+
+=== Page 6 ===
+PROPRIETARY AND 
+CONFIDENTIAL
+PROPRIETARY AND 
+CONFIDENTIAL
+BACKUP
+Source:  https://www.industrydocuments.ucsf.edu/docs/ffgg0257
+
+
+=== Page 7 ===
+PROPRIETARY AND 
+CONFIDENTIAL
+PROPRIETARY AND 
+CONFIDENTIAL
+Assessment of current performance of Collegium
+Collegium strategy going forward: key ingoing assumptions
+• 2 product portfolio exclusively in pain management therapeutic area, with 
+R&D pipeline all early life (Ph II or earlier) and concentrated in pain 
+management1
+• Facing “finite” market for its current portfolio, driven by:
+– Overall U.S. ERO market continuing to decline (-15% YoY decline2 until 
+2020)
+– Likely genericization of extended-release oxycodone with abuse-deterrent 
+formulations, leading to a market shift away from branded opioids
+• Product portfolio is facing challenges
+– Xtampza ER (oxycodone): $50.9M sales in Q1-Q3 20182
+• Competing with an established market leader in a highly genericized class
+– Nucynta (tapentadol): $156M sales in Q1-Q3 20182
+• Slow launch since acquisition and experiencing share loss (-4% TRx from 
+Q2-Q3 ’18)
+• Collegium responsible for minimum $135M/yr royalty payment for first 4 
+years of licensing regardless of product performance
+• Collegium continues to invest in salesforce reps (~150) calling on specialists 
+(~10,700) for both products
+• Overall, Collegium is unprofitable ($31M loss from operations Q1-Q3 2018)
+– ($0.50) EPS for Q3 ’18, missing Thomson Reuters’ consensus estimate of 
+($0 36)
+1 Collegium has one preclinical ADHD molecule
+2 Based on Purdue internal projection
+3 Based on Collegium 2018 Q3 10-Q 
+• Given finite market 
+outlook and Collegium’s 
+need to quickly return to 
+profitability, there are 2 
+potential strategic 
+choices:
+– Reduce cost by 
+downsizing salesforces, 
+which could potentially 
+lower expected sales 
+growth
+– Augment volume with 
+aggressive bidding 
+SOURCE: SEC filings, Internal research
+Source:  https://www.industrydocuments.ucsf.edu/docs/ffgg0257
+
+
+=== Page 8 ===
+PROPRIETARY AND 
+CONFIDENTIAL
+PROPRIETARY AND 
+CONFIDENTIAL
+Current view of Collegium profitability
+452
+217
+174
+172
+63
+70
+182
+80
+-32
+Gross sales
+Loss 
+from 
+operati
+ons
+Rebates
+Other 
+GTN 
+reductio
+ns
+Net sales
+9
+COGS
+R&D
+SG&A
+24
+252
+626
+88
+287
+128
+32
+Xtampza
+Nucynta
+Overall 
+Revenue and GTN 
+reductions
+Costs and operating 
+expenses
+2018 financial performance (estimation) 
+($ Millions)
+• Cash at the end of 
+Q3 2018:  ~$140 
+Mn
+Source:  https://www.industrydocuments.ucsf.edu/docs/ffgg0257
+
+
+=== Page 9 ===
+PROPRIETARY AND 
+CONFIDENTIAL
+PROPRIETARY AND 
+CONFIDENTIAL
+Collegium would need to double current share of Xtampza in order to break even
+9
+Potential impact of doubling Xtampza share through exclusive contracts with additional payors
+14
+Current loss 
+from 
+operations
+2020 
+operating 
+income
+Loss due to 
+market 
+decline
+Growth from 
+existing 
+account
+Growth 
+from new 
+account
+COGS increase
+0
+32
+19
+15
+50
+Key 
+assumptions:
+• ERO market 
+continues to 
+decline at -15% 
+year on year 
+until 2020
+• GtN of sales with 
+new account: 
+60%
+• Nucynta sales 
+remains the 
+same
+• SG&A remains 
+the same
+Projected 2020 Xtampza  financial performance 
+($ Millions)
+DIRECTIONAL ESTIMATION
+Source:  https://www.industrydocuments.ucsf.edu/docs/ffgg0257
+
+
+=== Page 10 ===
+PROPRIETARY AND 
+CONFIDENTIAL
+PROPRIETARY AND 
+CONFIDENTIAL
+Overview of top accounts across Commercial and Medicare: current view
+10
+Net sales1
+$M
+Market 
+segment
+Commer-
+cial
+11%
+7%
+6%
+2%
+2%
+1%
+1%
+1%
+1%
+1%
+11%
+5%
+2%
+1%
+1%
+0%
+54%
+21%
+17%
+13%
+21%
+23%
+20%
+4%
+9%
+3%
+5%
+26%
+14%
+14%
+15%
+17%
+14%
+42%
+35%
+38%
+21%
+28%
+29%
+0%
+20%
+0%
+0%
+56%
+66%
+38%
+40%
+37%
+28%
+112
+992
+193
+21
+102
+26
+21
+7
+12
+11
+6
+258
+155
+26
+20
+8
+5
+10
+73
+17
+18
+113
+63
+15
+9
+6
+6
+113
+13
+17
+53
+5
+4
+545
+2019 contracting
+Medicare 
+Part D
+Current status (FYE June 2018)
+1 Only account for discretionary rebates to payors, but not other GtN reductions; 2  Includes Admin fee and price protection when applicable; 
+3 Assuming status carries over from 201807 period for those accounts with OxyContin formulary access, status based on majority of lives; 4 Prime Therapeutics - excl HCSC: include BCBS NC, MN, KS Horizon BCBSNJ and other 
+prime accounts 
+Account
+Express Scripts
+Caremark
+OptumRx  - United Healthcare
+Aetna Health Plans
+Prime Therapeutics - excl HCSC4
+Prime Therapeutics - HCSC
+Cigna Healthcare
+Procare
+BCBS FL (Prime Therapeutics)
+Independence BCBS (PA)
+Caremark
+OptumRx  - United Healthcare
+Express Scripts
+Prime Therapeutics
+EnvisionRx Options
+Total
+Gross sales
+$M 
+Market 
+Share
+% 
+Net sales 
+OxyContin
+2T Preferred
+NOF
+NOF
+2T Preferred
+NOF
+3T Preferred
+3T Pref PDP/MAPD NOF
+Pref MAPD/PDP NOF
+2T Preferred
+2T Preferred
+2T Preferred 
+2T Preferred
+2T Preferred
+2T Preferred
+NOF
+MedImpact
+2T Preferred
+Rebate2
+Xtampza ER3
+Non-preferred
+Preferred
+Preferred
+Non-preferred
+Preferred
+NOF
+Preferred
+NOF
+NOF
+NOF
+Non-preferred
+Non-preferred
+Preferred
+Non-preferred
+Preferred
+Preferred
+2019 formulary status
+Collegium is 
+likely to 
+double 
+down on big 
+national 
+accounts in 
+order to 
+achieve 
+break-even
+Source:  https://www.industrydocuments.ucsf.edu/docs/ffgg0257
+
+
+=== Page 11 ===
+PROPRIETARY AND 
+CONFIDENTIAL
+PROPRIETARY AND 
+CONFIDENTIAL
+Current access status: OxyContin is preferred for 47% of lives on Prime’s Part D formularies
+11
+SOURCE: MMIT
+• OxyContin is the preferred oxycodone with access to nearly half of Prime lives while Xtampza ER is excluded
+• Zohydro ER is the preferred branded hydrocodone product (Hysingla ER is completely excluded), and Nucynta also maintains access 
+to half of Prime lives
+531
+94
+8
+26
+575
+25552
+Privileged: This presentation contains draft proposals for discussion by Management and are subject to appropriate Purdue legal 
+and regulatory review before they can be considered final. These materials are confidential and proprietary.
+1 Includes ~10K lives where no PA/ST required for OxyContin and Nucynta
+2 Defined as percentage of lives that are either preferred or covered (including PA/ST)
+Lives, K
+Overall formulary 
+status
+Lives, 
+%
+Hysingl
+a ER
+Xtampz
+a ER
+OxyCo
+ntin
+Nucynt
+a ER
+Zohydr
+o ER
+1,235
+Overall covered 
+lives %2
+0%
+0%
+47%
+47%
+92%
+Largest formulary
+47
+%
+Collegium 
+excluded1 
+Not 
+Covered
+Not 
+Covered
+Preferre
+d 
+(PA/ST)
+Preferred 
+(PA/ST)
+Covered 
+(PA/ST)
+BCBS FL BlueMedicare Classic 
+and Choice 
+43%
+Only Zohydro - 
+covered
+Not 
+Covered
+Not 
+Covered
+Not 
+Covered
+Not 
+Covered
+Covered 
+(PA/ST) 
+HISC Blue Medicare Rx (PDP) 
+Plus and Value 
+8%
+No branded ERO 
+coverage
+Not 
+Covered
+Not 
+Covered
+Not 
+Covered
+Not 
+Covered
+Not 
+Covered
+Regence BCBS of Oregon 
+MedAdvantage + RxClassic PPO 
++ RxEnhanced PPO 
+2%
+Only Zohydro - 
+preferred
+Not 
+Covered
+Not 
+Covered
+Not 
+Covered
+Not 
+Covered
+Preferred 
+(PA/ST)
+Blue Cross Community MMAI 
+1
+%
+OxyContin and 
+Zohydro 
+preferred
+Not 
+Covered
+Not 
+Covered
+Preferre
+d 
+(PA/ST)
+Not 
+Covered
+Preferred 
+(PA/ST)
+Blue Cross Blue Shield of 
+Minnesota SecureBlue 
+Coverage status of leading ERO brands, 
+Nov 2018
+PRIME
+Total
+Oxycontin Covered
+Not covered
+Source:  https://www.industrydocuments.ucsf.edu/docs/ffgg0257
+
+
+=== Page 12 ===
+PROPRIETARY AND 
+CONFIDENTIAL
+PROPRIETARY AND 
+CONFIDENTIAL
+We defined potential 2020 access scenarios for Oxycontin vs. Xtampza
+2020 Share shift assumptions under different scenarios, 2020 Q4 
+2020 access 
+scenarios
+Continue current 
+access status as 
+exclusive preferred 
+oxycodone ER
+1
+1
+1
+2
+3
+15
+18
+7
+14
+4
+4
+10
+4
+4
+10
+6
+5
+5
+6
+7
+5
+8
+4
+18
+18
+18
+18
+18
+18
+Oxycontin
+Other brands
+Xtampza
+Share by products (exit share) 
+Share shift vs. 
+status quo 
+Xtampza covered 
+(non-preferred), 
+while OxyContin 
+stays preferred
+2
+Low
+Hig
+h
+5%
+35%
+Xtampza replaces 
+Oxycontin as 
+exclusive preferred 
+with 
+grandfathering
+3
+Low
+Hig
+h
+35%
+55%
+Oxycontin Excluded 
+without 
+grandfathering
+4
+Low
+Hig
+h
+50%
+70%
+0%
+ENVISION
+Source:  https://www.industrydocuments.ucsf.edu/docs/ffgg0257
+
+
+=== Page 13 ===
+PROPRIETARY AND 
+CONFIDENTIAL
+PROPRIETARY AND 
+CONFIDENTIAL
+We modeled out the economics for Xtampza, Payor and Oxycontin in different access scenarios
+1 Minimum rebate rate required for plan sponsor to favor contracting with Oxycontin vs. exclusive deal with Xtampza, based on plan sponsor net cost analysis; “low share shift”
+2  Maximum rebate rate that Oxycontin could pay so that net sales is higher or equal to the net sales in the “walk-away” scenario where Oxycontin is excluded without grandfathering 
+5.9
+6.8
+6.8
+6.2
+4.9
+5.8
+4.8
+4.4
+Access 
+scenarios tested
+Xtampza 
+covered (non-
+preferred), 
+while 
+OxyContin 
+stays 
+preferred
+Continue 
+current 
+access status 
+as exclusive 
+preferred 
+oxycodone ER
+Xtampza 
+replaces 
+Oxycontin as 
+exclusive 
+preferred with 
+grandfatherin
+gOxycontin 
+Excluded 
+without 
+grandfatherin
+g
+Xtampza net 
+sales ($M)
+1
+2
+3
+0%
+50%
+70%
+70%
+Assumed 
+Xtampza 
+rebate
+Implication on Oxycontin bidding strategy
+s to maintain current access status assuming no increase, or reasonable increase in rebate rate – payor would be better off maintaining current access vs. 
+0.5
+0.2
+0.7
+0.4
+0.5
+0.7
+Share by 
+product
+Other brand 
+net sales 
+($M)
+4
+5
+3
+4
+1
+14
+4
+4
+10
+4
+10
+5
+6
+7
+7
+5
+6
+8
+4
+18
+18
+18
+18
+18
+17
+2.1
+1.4
+1.9
+1.9
+2.2
+2.4
+Oxycontin
+Xtampza
+Other brands
+Sha
+re 
+shif
+t
+Low
+Hig
+h
+Low
+Hig
+h
+Low
+Hig
+h
+Low
+Hig
+h
+ENVISION
+15
+2
+1 18
+0.7
+0.8
+46%
+Break-
+even 
+rebate2 
+31%
+35%
+N/A
+13%
+33%
+Net sales at min 
+rebate ($M)
+Rebate rate to keep 
+Envision whole1 
+32%
+22%
+29%
+N/A
+8%
+10%
+24%
+Theoretic
+al – 
+unlikely 
+able to 
+lower 
+current 
+rate 
+(40%)
+16%
+Source:  https://www.industrydocuments.ucsf.edu/docs/ffgg0257
+
+
+=== Page 14 ===
+ 
+PROPRIETARY AND 
+CONFIDENTIAL
+PROPRIETARY AND 
+CONFIDENTIAL
+High level assessment of potential strategic options for Oxycontin
+1 Only include Commercial and Part D accounts
+2 Assuming decline of branded Oxycodone ER at -1% YoY, and Xtampza losing 60-70%% of the market share due to exclusion
+2 Assuming decline of branded Oxycodone ER at -1% YoY, and Xtampza share grow by 10-40% YoY
+3 Assuming  Oxycontin share drops by 65%  in 2020  and by 30% YoY in 2021 and 2022 due to exclusion, and Xtampza captures 75% of the share drop from Oxycontin
+Key assumptions, 2022
+3 year financial projection of net sales1 (after rebates and other GtN 
+reductions)
+Maintaining current access status could offer highest cumulative net 
+sales in the longer term 
+13
+%2 
+2%4
+10
+%3
+Oxycontin 
+Share
+Oxycontin 
+rebate
+Commercial: 
+50%
+Medicare: 
+70%
+0%
+Commercial: 
+45%
+Medicare: 
+69%
+(assuming 
+2% increase 
+YoY)
+Oxycontin net sales1 ($M) 
+Xtampza net sales1 ($M)
+273
+227
+202
+702
+Secure 
+exclusive 
+position 
+across all 
+contracted 
+accounts 
+Maintain 
+current 
+access 
+status with 
+increasing 
+rebates
+Pull away 
+rebates 
+from all 
+accounts
+xx
+3 year 
+total
+297
+240
+206
+270
+179
+128
+2020
+21
+2022
+743
+577
+14
+19
+34
+44
+55
+47
+66
+65
+69
+120
+115
+113
+21
+2020
+2022
+Source:  https://www.industrydocuments.ucsf.edu/docs/ffgg0257
+
+
+=== Page 15 ===
+ 
+PROPRIETARY AND 
+CONFIDENTIAL
+PROPRIETARY AND 
+CONFIDENTIAL
+• OxyContin and Hysingla ER maintain strong access on Envision’s formularies, with OxyContin maintaining preferred status on 66% o
+lives 
+• Collegium’s products are nearly completely excluded on all Envision formularies
+1 Defined as percentage of lives that are either preferred or covered (including PA/ST)
+Current access status: OxyContin is preferred for 66% of lives on Envision Part D formularies
+SOURCE: MMIT
+25
+466
+203
+27
+51
+Not 
+Covered
+Preferre
+d
+Covered 
+(PA/ST)
+Not 
+Covered
+Not 
+Covered
+Not 
+Covered
+Covered 
+(PA/ST)
+Preferre
+d
+Not 
+Covered
+Not 
+Covered
+Not 
+Covered
+Not 
+Covered
+Privileged: This presentation contains draft proposals for discussion by Management and are subject to appropriate Purdue legal 
+and regulatory review before they can be considered final. These materials are confidential and proprietary.
+MCS Classicare II
+HealthSun MediMax 
+Preferre
+d
+Not 
+Covered
+Preferre
+d
+Not 
+Covered
+EnvisionRxPlus PDP
+Covered
+Not 
+Covered
+Not 
+Covered
+Covered 
+(PA/ST)
+74%
+1%
+92%
+0%
+65%
+EnvisionRxPlus Hybrid PDP
+HealthTeam Advantage Plan
+Covered 
+(PA/ST)
+Not 
+Covered
+Not 
+Covered
+Not 
+Covered
+Not 
+Covered
+Lives, K
+Overall formulary 
+status
+Lives, 
+%
+Hysingl
+a ER
+Xtampz
+a ER
+OxyCo
+ntin
+Nucynt
+a ER
+Zohydr
+o ER
+Largest formulary
+Purdue 
+preferred, 
+Zohydro covered
+Only Oxycontin 
+covered
+Purdue portfolio 
+exclusive 
+coverage 
+Only branded 
+hydrocodone 
+coverage
+Only Hysingla ER 
+covered
+Overall covered 
+lives %1
+59
+%
+26
+%
+7%
+3%
+3%
+Oxycontin Covered
+Not cov
+Coverage status of leading ERO brands, 
+Nov 2018
+ENVISION
+789
+Total
+Source:  https://www.industrydocuments.ucsf.edu/docs/ffgg0257
+
+
+=== Page 16 ===
+ 
+PROPRIETARY AND 
+CONFIDENTIAL
+PROPRIETARY AND 
+CONFIDENTIAL
+We defined potential 2020 access scenarios for Oxycontin vs. Xtampza
+2020 Share shift assumptions under different scenarios, 2020 Q4 
+2020 access 
+scenarios
+Continue current 
+access status as  
+exclusive preferred 
+oxycodone ER
+1
+Both Oxycontin and 
+Xtampza preferred 
+2
+Xtampza preferred, 
+Oxycontin non-
+preferred
+3
+Xtampza replaces 
+Oxycontin as 
+exclusive preferred 
+with 
+grandfathering
+4
+Oxycontin Excluded 
+without 
+grandfathering
+5
+5
+1
+6
+15
+8
+7
+8
+3
+12
+9
+5
+4
+11
+8
+9
+6
+8
+6
+9
+8
+9
+7
+6
+9
+3
+10
+7
+Oxycontin
+Xtampza
+Other 
+Share by products (exit share) 
+Share shift vs. 
+status quo 
+Low
+Hig
+h
+Low
+Hig
+h
+Low
+Hig
+h
+Low
+Hig
+h
+20%
+40%
+30%
+68%
+50%
+70%
+60%
+80%
+0%
+PRIME
+Source:  https://www.industrydocuments.ucsf.edu/docs/ffgg0257
+
+
+=== Page 17 ===
+PROPRIETARY AND 
+CONFIDENTIAL
+PROPRIETARY AND 
+CONFIDENTIAL
+We modeled out the economics for Xtampza, Payor and Oxycontin in different access scenarios
+1 Minimum rebate rate required for plan sponsor to favor contracting with Oxycontin vs. exclusive deal with Xtampza, based on plan sponsor net cost analysis; “low share shift”
+2  Maximum rebate rate that Oxycontin could pay so that net sales is higher or equal to the net sales in the “walk-away” scenario where Oxycontin is excluded without grandfathering  
+10.8
+11.0
+11.5
+13.2
+7.2
+6.2
+11.2
+7.9
+10.2
+6.6
+2020 access 
+scenarios
+Both 
+Oxycontin and 
+Xtampza 
+preferred 
+Xtampza 
+preferred, 
+Oxycontin 
+non-preferred
+Continue 
+current access 
+status as  
+exclusive 
+preferred
+oxycodone ER
+Xtampza 
+replacing 
+Oxycontin as 
+exclusive 
+preferred with 
+grandfathering
+Oxycontin 
+Excluded 
+without 
+grandfatherin
+g
+Xtampza net 
+sales ($M)
+1
+2
+3
+4
+0%
+40%
+50%
+70%
+70%
+Assumed 
+Xtampza 
+rebate
+Implication on Oxycontin bidding strategy
+ to maintain current access status assuming no increase, or reasonable increase in rebate rate – payor would be better off maintaining current access vs. 
+2.1
+3.2
+0.8
+2.9
+1.6
+1.1
+1.8
+1.6
+Share by 
+product, 2020 
+Q4
+Other brand 
+net sales ($M)
+5
+3
+22
+9
+8
+7
+12
+22
+6
+4
+5
+9
+6
+8
+11
+9
+7
+6
+8
+22
+8
+5
+9
+8
+9
+7
+10
+3
+22
+22
+22
+22
+22
+8.0
+7.3
+7.7
+8.8
+8.4
+8.8
+9.2
+9.6
+Oxycontin
+Other brands
+Xtampza
+PRIME
+0.7
+22
+6
+1
+15
+6.5
+Low
+High
+Low
+High
+Low
+High
+Low
+High
+Low
+High
+Shar
+e 
+shift
+Break-
+even 
+rebate2 
+37%
+48%
+32%
+37%
+N/A
+30%
+44%
+60%
+45%
+Net sales at min 
+rebate ($M)
+42%
+Rebate rate to keep 
+Prime whole1 
+30%
+44%
+27%
+40%
+N/A
+24%
+36%
+32%
+Theoretic
+al – 
+unlikely 
+able to 
+lower 
+current 
+rate 
+(40%)
+4
+Source:  https://www.industrydocuments.ucsf.edu/docs/ffgg0257
+
+
+=== Page 18 ===
+PROPRIETARY AND 
+CONFIDENTIAL
+PROPRIETARY AND 
+CONFIDENTIAL
+Long term view: 2020-2022 financial impact under different access scenarios
+1 Minimum rebate rate required for plan sponsor to favor contracting with Oxycontin vs. exclusive deal with Xtampza, based on plan sponsor net cost analysis; “low share shift”
+2  Maximum rebate rate that Oxycontin could pay so that net sales is higher or equal to the net sales in the “walk-away” scenario where Oxycontin is excluded without grandfathering  
+20.3
+17.3
+10.2
+14.5
+16.0
+19.4
+12.5
+19.2
+Access scenarios
+Both Oxycontin 
+and Xtampza 
+preferred 
+Xtampza 
+preferred, 
+Oxycontin non-
+preferred
+Continue current 
+access status as  
+exclusive preferred
+oxycodone ER
+Xtampza replacing 
+Oxycontin as 
+exclusive preferred 
+with grandfathering
+60%
+50%
+43%
+5%
+0%
+Oxycontin 
+Excluded without 
+grandfathering
+2020
+1
+2
+3
+4
+Assumed 
+Oxycontin 
+rebate, 2022
+3 year total ($M)
+Share 
+shift
+Maintaining  current access status could maximize net sales in the longer term as well, assuming reasonable increase in rebate rate
+6.6
+10.6
+9.6
+8.7
+10.2
+7.5
+10.6
+11.1
+Share by 
+product, 2022 
+Q4
+2021
+5
+20
+3
+5
+20
+4
+8
+20
+9
+7
+10
+7
+8
+8
+5
+9
+7
+9
+9
+9
+2
+9
+20
+10
+20
+1
+20
+9
+1
+9
+1
+20
+20
+3.4
+6.0
+2.6
+5.6
+6.4
+4.8
+3.4
+5.1
+Oxycontin
+Other brands
+Xtampza
+PRIME
+10.8
+0 6
+13
+20
+7.3
+Low
+High
+Low
+High
+Low
+High
+Low
+High
+Low
+High
+Oxycontin net sales ($M)
+2022
+4.3
+2.8
+3.3
+1.5
+2.5
+1.6
+2.4
+1.0
+2.0
+22.4
+5
+Source:  https://www.industrydocuments.ucsf.edu/docs/ffgg0257
+
+
+=== Page 19 ===
+ 
+ 
+ 
+PROPRIETARY AND 
+CONFIDENTIAL
+PROPRIETARY AND 
+CONFIDENTIAL
+BACKUP
+Source:  https://www.industrydocuments.ucsf.edu/docs/ffgg0257
+
+
+=== Page 20 ===
+PROPRIETARY AND 
+CONFIDENTIAL
+PROPRIETARY AND 
+CONFIDENTIAL
+Assessment of current performance of Collegium
+Collegium strategy going forward: key ingoing assumptions
+• 2 product portfolio exclusively in pain management therapeutic area, with 
+R&D pipeline all early life (Ph II or earlier) and concentrated in pain 
+management1
+• Facing “finite” market for its current portfolio, driven by:
+– Overall U.S. ERO market continuing to decline (-15% YoY decline2 until 
+2020)
+– Likely genericization of extended-release oxycodone with abuse-deterrent 
+formulations, leading to a market shift away from branded opioids
+• Product portfolio is facing challenges
+– Xtampza ER (oxycodone): $50.9M sales in Q1-Q3 20182
+• Competing with an established market leader in a highly genericized class
+– Nucynta (tapentadol): $156M sales in Q1-Q3 20182
+• Slow launch since acquisition and experiencing share loss (-4% TRx from 
+Q2-Q3 ’18)
+• Collegium responsible for minimum $135M/yr royalty payment for first 4 
+years of licensing regardless of product performance
+• Collegium continues to invest in salesforce reps (~150) calling on specialists 
+(~10,700) for both products
+• Overall, Collegium is unprofitable ($31M loss from operations Q1-Q3 2018)
+– ($0.50) EPS for Q3 ’18, missing Thomson Reuters’ consensus estimate of 
+($0 36)
+1 Collegium has one preclinical ADHD molecule
+2 Based on Purdue internal projection
+3 Based on Collegium 2018 Q3 10-Q 
+• Given finite market 
+outlook and Collegium’s 
+need to quickly return to 
+profitability, there are 2 
+potential strategic 
+choices:
+– Reduce cost by 
+downsizing salesforces, 
+which could potentially 
+lower expected sales 
+growth
+– Augment volume with 
+aggressive bidding 
+SOURCE: SEC filings, Internal research
+-27 sales from PD “Perspective on global 
+opioid and opiate markets” for narcotic 
+products; 
+7
+Source:  https://www.industrydocuments.ucsf.edu/docs/ffgg0257
+
+
+=== Page 21 ===
+ 
+ 
+ 
+PROPRIETARY AND 
+CONFIDENTIAL
+PROPRIETARY AND 
+CONFIDENTIAL
+Current view of Collegium profitability
+452
+217
+174
+172
+63
+70
+182
+80
+-32
+Gross sales
+Loss 
+from 
+operati
+ons
+Rebates
+Other 
+GTN 
+reductio
+ns
+Net sales
+9
+COGS
+R&D
+SG&A
+24
+252
+626
+88
+287
+128
+32
+Xtampza
+Nucynta
+Overall 
+Revenue and GTN 
+reductions
+Costs and operating 
+expenses
+2018 financial performance (estimation) 
+($ Millions)
+• Cash at the end of 
+Q3 2018:  ~$140 
+Mn
+Source:  https://www.industrydocuments.ucsf.edu/docs/ffgg0257
+
+
+=== Page 22 ===
+ 
+ 
+ 
+PROPRIETARY AND 
+CONFIDENTIAL
+PROPRIETARY AND 
+CONFIDENTIAL
+Collegium would need to double current share of Xtampza in order to break even
+9
+Potential impact of doubling Xtampza share through exclusive contracts with additional payors
+14
+Current loss 
+from 
+operations
+2020 
+operating 
+income
+Loss due to 
+market 
+decline
+Growth from 
+existing 
+account
+Growth 
+from new 
+account
+COGS increase
+0
+32
+19
+15
+50
+Key 
+assumptions:
+• ERO market 
+continues to 
+decline at -15% 
+year on year 
+until 2020
+• GtN of sales with 
+new account: 
+60%
+• Nucynta sales 
+remains the 
+same
+• SG&A remains 
+the same
+Projected 2020 Xtampza  financial performance 
+($ Millions)
+DIRECTIONAL ESTIMATION
+Source:  https://www.industrydocuments.ucsf.edu/docs/ffgg0257
+
+
+=== Page 23 ===
+ 
+ 
+ 
+PROPRIETARY AND 
+CONFIDENTIAL
+PROPRIETARY AND 
+CONFIDENTIAL
+Overview of top accounts across Commercial and Medicare: current view
+10
+Net sales1
+$M
+Market 
+segment
+Commer-
+cial
+11%
+7%
+6%
+2%
+2%
+1%
+1%
+1%
+1%
+1%
+11%
+5%
+2%
+1%
+1%
+0%
+54%
+21%
+17%
+13%
+21%
+23%
+20%
+4%
+9%
+3%
+5%
+26%
+14%
+14%
+15%
+17%
+14%
+42%
+35%
+38%
+21%
+28%
+29%
+0%
+20%
+0%
+0%
+56%
+66%
+38%
+40%
+37%
+28%
+112
+992
+193
+21
+102
+26
+21
+7
+12
+11
+6
+258
+155
+26
+20
+8
+5
+10
+73
+17
+18
+113
+63
+15
+9
+6
+6
+113
+13
+17
+53
+5
+4
+545
+2019 contracting
+Medicare 
+Part D
+Current status (FYE June 2018)
+1 Only account for discretionary rebates to payors, but not other GtN reductions; 2  Includes Admin fee and price protection when applicable; 
+3 Assuming status carries over from 201807 period for those accounts with OxyContin formulary access, status based on majority of lives; 4 Prime Therapeutics - excl HCSC: include BCBS NC, MN, KS Horizon BCBSNJ and other 
+prime accounts 
+Account
+Express Scripts
+Caremark
+OptumRx  - United Healthcare
+Aetna Health Plans
+Prime Therapeutics - excl HCSC4
+Prime Therapeutics - HCSC
+Cigna Healthcare
+Procare
+BCBS FL (Prime Therapeutics)
+Independence BCBS (PA)
+Caremark
+OptumRx  - United Healthcare
+Express Scripts
+Prime Therapeutics
+EnvisionRx Options
+Total
+Gross sales
+$M 
+Market 
+Share
+% 
+Net sales 
+OxyContin
+2T Preferred
+NOF
+NOF
+2T Preferred
+NOF
+3T Preferred
+3T Pref PDP/MAPD NOF
+Pref MAPD/PDP NOF
+2T Preferred
+2T Preferred
+2T Preferred 
+2T Preferred
+2T Preferred
+2T Preferred
+NOF
+MedImpact
+2T Preferred
+Rebate2
+Xtampza ER3
+Non-preferred
+Preferred
+Preferred
+Non-preferred
+Preferred
+NOF
+Preferred
+NOF
+NOF
+NOF
+Non-preferred
+Non-preferred
+Preferred
+Non-preferred
+Preferred
+Preferred
+2019 formulary status
+Collegium is 
+likely to 
+double 
+down on big 
+national 
+accounts in 
+order to 
+achieve 
+break-even
+Source:  https://www.industrydocuments.ucsf.edu/docs/ffgg0257
+
+
+=== Page 24 ===
+PROPRIETARY AND 
+CONFIDENTIAL
+PROPRIETARY AND 
+CONFIDENTIAL
+Current access status: OxyContin is preferred for 47% of lives on Prime’s Part D formularies
+11
+SOURCE: MMIT
+• OxyContin is the preferred oxycodone with access to nearly half of Prime lives while Xtampza ER is excluded
+• Zohydro ER is the preferred branded hydrocodone product (Hysingla ER is completely excluded), and Nucynta also maintains access 
+to half of Prime lives
+531
+94
+8
+26
+575
+25552
+Privileged: This presentation contains draft proposals for discussion by Management and are subject to appropriate Purdue legal 
+and regulatory review before they can be considered final. These materials are confidential and proprietary.
+1 Includes ~10K lives where no PA/ST required for OxyContin and Nucynta
+2 Defined as percentage of lives that are either preferred or covered (including PA/ST)
+Lives, K
+Overall formulary 
+status
+Lives, 
+%
+Hysingl
+a ER
+Xtampz
+a ER
+OxyCo
+ntin
+Nucynt
+a ER
+Zohydr
+o ER
+1,235
+Overall covered 
+lives %2
+0%
+0%
+47%
+47%
+92%
+Largest formulary
+47
+%
+Collegium 
+excluded1 
+Not 
+Covered
+Not 
+Covered
+Preferre
+d 
+(PA/ST)
+Preferred 
+(PA/ST)
+Covered 
+(PA/ST)
+BCBS FL BlueMedicare Classic 
+and Choice 
+43%
+Only Zohydro - 
+covered
+Not 
+Covered
+Not 
+Covered
+Not 
+Covered
+Not 
+Covered
+Covered 
+(PA/ST) 
+HISC Blue Medicare Rx (PDP) 
+Plus and Value 
+8%
+No branded ERO 
+coverage
+Not 
+Covered
+Not 
+Covered
+Not 
+Covered
+Not 
+Covered
+Not 
+Covered
+Regence BCBS of Oregon 
+MedAdvantage + RxClassic PPO 
++ RxEnhanced PPO 
+2%
+Only Zohydro - 
+preferred
+Not 
+Covered
+Not 
+Covered
+Not 
+Covered
+Not 
+Covered
+Preferred 
+(PA/ST)
+Blue Cross Community MMAI 
+1
+%
+OxyContin and 
+Zohydro 
+preferred
+Not 
+Covered
+Not 
+Covered
+Preferre
+d 
+(PA/ST)
+Not 
+Covered
+Preferred 
+(PA/ST)
+Blue Cross Blue Shield of 
+Minnesota SecureBlue 
+Coverage status of leading ERO brands, 
+Nov 2018
+PRIME
+Total
+Oxycontin Covered
+Not covered
+11
+Source:  https://www.industrydocuments.ucsf.edu/docs/ffgg0257
+
+
+=== Page 25 ===
+ 
+ 
+ 
+PROPRIETARY AND 
+CONFIDENTIAL
+PROPRIETARY AND 
+CONFIDENTIAL
+We defined potential 2020 access scenarios for Oxycontin vs. Xtampza
+2020 Share shift assumptions under different scenarios, 2020 Q4 
+2020 access 
+scenarios
+Continue current 
+access status as 
+exclusive preferred 
+oxycodone ER
+1
+1
+1
+2
+3
+15
+7
+14
+4
+4
+10
+4
+4
+10
+6
+5
+5
+6
+7
+5
+8
+4
+Oxycontin
+Other 
+Xtampza
+Share by products (exit share) 
+Share shift vs. 
+status quo 
+Xtampza covered 
+(non-preferred), 
+while OxyContin 
+stays preferred
+2
+Low
+Hig
+h
+5%
+35%
+Xtampza replaces 
+Oxycontin as 
+exclusive preferred 
+with 
+grandfathering
+3
+Low
+Hig
+h
+35%
+55%
+Oxycontin Excluded 
+without 
+grandfathering
+4
+Low
+Hig
+h
+50%
+70%
+0%
+ENVISION
+Source:  https://www.industrydocuments.ucsf.edu/docs/ffgg0257
+
+
+=== Page 26 ===
+PROPRIETARY AND 
+CONFIDENTIAL
+PROPRIETARY AND 
+CONFIDENTIAL
+We modeled out the economics for Xtampza, Payor and Oxycontin in different access scenarios
+1 Minimum rebate rate required for plan sponsor to favor contracting with Oxycontin vs. exclusive deal with Xtampza, based on plan sponsor net cost analysis; “low share shift”
+2  Maximum rebate rate that Oxycontin could pay so that net sales is higher or equal to the net sales in the “walk-away” scenario where Oxycontin is excluded without grandfathering 
+5.9
+6.8
+6.8
+6.2
+4.9
+5.8
+4.8
+4.4
+Access 
+scenarios tested
+Xtampza 
+covered (non-
+preferred), 
+while 
+OxyContin 
+stays 
+preferred
+Continue 
+current 
+access status 
+as exclusive 
+preferred 
+oxycodone ER
+Xtampza 
+replaces 
+Oxycontin as 
+exclusive 
+preferred with 
+grandfatherin
+gOxycontin 
+Excluded 
+without 
+grandfatherin
+g
+Xtampza net 
+sales ($M)
+1
+2
+3
+0%
+50%
+70%
+70%
+Assumed 
+Xtampza 
+rebate
+Implication on Oxycontin bidding strategy
+ to maintain current access status assuming no increase, or reasonable increase in rebate rate – payor would be better off maintaining current access vs. 
+0.5
+0.2
+0.7
+0.4
+0.5
+0.7
+Share by 
+product
+Other brand 
+net sales 
+($M)
+4
+5
+3
+4
+1
+14
+4
+4
+10
+4
+10
+5
+6
+7
+7
+5
+6
+8
+4
+18
+18
+18
+18
+18
+17
+2.1
+1.4
+1.9
+1.9
+2.2
+2.4
+Oxycontin
+Xtampza
+Other brands
+Sha
+re 
+shif
+t
+Low
+Hig
+h
+Low
+Hig
+h
+Low
+Hig
+h
+Low
+Hig
+h
+ENVISION
+15
+2
+1 18
+0.7
+0.8
+46%
+Break-
+even 
+rebate2 
+31%
+35%
+N/A
+13%
+33%
+Net sales at min 
+rebate ($M)
+Rebate rate to keep 
+Envision whole1 
+32%
+22%
+29%
+N/A
+8%
+10%
+24%
+Theoretic
+al – 
+unlikely 
+able to 
+lower 
+current 
+rate 
+(40%)
+16%
+13
+Source:  https://www.industrydocuments.ucsf.edu/docs/ffgg0257

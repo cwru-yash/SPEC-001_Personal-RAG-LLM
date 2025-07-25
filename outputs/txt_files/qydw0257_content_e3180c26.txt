@@ -1,0 +1,8 @@
+Document: Images/qydw0257.zip/qydw0257.pdf
+Category: Images
+Processed: 2025-06-12T11:26:53.836857
+Method: pymupdf+ocr
+==================================================
+
+=== Page 1 ===
+Source:  https://www.industrydocuments.ucsf.edu/docs/qydw0257

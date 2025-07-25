@@ -1,0 +1,8 @@
+Document: Emails/lkdw0256.zip/lkdw0256.pdf
+Category: Emails
+Processed: 2025-06-12T11:26:53.883939
+Method: pymupdf+ocr
+==================================================
+
+=== Page 1 ===
+Source:  https://www.industrydocuments.ucsf.edu/docs/lkdw0256

@@ -1,0 +1,9 @@
+STATUS: SUCCESS
+Document: Images/thnw0257.zip/thnw0257.pdf
+Category: Images
+Processed: 2025-06-12T12:01:01.377017
+Method: pymupdf+ocr
+==================================================
+
+=== Page 1 ===
+Source:  https://www.industrydocuments.ucsf.edu/docs/thnw0257

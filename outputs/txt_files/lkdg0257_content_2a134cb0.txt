@@ -1,0 +1,8 @@
+Document: Images/lkdg0257.zip/lkdg0257.pdf
+Category: Images
+Processed: 2025-06-11T22:37:51.953931
+Method: pymupdf+ocr
+==================================================
+
+=== Page 1 ===
+Source:  https://www.industrydocuments.ucsf.edu/docs/lkdg0257

@@ -1,0 +1,22 @@
+{
+  "document_id": "ae33f2ae",
+  "zip_file": "nqbg0257.zip",
+  "category": "Documents",
+  "content_file": {
+    "file_name": "nqbg0257.pdf",
+    "file_path": "Documents/nqbg0257.zip/nqbg0257.pdf",
+    "extracted_text": "=== Page 1 ===\nSource:  https://www.industrydocuments.ucsf.edu/docs/nqbg0257\n",
+    "extraction_method": "pymupdf+ocr",
+    "errors": [],
+    "success": true
+  },
+  "metadata_file": {
+    "file_name": "nqbg0257-info.pdf",
+    "file_path": "Documents/nqbg0257.zip/nqbg0257-info.pdf",
+    "extracted_text": "=== Page 1 ===\nnull - nqbg0257 - Downloaded 31/03/2025 11:15:23 AM\nDocument Information\nTitle: Pipeline-FS-003-v13-lo.pdf\nURL: https://www.industrydocuments.ucsf.edu/docs/nqbg0257\nDocument Date: 2013 August 22; 2020 August 31\nType: Document\nGenre: Adobe Portable Document Format\nPages: 1\nID: nqbg0257\nCollection: McKinsey Documents\nDrug: opioids\nAvailability: public; no restrictions\nBates Number: MCK-MAAG-4011429\nRedacted: yes\nDate Added UCSF: 2022 June 06\nCite This Document\nAuthor. Title. Date. Year. Collection. Source. https://www.industrydocuments.ucsf.edu/docs/[ID]\nUnknown. Pipeline-FS-003-v13-lo.pdf. 2013 August 22; 2020 August 31. McKinsey Documents. \nUnknown. https://www.industrydocuments.ucsf.edu/docs/nqbg0257\n",
+    "extraction_method": "pymupdf+ocr",
+    "errors": [],
+    "success": true
+  },
+  "processed_at": "2025-06-11T22:37:52.643594"
+}

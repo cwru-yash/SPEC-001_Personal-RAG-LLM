@@ -1,4 +1,4 @@
-# services/processor/src/pipeline/zip_dataset_processor.py
+# services/processor/src/pipeline/enhanced_zip_processor.py
 import os
 import zipfile
 import tempfile
@@ -12,8 +12,8 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 import json
 from datetime import datetime
 
-from src.pipeline.document_pipeline import DocumentProcessingPipeline, ProcessingResult
-from src.models.document import Document
+from .document_pipeline import DocumentProcessingPipeline, ProcessingResult
+from ..models.document import Document
 
 @dataclass
 class DocumentPair:
@@ -30,16 +30,20 @@ class DocumentPair:
         if self.errors is None:
             self.errors = []
 
-class ZipDatasetProcessor:
-    """Processor for zip-based datasets with paired PDF files."""
+class EnhancedZipProcessor:
+    """Enhanced ZIP processor that handles all file types including presentations and images."""
     
     def __init__(self, config: Dict[str, Any]):
-        """Initialize the zip dataset processor."""
+        """Initialize the enhanced zip processor."""
         self.config = config
         self.logger = logging.getLogger(__name__)
         
-        # Initialize the document processing pipeline
+        # Initialize the document processing pipeline with all extractors
         self.pipeline = DocumentProcessingPipeline(config.get("pipeline", {}))
+        
+        # Log supported file types
+        supported_types = self.pipeline.processor_registry.supported_types()
+        self.logger.info(f"Pipeline supports: {supported_types}")
         
         # Processing statistics
         self.stats = {
@@ -49,17 +53,18 @@ class ZipDatasetProcessor:
             "content_docs_processed": 0,
             "metadata_docs_processed": 0,
             "by_category": {},
+            "by_file_type": {},
             "errors": []
         }
         
         # Temporary extraction directory
-        self.temp_dir = tempfile.mkdtemp(prefix="zip_dataset_")
+        self.temp_dir = tempfile.mkdtemp(prefix="enhanced_zip_")
         self.logger.info(f"Using temporary directory: {self.temp_dir}")
     
     def process_dataset(self, input_root: str, output_dir: Optional[str] = None) -> List[DocumentPair]:
         """Process the entire dataset structure."""
         
-        self.logger.info(f"Starting dataset processing from: {input_root}")
+        self.logger.info(f"Starting enhanced dataset processing from: {input_root}")
         
         if not os.path.exists(input_root):
             raise ValueError(f"Input directory does not exist: {input_root}")
@@ -80,17 +85,18 @@ class ZipDatasetProcessor:
             all_document_pairs.extend(category_pairs)
             
             # Update statistics
+            successful_pairs = len([p for p in category_pairs if p.content_doc and p.metadata_doc])
             self.stats["by_category"][category] = {
                 "zip_files": len(zip_files),
                 "document_pairs": len(category_pairs),
-                "successful_pairs": len([p for p in category_pairs if p.content_doc and p.metadata_doc])
+                "successful_pairs": successful_pairs
             }
         
         # Save processing results if output directory specified
         if output_dir:
             self._save_results(all_document_pairs, output_dir)
         
-        self.logger.info(f"Dataset processing complete. Processed {len(all_document_pairs)} document pairs")
+        self.logger.info(f"Enhanced dataset processing complete. Processed {len(all_document_pairs)} document pairs")
         
         return all_document_pairs
     
@@ -99,20 +105,14 @@ class ZipDatasetProcessor:
         
         zip_files_by_category = {}
         
-        # Walk through the directory structure
         for category_dir in os.listdir(input_root):
             category_path = os.path.join(input_root, category_dir)
             
-            if not os.path.isdir(category_path):
-                continue
-            
-            # Skip hidden directories and files
-            if category_dir.startswith('.'):
+            if not os.path.isdir(category_path) or category_dir.startswith('.'):
                 continue
                 
             zip_files = []
             
-            # Find all zip files in this category
             for file_name in os.listdir(category_path):
                 if file_name.endswith('.zip'):
                     zip_path = os.path.join(category_path, file_name)
@@ -128,18 +128,14 @@ class ZipDatasetProcessor:
         """Process all zip files in a category."""
         
         document_pairs = []
-        
-        # Process zip files in parallel
         max_workers = self.config.get("max_workers", 4)
         
         with ThreadPoolExecutor(max_workers=max_workers) as executor:
-            # Submit all zip processing jobs
             future_to_zip = {
                 executor.submit(self._process_zip_file, zip_file, category): zip_file
                 for zip_file in zip_files
             }
             
-            # Collect results
             for future in as_completed(future_to_zip):
                 zip_file = future_to_zip[future]
                 
@@ -148,19 +144,18 @@ class ZipDatasetProcessor:
                     document_pairs.append(document_pair)
                     
                     if document_pair.content_doc and document_pair.metadata_doc:
-                        self.logger.info(f"Successfully processed zip: {os.path.basename(zip_file)}")
+                        self.logger.info(f"✅ Successfully processed: {os.path.basename(zip_file)}")
                         self.stats["zip_files_processed"] += 1
                     else:
-                        self.logger.warning(f"Partial processing for zip: {os.path.basename(zip_file)}")
+                        self.logger.warning(f"⚠️ Partial processing: {os.path.basename(zip_file)}")
                         if document_pair.errors:
-                            self.logger.warning(f"Errors: {'; '.join(document_pair.errors)}")
+                            self.logger.warning(f"   Errors: {'; '.join(document_pair.errors)}")
                         
                 except Exception as e:
-                    self.logger.error(f"Failed to process zip {zip_file}: {e}")
+                    self.logger.error(f"❌ Failed to process zip {zip_file}: {e}")
                     self.stats["zip_files_failed"] += 1
                     self.stats["errors"].append(f"{zip_file}: {str(e)}")
                     
-                    # Create error document pair
                     document_pairs.append(DocumentPair(
                         zip_file=zip_file,
                         category=category,
@@ -171,11 +166,10 @@ class ZipDatasetProcessor:
         return document_pairs
     
     def _process_zip_file(self, zip_file: str, category: str) -> DocumentPair:
-        """Process a single zip file containing PDF pair."""
+        """Process a single zip file with enhanced support for all file types."""
         
         base_name = os.path.splitext(os.path.basename(zip_file))[0]
         
-        # Create document pair
         document_pair = DocumentPair(
             zip_file=zip_file,
             category=category,
@@ -183,46 +177,83 @@ class ZipDatasetProcessor:
         )
         
         try:
-            # Extract zip file
-            extraction_path = self._extract_zip_file(zip_file, base_name)
+            # Extract zip file with nested handling
+            extraction_path = self._extract_zip_with_nesting(zip_file, base_name)
             document_pair.extraction_path = extraction_path
             
             # Find PDF files in extracted content
             pdf_files = self._find_pdf_files(extraction_path)
-            
+
             if len(pdf_files) != 2:
                 document_pair.errors.append(f"Expected 2 PDF files, found {len(pdf_files)}: {pdf_files}")
                 return document_pair
+
+            # With this:
+            # Find all processable files in extracted content
+            processable_files = self._find_content_files(extraction_path)
+
+            if len(processable_files) == 0:
+                document_pair.errors.append(f"No processable files found in ZIP")
+                return document_pair
+
+            # # Find all processable files (not just PDFs)
+            # processable_files = self._find_processable_files(extraction_path)
             
-            # Identify metadata and content PDFs
-            metadata_pdf, content_pdf = self._identify_pdf_pair(pdf_files, base_name)
-            
-            if not metadata_pdf or not content_pdf:
-                document_pair.errors.append("Could not identify metadata and content PDFs")
+            if len(processable_files) == 0:
+                document_pair.errors.append("No processable files found in ZIP")
                 return document_pair
             
-            # Process both PDFs
-            metadata_result = self._process_pdf_with_context(
-                metadata_pdf, category, "metadata", base_name
-            )
-            content_result = self._process_pdf_with_context(
-                content_pdf, category, "content", base_name
-            )
+            # Log what we found
+            file_types = [Path(f).suffix.lower() for f in processable_files]
+            self.logger.debug(f"Found files in {base_name}: {file_types}")
             
-            # Store results
-            if metadata_result.success:
-                document_pair.metadata_doc = metadata_result.document
-                self.stats["metadata_docs_processed"] += 1
+            # Identify metadata and content files based on category
+            # metadata_file, content_file = self._identify_file_pair(processable_files, base_name, category)
+            
+            # Identify metadata and content files based on category
+            if category == "Presentations":
+                metadata_file, content_file = self._identify_presentation_pair(processable_files, base_name)
+            elif category == "Images":
+                metadata_file, content_file = self._identify_image_pair(processable_files, base_name)
+            elif category == "Spreadsheets":
+                metadata_file, content_file = self._identify_spreadsheet_pair(processable_files, base_name)
             else:
-                document_pair.errors.append(f"Metadata PDF processing failed: {metadata_result.error}")
+                # Default to PDF pair identification
+                pdf_files = [f for f in processable_files if f.lower().endswith('.pdf')]
+                if len(pdf_files) >= 2:
+                    metadata_file, content_file = self._identify_pdf_pair(pdf_files, base_name)
+                else:
+                    # Fallback for mixed file types
+                    metadata_file, content_file = self._identify_mixed_pair(processable_files, base_name)
+
+            # Process both files
+            if metadata_file:
+                metadata_result = self._process_file_with_context(
+                    metadata_file, category, "metadata", base_name
+                )
+                if metadata_result.success:
+                    document_pair.metadata_doc = metadata_result.document
+                    self.stats["metadata_docs_processed"] += 1
+                else:
+                    document_pair.errors.append(f"Metadata processing failed: {metadata_result.error}")
             
-            if content_result.success:
-                document_pair.content_doc = content_result.document
-                self.stats["content_docs_processed"] += 1
-            else:
-                document_pair.errors.append(f"Content PDF processing failed: {content_result.error}")
+            if content_file:
+                content_result = self._process_file_with_context(
+                    content_file, category, "content", base_name
+                )
+                if content_result.success:
+                    document_pair.content_doc = content_result.document
+                    self.stats["content_docs_processed"] += 1
+                    
+                    # Track file types
+                    file_ext = Path(content_file).suffix.lower()
+                    if file_ext not in self.stats["by_file_type"]:
+                        self.stats["by_file_type"][file_ext] = 0
+                    self.stats["by_file_type"][file_ext] += 1
+                else:
+                    document_pair.errors.append(f"Content processing failed: {content_result.error}")
             
-            # Link the documents if both successful
+            # Link documents if both successful
             if document_pair.content_doc and document_pair.metadata_doc:
                 self._link_document_pair(document_pair)
                 self.stats["document_pairs_created"] += 1
@@ -241,43 +272,195 @@ class ZipDatasetProcessor:
         
         return document_pair
     
-    def _extract_zip_file(self, zip_file: str, base_name: str) -> str:
-        """Extract zip file to temporary directory."""
+    def _extract_zip_with_nesting(self, zip_file: str, base_name: str) -> str:
+        """Extract zip file with support for nested archives."""
         
         extraction_path = os.path.join(self.temp_dir, f"{base_name}_{uuid.uuid4().hex[:8]}")
         os.makedirs(extraction_path, exist_ok=True)
         
+        # Extract main archive
         with zipfile.ZipFile(zip_file, 'r') as zip_ref:
             zip_ref.extractall(extraction_path)
         
+        # Handle nested ZIP files (common in Spreadsheets category)
+        for root, _, files in os.walk(extraction_path):
+            for file in files:
+                if file.endswith('.zip'):
+                    nested_zip = os.path.join(root, file)
+                    nested_extract_dir = os.path.join(root, f"{os.path.splitext(file)[0]}_extracted")
+                    
+                    try:
+                        with zipfile.ZipFile(nested_zip, 'r') as nested_zip_ref:
+                            nested_zip_ref.extractall(nested_extract_dir)
+                        os.remove(nested_zip)
+                        self.logger.debug(f"Extracted nested ZIP: {file}")
+                    except Exception as e:
+                        self.logger.warning(f"Failed to extract nested ZIP {file}: {e}")
+        
         return extraction_path
     
-    def _find_content_files(self, extraction_path: str) -> List[str]:
-        """Find all processable content files (not just PDFs)."""
-        content_files = []
-        supported_extensions = ['.pdf', '.xlsx', '.xls', '.csv', '.docx', '.pptx', '.jpg', '.png']
+    def _find_processable_files(self, extraction_path: str) -> List[str]:
+        """Find all files that can be processed by the pipeline."""
+        
+        processable_files = []
+        supported_extensions = set(self.pipeline.processor_registry.supported_types())
         
         for root, _, files in os.walk(extraction_path):
             for file in files:
-                if any(file.lower().endswith(ext) for ext in supported_extensions):
-                    content_files.append(os.path.join(root, file))
+                file_ext = Path(file).suffix[1:].lower()  # Remove dot
+                if file_ext in supported_extensions:
+                    processable_files.append(os.path.join(root, file))
         
-        return content_files
+        return processable_files
+    
+    def _identify_presentation_pair(self, files: List[str], base_name: str) -> Tuple[Optional[str], Optional[str]]:
+        """Identify content and metadata files for presentations."""
+        
+        # Look for presentation files (content) and PDF info files (metadata)
+        presentation_files = [f for f in files if f.lower().endswith(('.pptx', '.ppt'))]
+        pdf_files = [f for f in files if f.lower().endswith('.pdf')]
+        
+        content_file = None
+        metadata_file = None
+        
+        if presentation_files:
+            content_file = presentation_files[0]  # Use first presentation file as content
+        
+        # Find metadata file (typically PDF with 'info' in name)
+        for pdf_file in pdf_files:
+            if 'info' in os.path.basename(pdf_file).lower():
+                metadata_file = pdf_file
+                break
+        
+        # If no explicit metadata file found, use file size heuristic
+        if not metadata_file and pdf_files:
+            # Sort PDFs by size - metadata typically smaller
+            pdf_files_with_size = [(f, os.path.getsize(f)) for f in pdf_files]
+            pdf_files_with_size.sort(key=lambda x: x[1])
+            metadata_file = pdf_files_with_size[0][0]
+        
+        return metadata_file, content_file
 
-    def _find_pdf_files(self, extraction_path: str) -> List[str]:
-        """Find all PDF files in the extracted directory."""
+    def _identify_image_pair(self, files: List[str], base_name: str) -> Tuple[Optional[str], Optional[str]]:
+        """Identify content and metadata files for images."""
         
-        pdf_files = []
+        # Look for image files (content) and PDF info files (metadata)
+        image_files = [f for f in files if any(f.lower().endswith(ext) for ext in 
+                        ['.png', '.jpg', '.jpeg', '.tiff', '.bmp'])]
+        pdf_files = [f for f in files if f.lower().endswith('.pdf')]
         
-        for root, _, files in os.walk(extraction_path):
-            for file in files:
-                if file.lower().endswith('.pdf'):
-                    pdf_files.append(os.path.join(root, file))
+        content_file = None
+        metadata_file = None
         
-        return pdf_files
+        if image_files:
+            content_file = image_files[0]  # Use first image file as content
+        
+        # Find metadata file (typically PDF with 'info' in name)
+        for pdf_file in pdf_files:
+            if 'info' in os.path.basename(pdf_file).lower():
+                metadata_file = pdf_file
+                break
+        
+        # If no explicit metadata file found, use file size heuristic
+        if not metadata_file and pdf_files:
+            metadata_file = pdf_files[0]
+        
+        return metadata_file, content_file
+
+    def _identify_mixed_pair(self, files: List[str], base_name: str) -> Tuple[Optional[str], Optional[str]]:
+        """Identify content and metadata for mixed file types."""
+        if len(files) == 1:
+            # Only one file - treat as content
+            return None, files[0]
+        
+        # Sort by size - metadata usually smaller
+        files_by_size = sorted(files, key=lambda f: os.path.getsize(f))
+        
+        # Check for 'info' pattern in any file
+        metadata_file = None
+        for f in files:
+            if 'info' in os.path.basename(f).lower():
+                metadata_file = f
+                break
+        
+        if metadata_file:
+            # Find content file (different from metadata file)
+            content_file = next((f for f in files if f != metadata_file), None)
+        else:
+            # Use size heuristic
+            metadata_file = files_by_size[0]  # Smallest file
+            content_file = files_by_size[-1]  # Largest file
+        
+        return metadata_file, content_file
+
+    def _identify_file_pair(self, files: List[str], base_name: str, category: str) -> Tuple[Optional[str], Optional[str]]:
+        """Identify content and metadata files based on category and naming."""
+        
+        if len(files) == 0:
+            return None, None
+        
+        if len(files) == 1:
+            # Single file - treat as content
+            return None, files[0]
+        
+        metadata_file = None
+        content_file = None
+        
+        # Separate files by type
+        pdf_files = [f for f in files if f.lower().endswith('.pdf')]
+        image_files = [f for f in files if any(f.lower().endswith(ext) 
+                      for ext in ['.png', '.jpg', '.jpeg', '.tiff', '.bmp'])]
+        presentation_files = [f for f in files if any(f.lower().endswith(ext) 
+                             for ext in ['.pptx', '.ppt'])]
+        spreadsheet_files = [f for f in files if any(f.lower().endswith(ext) 
+                            for ext in ['.xlsx', '.xls', '.csv'])]
+        
+        # Category-specific logic
+        if category == "Images":
+            # Content: image file, Metadata: PDF with info
+            if image_files:
+                content_file = image_files[0]
+            
+            for pdf in pdf_files:
+                if 'info' in os.path.basename(pdf).lower():
+                    metadata_file = pdf
+                    break
+                    
+        elif category == "Presentations":
+            # Content: presentation file, Metadata: PDF with info
+            if presentation_files:
+                content_file = presentation_files[0]
+            
+            for pdf in pdf_files:
+                if 'info' in os.path.basename(pdf).lower():
+                    metadata_file = pdf
+                    break
+                    
+        elif category == "Spreadsheets":
+            # Content: spreadsheet file, Metadata: PDF with info
+            if spreadsheet_files:
+                content_file = spreadsheet_files[0]
+            
+            for pdf in pdf_files:
+                if 'info' in os.path.basename(pdf).lower():
+                    metadata_file = pdf
+                    break
+                    
+        else:
+            # Default logic for Documents/Emails - use PDF pair identification
+            if len(pdf_files) >= 2:
+                metadata_file, content_file = self._identify_pdf_pair(pdf_files, base_name)
+        
+        # Fallback: use size heuristic if no specific identification
+        if not metadata_file and not content_file and len(files) >= 2:
+            files_by_size = sorted(files, key=lambda f: os.path.getsize(f))
+            metadata_file = files_by_size[0]  # Smaller file
+            content_file = files_by_size[-1]   # Larger file
+        
+        return metadata_file, content_file
     
     def _identify_pdf_pair(self, pdf_files: List[str], base_name: str) -> Tuple[Optional[str], Optional[str]]:
-        """Identify which PDF is metadata and which is content."""
+        """Identify PDF pair using original logic."""
         
         metadata_pdf = None
         content_pdf = None
@@ -286,42 +469,35 @@ class ZipDatasetProcessor:
             file_name = os.path.basename(pdf_file)
             name_without_ext = os.path.splitext(file_name)[0]
             
-            # Check if this is the metadata file (contains -info suffix)
             if name_without_ext.endswith('-info') or 'info' in name_without_ext.lower():
                 metadata_pdf = pdf_file
             else:
-                # Check if this matches the base name or is the main content
                 if name_without_ext == base_name or name_without_ext.startswith(base_name):
                     content_pdf = pdf_file
         
-        # If we couldn't identify by naming convention, use file size heuristic
+        # Fallback: use size heuristic
         if not metadata_pdf or not content_pdf:
-            # Sort by file size - metadata is usually smaller
             pdf_files_with_size = [(f, os.path.getsize(f)) for f in pdf_files]
             pdf_files_with_size.sort(key=lambda x: x[1])
             
-            # Smaller file is likely metadata
             metadata_pdf = pdf_files_with_size[0][0]
             content_pdf = pdf_files_with_size[1][0]
         
         return metadata_pdf, content_pdf
     
-    def _process_pdf_with_context(self, pdf_file: str, category: str, doc_type: str, base_name: str) -> ProcessingResult:
-        """Process PDF with additional context metadata."""
+    def _process_file_with_context(self, file_path: str, category: str, 
+                                   doc_type: str, base_name: str) -> ProcessingResult:
+        """Process any supported file type with context."""
         
-        # Add context metadata
         context_metadata = {
             "dataset_category": category,
-            "document_type": doc_type,  # "metadata" or "content"
+            "document_type": doc_type,
             "base_name": base_name,
             "source_zip": f"{base_name}.zip",
             "is_paired_document": True
         }
         
-        # Process the PDF
-        result = self.pipeline.process_file(pdf_file, context_metadata)
-        
-        return result
+        return self.pipeline.process_file(file_path, context_metadata)
     
     def _link_document_pair(self, document_pair: DocumentPair):
         """Create bidirectional links between paired documents."""
@@ -352,12 +528,13 @@ class ZipDatasetProcessor:
         
         os.makedirs(output_dir, exist_ok=True)
         
-        # Save summary statistics
+        # Save summary with enhanced statistics
         summary = {
             "processing_timestamp": datetime.now().isoformat(),
             "total_document_pairs": len(document_pairs),
             "successful_pairs": len([p for p in document_pairs if p.content_doc and p.metadata_doc]),
             "statistics": self.stats,
+            "file_type_distribution": self.stats["by_file_type"],
             "document_pairs": []
         }
         
@@ -372,7 +549,8 @@ class ZipDatasetProcessor:
                     "doc_id": pair.content_doc.doc_id if pair.content_doc else None,
                     "file_name": pair.content_doc.file_name if pair.content_doc else None,
                     "content_types": pair.content_doc.content_type if pair.content_doc else None,
-                    "chunks_count": len(pair.content_doc.chunks) if pair.content_doc else 0
+                    "chunks_count": len(pair.content_doc.chunks) if pair.content_doc else 0,
+                    "file_extension": pair.content_doc.file_extension if pair.content_doc else None
                 },
                 "metadata_document": {
                     "doc_id": pair.metadata_doc.doc_id if pair.metadata_doc else None,
@@ -384,11 +562,11 @@ class ZipDatasetProcessor:
             summary["document_pairs"].append(pair_data)
         
         # Save to file
-        summary_file = os.path.join(output_dir, f"dataset_processing_summary_{datetime.now().strftime('%Y%m%d_%H%M%S')}.json")
+        summary_file = os.path.join(output_dir, f"enhanced_processing_summary_{datetime.now().strftime('%Y%m%d_%H%M%S')}.json")
         with open(summary_file, 'w') as f:
             json.dump(summary, f, indent=2)
         
-        self.logger.info(f"Results saved to: {summary_file}")
+        self.logger.info(f"Enhanced results saved to: {summary_file}")
     
     def get_statistics(self) -> Dict[str, Any]:
         """Get processing statistics."""
@@ -402,155 +580,3 @@ class ZipDatasetProcessor:
                 self.logger.info(f"Cleaned up temporary directory: {self.temp_dir}")
             except Exception as e:
                 self.logger.warning(f"Failed to clean up temp directory: {e}")
-
-# Integration with storage systems
-class ZipDatasetStorage:
-    """Storage integration for processed zip dataset."""
-    
-    def __init__(self, metadata_storage, vector_store, graph_storage):
-        """Initialize with storage backends."""
-        self.metadata_storage = metadata_storage
-        self.vector_store = vector_store
-        self.graph_storage = graph_storage
-        self.logger = logging.getLogger(__name__)
-    
-    def store_document_pairs(self, document_pairs: List[DocumentPair]) -> Dict[str, Any]:
-        """Store all document pairs in storage systems."""
-        
-        results = {
-            "stored_content_docs": 0,
-            "stored_metadata_docs": 0,
-            "storage_errors": [],
-            "relationships_created": 0
-        }
-        
-        for pair in document_pairs:
-            try:
-                # Store content document
-                if pair.content_doc:
-                    self._store_single_document(pair.content_doc)
-                    results["stored_content_docs"] += 1
-                
-                # Store metadata document
-                if pair.metadata_doc:
-                    self._store_single_document(pair.metadata_doc)
-                    results["stored_metadata_docs"] += 1
-                
-                # Create relationships in graph database
-                if pair.content_doc and pair.metadata_doc:
-                    self._create_document_relationships(pair)
-                    results["relationships_created"] += 1
-                    
-            except Exception as e:
-                error_msg = f"Storage error for {pair.base_name}: {str(e)}"
-                self.logger.error(error_msg)
-                results["storage_errors"].append(error_msg)
-        
-        return results
-    
-    def _store_single_document(self, document: Document):
-        """Store a single document in all storage systems."""
-        
-        # Store metadata in DuckDB
-        self.metadata_storage.store_document(document)
-        
-        # Store chunks in vector store
-        if document.chunks:
-            self.vector_store.store_chunks(document.chunks)
-        
-        # Store document in graph database
-        self.graph_storage.store_document_relations(document.__dict__)
-    
-    def _create_document_relationships(self, pair: DocumentPair):
-        """Create special relationships for document pairs in graph database."""
-        
-        if not pair.content_doc or not pair.metadata_doc:
-            return
-        
-        # Create metadata relationship
-        relationship_data = {
-            "source_doc_id": pair.metadata_doc.doc_id,
-            "target_doc_id": pair.content_doc.doc_id,
-            "relationship_type": "DESCRIBES",
-            "relationship_metadata": {
-                "category": pair.category,
-                "base_name": pair.base_name,
-                "created_at": datetime.now().isoformat()
-            }
-        }
-        
-        # Store in graph database (you may need to implement this method)
-        # self.graph_storage.create_custom_relationship(relationship_data)
-
-
-# Example usage script
-def main():
-    """Example usage of the ZIP dataset processor."""
-    
-    import logging
-    
-    # Setup logging
-    logging.basicConfig(
-        level=logging.INFO,
-        format='%(asctime)s - %(name)s - %(levelname)s - %(message)s'
-    )
-    
-    # Configuration
-    config = {
-        "max_workers": 4,
-        "pipeline": {
-            "pdf": {
-                "engine": "pymupdf",
-                "extract_images": True,
-                "perform_ocr": True
-            },
-            "chunker": {
-                "default_chunk_size": 500,
-                "default_chunk_overlap": 50
-            }
-        }
-    }
-    
-    # Initialize processor
-    processor = ZipDatasetProcessor(config)
-    
-    try:
-        # Process the dataset
-        input_root = "/path/to/your/dataset"  # Update this path
-        output_dir = "/path/to/output"        # Update this path
-        
-        document_pairs = processor.process_dataset(input_root, output_dir)
-        
-        # Print statistics
-        stats = processor.get_statistics()
-        print("\nProcessing Statistics:")
-        print(f"Total zip files processed: {stats['zip_files_processed']}")
-        print(f"Total zip files failed: {stats['zip_files_failed']}")
-        print(f"Document pairs created: {stats['document_pairs_created']}")
-        print(f"Content documents processed: {stats['content_docs_processed']}")
-        print(f"Metadata documents processed: {stats['metadata_docs_processed']}")
-        
-        print("\nBy Category:")
-        for category, cat_stats in stats['by_category'].items():
-            print(f"  {category}: {cat_stats['successful_pairs']}/{cat_stats['zip_files']} successful")
-        
-        # Store in databases (optional)
-        # from src.storage.duckdb import DuckDBStorage
-        # from src.storage.vector_store import VectorStore
-        # from src.storage.graph_db import GraphDBStorage
-        # 
-        # storage = ZipDatasetStorage(
-        #     DuckDBStorage("/data/metadata.db"),
-        #     VectorStore({"host": "chroma", "port": 8000}),
-        #     GraphDBStorage({"uri": "bolt://neo4j:7687", "user": "neo4j", "password": "password"})
-        # )
-        # 
-        # storage_results = storage.store_document_pairs(document_pairs)
-        # print(f"\nStorage Results: {storage_results}")
-        
-    finally:
-        # Clean up
-        processor.cleanup()
-
-if __name__ == "__main__":
-    main()

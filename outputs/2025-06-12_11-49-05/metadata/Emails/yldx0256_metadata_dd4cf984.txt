@@ -1,0 +1,27 @@
+Metadata for: Emails/yldx0256.zip/yldx0256.pdf
+Category: Emails
+==================================================
+
+=== Page 1 ===
+null - yldx0256 - Downloaded 31/03/2025 11:06:09 AM
+Document Information
+Title: Client News Daily Digest | Company
+URL: https://www.industrydocuments.ucsf.edu/docs/yldx0256
+Author: Client News; Client News [Client_News@mckinsey.com]
+Document Date: 2020 August 18
+Type: Email
+Genre: Outlook Message File
+Pages: 2
+ID: yldx0256
+Collection: McKinsey Documents
+Recipient: Martin Elling [Martin_Elling@mckinsey.com]
+Drug: opioids
+Availability: public; no restrictions
+Bates Number: MCK-MAAG-4321505
+Redacted: yes
+Date Added UCSF: 2022 June 06
+Cite This Document
+Author. Title. Date. Year. Collection. Source. https://www.industrydocuments.ucsf.edu/docs/[ID]
+Client News; Client News [Client_News@mckinsey.com]. Client News Daily Digest | Company. 
+2020 August 18. McKinsey Documents. Unknown. https://www.industrydocuments.ucsf.edu/
+docs/yldx0256

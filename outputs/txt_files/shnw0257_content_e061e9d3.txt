@@ -1,0 +1,40 @@
+Document: Documents/shnw0257.zip/shnw0257.pdf
+Category: Documents
+Processed: 2025-06-11T22:37:52.707269
+Method: pymupdf+ocr
+==================================================
+
+=== Page 1 ===
+Source:  https://www.industrydocuments.ucsf.edu/docs/shnw0257
+
+
+=== Page 2 ===
+Source:  https://www.industrydocuments.ucsf.edu/docs/shnw0257
+
+
+=== Page 3 ===
+Source:  https://www.industrydocuments.ucsf.edu/docs/shnw0257
+
+
+=== Page 4 ===
+Source:  https://www.industrydocuments.ucsf.edu/docs/shnw0257
+
+
+=== Page 5 ===
+Source:  https://www.industrydocuments.ucsf.edu/docs/shnw0257
+
+
+=== Page 6 ===
+Source:  https://www.industrydocuments.ucsf.edu/docs/shnw0257
+
+
+=== Page 7 ===
+Source:  https://www.industrydocuments.ucsf.edu/docs/shnw0257
+
+
+=== Page 8 ===
+Source:  https://www.industrydocuments.ucsf.edu/docs/shnw0257
+
+
+=== Page 9 ===
+Source:  https://www.industrydocuments.ucsf.edu/docs/shnw0257

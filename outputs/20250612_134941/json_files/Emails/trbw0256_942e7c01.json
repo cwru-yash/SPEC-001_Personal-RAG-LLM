@@ -1,0 +1,23 @@
+{
+  "document_id": "942e7c01",
+  "zip_file": "trbw0256.zip",
+  "category": "Emails",
+  "content_file": {
+    "file_name": "trbw0256.pdf",
+    "file_path": "Emails/trbw0256.zip/trbw0256.pdf",
+    "extracted_text": "=== Page 1 ===\nSource:  https://www.industrydocuments.ucsf.edu/docs/trbw0256\n\n\n=== Page 2 ===\nSource:  https://www.industrydocuments.ucsf.edu/docs/trbw0256\n",
+    "extraction_method": "pymupdf+ocr",
+    "errors": [],
+    "success": true
+  },
+  "metadata_file": {
+    "file_name": "trbw0256-info.pdf",
+    "file_path": "Emails/trbw0256.zip/trbw0256-info.pdf",
+    "extracted_text": "=== Page 1 ===\nnull - trbw0256 - Downloaded 31/03/2025 11:06:49 AM\nDocument Information\nTitle: Addressing Stigma\nURL: https://www.industrydocuments.ucsf.edu/docs/trbw0256\nAuthor: Erica Coe; Erica Coe [Erica_Coe@mckinsey.com]\nDocument Date: 2020 July 17\nType: Email\nGenre: Email;Outlook Message File\nPages: 2\nID: trbw0256\nCollection: McKinsey Documents\nRecipient: Shubham Singhal [shubham_singhal@mckinsey.com]; Thomas Latkovic [\nthomas_latkovic@mckinsey.com]; Amit Shah [amit_shah@mckinsey.com]; Kana Enomoto [\nKana_Enomoto@mckinsey.com]\nDrug: opioids\nAvailability: public; no restrictions\nBates Number: MCK-MAAG-2361966\nDate Added UCSF: 2022 June 06\nCite This Document\nAuthor. Title. Date. Year. Collection. Source. https://www.industrydocuments.ucsf.edu/docs/[ID]\nErica Coe; Erica Coe [Erica_Coe@mckinsey.com]. Addressing Stigma. 2020 July 17. McKinsey \nDocuments. Unknown. https://www.industrydocuments.ucsf.edu/docs/trbw0256\n",
+    "extraction_method": "pymupdf+ocr",
+    "errors": [],
+    "success": true
+  },
+  "processed_at": "2025-06-12T13:49:41.372400",
+  "overall_success": true
+}

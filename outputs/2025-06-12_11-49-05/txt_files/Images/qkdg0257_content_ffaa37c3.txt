@@ -1,0 +1,111 @@
+Document: Images/qkdg0257.zip/qkdg0257.pdf
+Category: Images
+Processed: 2025-06-12T11:49:12.489123
+Method: pymupdf+enhanced_ocr
+Text Length: 1134 chars
+==================================================
+
+=== Page 1 ===
+Source:  https://www.industrydocuments.ucsf.edu/docs/qkdg0257
+
+=== Page 1 Image 1 (OCR) ===
+Bank Reference
+
+21911215557
+
+1
+
+Customer Reference
+
+NONREF
+
+Value Date
+
+04/22/2019
+
+Entry Date
+
+04/22/2019
+
+Posted Time
+
+05:37
+
+Transaction Amount
+
+212,700.00
+
+Product Type
+
+Funds Transfer
+
+ACH CREDIT
+
+Transaction Description
+
+Payment Details
+
+ACH CREDIT RECEIVED SENDING CO REF # 021000022354099RCVR NAME MCKINSEY & CO
+
+IN SENDING CO AUDIT #2000154399 SENDING PERSON/CO PURDUE PHARMA L. ENTRY
+
+DESCRIPTION PAYMENTS
+
+Batch/Track Number
+
+530934648865
+
+MCK-MAAG-4772045
+
+=== Page 1 (Full Page OCR) ===
+Bank Reference
+
+21911215557
+
+1
+
+Customer Reference
+
+NONREF
+
+Value Date
+
+04/22/2019
+
+Entry Date
+
+04/22/2019
+
+Posted Time
+
+05:37
+
+Transaction Amount
+
+212,700.00
+
+Funds Transfer
+
+Product Type
+
+Transaction Description
+
+ACH CREDIT
+
+Payment Details
+
+ACH CREDIT RECEIVED SENDING CO REF # 0210000223540S9RCVR NAME MCKINSEY & CO
+
+IN SENDING CO AUDIT #2000154399 SENDING PERSON/CO PURDUE PHARMA L. ENTRY
+
+DESCRIPTION PAYMENTS
+
+Batch/Track Number
+
+530934648865
+
+Soi
+
+https://www. industrydocuments.ucsf.edu/docs/qkdg0257
+
+MCK-MAAG-4772045

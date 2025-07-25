@@ -1,0 +1,23 @@
+{
+  "document_id": "08dad02d",
+  "zip_file": "nxcw0256.zip",
+  "category": "Emails",
+  "content_file": {
+    "file_name": "nxcw0256.pdf",
+    "file_path": "Emails/nxcw0256.zip/nxcw0256.pdf",
+    "extracted_text": "=== Page 1 ===\nSource:  https://www.industrydocuments.ucsf.edu/docs/nxcw0256\n\n\n=== Page 2 ===\nSource:  https://www.industrydocuments.ucsf.edu/docs/nxcw0256\n\n\n=== Page 3 ===\nSource:  https://www.industrydocuments.ucsf.edu/docs/nxcw0256\n\n\n=== Page 4 ===\nSource:  https://www.industrydocuments.ucsf.edu/docs/nxcw0256\n",
+    "extraction_method": "pymupdf+ocr",
+    "errors": [],
+    "success": true
+  },
+  "metadata_file": {
+    "file_name": "nxcw0256-info.pdf",
+    "file_path": "Emails/nxcw0256.zip/nxcw0256-info.pdf",
+    "extracted_text": "=== Page 1 ===\nnull - nxcw0256 - Downloaded 31/03/2025 11:06:15 AM\nDocument Information\nTitle: [EXT]Wall Street Breakfast: Gold, Stimulus, Trade\nURL: https://www.industrydocuments.ucsf.edu/docs/nxcw0256\nAuthor: account@seekingalpha.com\nDocument Date: 2020 August 05\nType: Email\nGenre: Email;Outlook Message File\nPages: 4\nID: nxcw0256\nCollection: McKinsey Documents\nRecipient: Arnab Ghatak [arnab_ghatak@mckinsey.com]\nDrug: Oxycodone\nAvailability: public; no restrictions\nBates Number: MCK-MAAG-2608752\nDate Added UCSF: 2022 June 06\nCite This Document\nAuthor. Title. Date. Year. Collection. Source. https://www.industrydocuments.ucsf.edu/docs/[ID]\naccount@seekingalpha.com. [EXT]Wall Street Breakfast: Gold, Stimulus, Trade. 2020 August \n05. McKinsey Documents. Unknown. https://www.industrydocuments.ucsf.edu/docs/nxcw0256\n",
+    "extraction_method": "pymupdf+ocr",
+    "errors": [],
+    "success": true
+  },
+  "processed_at": "2025-06-12T12:01:01.461695",
+  "overall_success": true
+}

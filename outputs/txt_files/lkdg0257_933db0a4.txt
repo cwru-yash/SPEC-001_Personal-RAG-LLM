@@ -1,0 +1,57 @@
+File: /Users/yashm/Documents/GitHub/SPEC-001_Personal-RAG-LLM/SPEC-001_Personal-RAG-LLM/data/input/Images/lkdg0257/lkdg0257.pdf
+Processed: 2025-06-11T22:37:07.859066
+Method: pymupdf+ocr
+==================================================
+
+=== Page 1 ===
+Source:  https://www.industrydocuments.ucsf.edu/docs/lkdg0257
+
+
+=== Page 1 Image 1 (OCR) ===
+Bank Reference
+
+21900714099
+
+1
+
+Customer Reference
+
+NONREF
+
+Value Date
+
+01/07/2019
+
+Entry Date
+
+01/07/2019
+
+Posted Time
+
+03:23
+
+Transaction Amount
+
+265,875.00
+
+Product Type
+
+Funds Transfer
+
+Transaction Description
+
+ACH CREDIT
+
+Payment Details
+
+ACH CREDIT RECEIVED SENDING CO REF # 021000023254098RCVR NAME MCKINSEY & CO
+
+IN SENDING CO AUDIT #2000150855 SENDING PERSON/CO PURDUE PHARMA L. ENTRY
+
+DESCRIPTION PAYMENTS
+
+Batch/Track Number
+
+534338820865
+
+MCK-MAAG-4772040

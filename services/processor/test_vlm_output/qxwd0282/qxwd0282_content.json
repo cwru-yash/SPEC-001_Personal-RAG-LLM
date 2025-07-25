@@ -1,0 +1,51 @@
+{
+  "doc_id": "086f452e-0662-433c-b6bf-e422aa81e569",
+  "file_name": "qxwd0282.pdf",
+  "file_path": "/var/folders/q_/w29h3cts0gv3f_5r904qxn0w0000gn/T/vlm_processor_vdo5w8ix/qxwd0282_c08be0cd/qxwd0282.pdf",
+  "category": "Documents",
+  "doc_type": "content",
+  "content_format": "pdf",
+  "vlm_content_type": "document",
+  "vlm_confidence": 0.8166666666666668,
+  "vlm_layout_description": "VLM processing failed, using traditional extraction",
+  "vlm_visual_elements": [],
+  "text_content": "",
+  "structured_content": {
+    "content_type": "document",
+    "document_role": "content",
+    "text_length": 0,
+    "has_visual_elements": false,
+    "visual_element_count": 0,
+    "visual_elements": []
+  },
+  "metadata": {
+    "pair_id": "qxwd0282",
+    "category": "Documents",
+    "doc_type": "content",
+    "processing_timestamp": "2025-07-24T16:45:07.757378",
+    "file_stats": {
+      "size_bytes": 1520123,
+      "size_mb": 1.45
+    },
+    "vlm_processing": {
+      "enabled": true,
+      "method": "vlm_enhanced",
+      "confidence": 0.8166666666666668,
+      "content_type_detected": "document",
+      "performance": {
+        "total_processing_time": 1314.861469,
+        "successful_pages": 3,
+        "total_pages_attempted": 3,
+        "success_rate": 1.0,
+        "average_page_time": 438.20798897743225,
+        "current_timeout": 600
+      }
+    }
+  },
+  "file_size": 1520123,
+  "processing_time": 1314.868312,
+  "processing_method": "vlm_enhanced",
+  "success": true,
+  "errors": [],
+  "warnings": []
+}

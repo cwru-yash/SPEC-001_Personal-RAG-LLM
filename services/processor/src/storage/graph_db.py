@@ -22,7 +22,8 @@ class GraphDBStorage:
         self.uri = config.get("uri", "bolt://neo4j:7687")
         self.user = config.get("user", "neo4j")
         self.password = config.get("password", "password")
-        self.database = config.get("database", "documents")
+        # self.database = config.get("database", "documents")
+        self.database = config.get("database", "neo4j")  # Use default database
         
         # Connect to Neo4j
         self.driver = GraphDatabase.driver(self.uri, auth=(self.user, self.password))

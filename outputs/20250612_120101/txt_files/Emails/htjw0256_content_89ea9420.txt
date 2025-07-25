@@ -1,0 +1,9 @@
+STATUS: SUCCESS
+Document: Emails/htjw0256.zip/htjw0256.pdf
+Category: Emails
+Processed: 2025-06-12T12:01:01.473115
+Method: pymupdf+ocr
+==================================================
+
+=== Page 1 ===
+Source:  https://www.industrydocuments.ucsf.edu/docs/htjw0256

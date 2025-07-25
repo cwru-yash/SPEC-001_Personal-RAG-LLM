@@ -1,0 +1,8 @@
+2025-07-22 17:14:04,466 - __main__ - INFO - 🚀 Starting CPU-Optimized VLM Test Suite
+2025-07-22 17:14:04,467 - __main__ - INFO - ============================================================
+2025-07-22 17:14:04,481 - __main__ - ERROR - ❌ Configuration loading failed: while parsing a block mapping
+  in "/Users/yashm/Documents/GitHub/SPEC-001_Personal-RAG-LLM/SPEC-001_Personal-RAG-LLM/services/processor/conf/config.yaml", line 96, column 5
+expected <block end>, but found '<scalar>'
+  in "/Users/yashm/Documents/GitHub/SPEC-001_Personal-RAG-LLM/SPEC-001_Personal-RAG-LLM/services/processor/conf/config.yaml", line 99, column 26
+2025-07-22 17:14:04,481 - __main__ - ERROR -    Make sure you're running this from the processor directory
+2025-07-22 17:14:04,481 - __main__ - ERROR -    and that conf/vlm/cpu_optimized.yaml exists

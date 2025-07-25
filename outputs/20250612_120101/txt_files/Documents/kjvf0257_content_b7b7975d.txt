@@ -1,0 +1,61 @@
+STATUS: SUCCESS
+Document: Documents/kjvf0257.zip/kjvf0257.pdf
+Category: Documents
+Processed: 2025-06-12T12:01:02.149550
+Method: pymupdf+ocr
+==================================================
+
+=== Page 1 ===
+Source:  https://www.industrydocuments.ucsf.edu/docs/kjvf0257
+
+
+=== Page 2 ===
+Source:  https://www.industrydocuments.ucsf.edu/docs/kjvf0257
+
+
+=== Page 3 ===
+Source:  https://www.industrydocuments.ucsf.edu/docs/kjvf0257
+
+
+=== Page 4 ===
+Source:  https://www.industrydocuments.ucsf.edu/docs/kjvf0257
+
+
+=== Page 5 ===
+Source:  https://www.industrydocuments.ucsf.edu/docs/kjvf0257
+
+
+=== Page 6 ===
+Source:  https://www.industrydocuments.ucsf.edu/docs/kjvf0257
+
+
+=== Page 7 ===
+Source:  https://www.industrydocuments.ucsf.edu/docs/kjvf0257
+
+
+=== Page 8 ===
+Source:  https://www.industrydocuments.ucsf.edu/docs/kjvf0257
+
+
+=== Page 9 ===
+Source:  https://www.industrydocuments.ucsf.edu/docs/kjvf0257
+
+
+=== Page 10 ===
+Source:  https://www.industrydocuments.ucsf.edu/docs/kjvf0257
+
+
+=== Page 11 ===
+Source:  https://www.industrydocuments.ucsf.edu/docs/kjvf0257
+
+
+=== Page 12 ===
+Source:  https://www.industrydocuments.ucsf.edu/docs/kjvf0257
+
+
+=== Page 13 ===
+Source:  https://www.industrydocuments.ucsf.edu/docs/kjvf0257
+
+
+=== Page 14 ===
+Source:  https://www.industrydocuments.ucsf.edu/docs/kjvf0257

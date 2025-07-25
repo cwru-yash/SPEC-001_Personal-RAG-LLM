@@ -1,0 +1,37 @@
+Document: Images/ykdg0257.zip/ykdg0257.pdf
+Category: Images
+Processed: 2025-06-12T11:49:48.173522
+Method: pymupdf+enhanced_ocr
+Text Length: 355 chars
+==================================================
+
+=== Page 1 ===
+Source:  https://www.industrydocuments.ucsf.edu/docs/ykdg0257
+
+=== Page 1 Image 1 (OCR) ===
+Bank Reference
+
+219094 15334
+
+1
+
+Customer Reference
+
+NONREF
+
+MCK-MAAG-4772043
+
+=== Page 1 (Full Page OCR) ===
+Bank Reference
+
+21909415334
+
+1
+
+Customer Reference
+
+NONREF
+
+Source: https://www.industrydocuments.ucsf.edu/docs/ykdg0257
+
+MCK-MAAG-4772043

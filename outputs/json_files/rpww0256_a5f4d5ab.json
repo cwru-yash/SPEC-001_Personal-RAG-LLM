@@ -1,0 +1,22 @@
+{
+  "document_id": "a5f4d5ab",
+  "zip_file": "rpww0256.zip",
+  "category": "Emails",
+  "content_file": {
+    "file_name": "rpww0256.pdf",
+    "file_path": "Emails/rpww0256.zip/rpww0256.pdf",
+    "extracted_text": "=== Page 1 ===\nSource:  https://www.industrydocuments.ucsf.edu/docs/rpww0256\n",
+    "extraction_method": "pymupdf+ocr",
+    "errors": [],
+    "success": true
+  },
+  "metadata_file": {
+    "file_name": "rpww0256-info.pdf",
+    "file_path": "Emails/rpww0256.zip/rpww0256-info.pdf",
+    "extracted_text": "=== Page 1 ===\nnull - rpww0256 - Downloaded 31/03/2025 11:04:01 AM\nDocument Information\nTitle: 17F23D0C3474ACF38525814800462572.MSG\nURL: https://www.industrydocuments.ucsf.edu/docs/rpww0256\nDocument Date: 2017 June 23; 2020 September 27\nType: Email\nGenre: Lotus Notes Message File\nPages: 1\nID: rpww0256\nCollection: McKinsey Documents\nDrug: opioids\nAvailability: public; no restrictions\nBates Number: MCK-MAAG-2718907\nRedacted: yes\nDate Added UCSF: 2022 June 06\nCite This Document\nAuthor. Title. Date. Year. Collection. Source. https://www.industrydocuments.ucsf.edu/docs/[ID]\nUnknown. 17F23D0C3474ACF38525814800462572.MSG. 2017 June 23; 2020 September 27. \nMcKinsey Documents. Unknown. https://www.industrydocuments.ucsf.edu/docs/rpww0256\n",
+    "extraction_method": "pymupdf+ocr",
+    "errors": [],
+    "success": true
+  },
+  "processed_at": "2025-06-12T11:26:53.894478"
+}

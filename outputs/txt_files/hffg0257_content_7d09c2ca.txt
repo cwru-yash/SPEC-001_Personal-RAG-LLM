@@ -1,0 +1,1415 @@
+Document: Presentations/hffg0257.zip/hffg0257.pdf
+Category: Presentations
+Processed: 2025-06-12T11:26:54.246284
+Method: pymupdf+ocr
+==================================================
+
+=== Page 1 ===
+Developing a path forward for market access 
+November 2018 
+Privileged: This presentation contains draft proposals for discussion by 
+Management and are subject to appropriate Purdue legal and regulatory review 
+before they can be considered final. These materials are confidential and 
+proprietary.
+Source:  https://www.industrydocuments.ucsf.edu/docs/hffg0257
+
+
+=== Page 2 ===
+PROPRIETARY AND 
+CONFIDENTIAL
+PROPRIETARY AND 
+CONFIDENTIAL
+2
+Net sales1
+$M
+10
+11
+5
+43
+21
+31
+11
+5
+7
+5
+1
+1
+1
+10
+1
+1
+159
+53
+63
+113
+111
+73
+17
+18
+9
+15
+10
+6
+6
+17
+13
+6
+4
+545
+2019 contracting
+Market 
+segment
+Commer-
+cial
+Medicare 
+Part D
+Current status (FYE June 2018)
+1 Only account for discretionary rebates to payors, but not other GtN reductions; 2  Includes Admin fee and price protection when applicable; 
+3 Assuming status carries over from 201807 period for 
+those accounts with OxyContin formulary access, status based on majority of lives; 
+4 Excluding BCBS TN               5 Prime Therapeutics - excl HCSC: include BCBS NC, MN, KS Horizon BCBSNJ and other prime accounts 
+21%
+17%
+13%
+21%
+23%
+20%
+4%
+9%
+3%
+5%
+26%
+14%
+14%
+15%
+17%
+14%
+Gross sales
+$M 
+Market 
+Share
+11%
+7%
+6%
+2%
+2%
+1%
+1%
+1%
+1%
+1%
+11%
+5%
+2%
+1%
+1%
+0%
+54%
+% 
+Net sales 
+Account
+Express Scripts4
+Caremark
+OptumRx  - United Healthcare
+Aetna Health Plans
+Prime Therapeutics - excl HCSC5
+Prime Therapeutics - HCSC
+Cigna Healthcare
+Procare
+BCBS FL (Prime Therapeutics)
+Independence BCBS (PA)
+Caremark
+OptumRx  - United Healthcare
+Express Scripts
+Prime Therapeutics
+EnvisionRx Options
+Total
+MedImpact
+2T Preferred
+NOF
+NOF
+2T Preferred
+NOF
+3T Preferred
+3T Pref PDP/MAPD NOF
+Pref MAPD/PDP NOF
+2T Preferred
+2T Preferred
+2T Preferred 
+2T Preferred
+2T Preferred
+2T Preferred
+NOF
+2T Preferred
+42%
+35%
+38%
+21%
+28%
+29%
+0%
+20%
+0%
+0%
+56%
+66%
+38%
+40%
+37%
+28%
+Rebate2
+OxyContin
+Xtampza ER3
+Non-preferred
+Preferred
+Preferred
+Non-preferred
+Preferred
+NOF
+Preferred
+NOF
+NOF
+NOF
+Non-preferred
+Non-preferred
+Preferred
+Non-preferred
+Preferred
+Preferred
+2019 formulary status
+TBD
+TBD
+TBD
+TBD
+TBD
+TBD
+TBD
+TBD
+TBD
+TBD
+12/07/2018
+11/04/2018
+11/16/2018
+12/07/2018
+12/14/2018
+11/19/2018
+2020 Bid 
+due date
+SOURCE: Purdue internal data, MMIT
+Lives 
+992
+191
+5
+112
+26
+102
+21
+21
+12
+11
+7
+6
+258
+155
+26
+20
+8
+Re-
+evaluating 
+2019 bid 
+given the 
+latest event 
+of Excellus 
+BCBS 
+exclusion 
+Overview: top accounts for Oxycontin
+Source:  https://www.industrydocuments.ucsf.edu/docs/hffg0257
+
+
+=== Page 3 ===
+PROPRIETARY AND 
+CONFIDENTIAL
+PROPRIETARY AND 
+CONFIDENTIAL
+Fact base for ESI modeling 
+ No. of lives: 817 K
+Gross sales: $1.9 Mn
+Net sales: $1.9 Mn
+2018 formulary status: 3T Non-Preferred
+2019 contracting status: asked for 70% rebate to remain 
+current status, then excluded Oxycontin when we didn’t 
+accept the rate; timeline of implementation TBD
+Excellus BCBS 
+Commercial 
+ESI 
+commercial
+ Fact base for modeling:
+No. of lives: 42Mn
+Gross sales: $191 Mn            
+Net sales: $111 Mn
+Blended rebate rate: 41.7%
+2018 formulary status: 2T Preferred - allows for class UM
+2019 contracting status: 42.5% rebate as the only preferred 
+Oxycodone ER, or 20% rebate as the non-preferred (but 
+exclusive)
+ Scenario for modeling
+ESI overall:
+Status quo:
+-
+Maintain current access 
+status with the same rate 
+Exclusive: 
+- 70% rebate for exclusive 
+preferred status
+Source:  https://www.industrydocuments.ucsf.edu/docs/hffg0257
+
+
+=== Page 4 ===
+PROPRIETARY AND 
+CONFIDENTIAL
+PROPRIETARY AND 
+CONFIDENTIAL
+The ERO market contraction of -21% at ESI Commercial is more severe than the overall market, 
+yet OxyContin has grown its share of TRx in contrast to the broader market
+a
+67.2
+69.6
+10.0
+7.5
+17.7
+16.6
+1.6
+2.4
+2017
+1.5
+2.0 1.9
+2018 
+Hysingla ER
+OxyContin
+Nucynta ER
+Zohydro ER
+Xtampza ER
+Other ERO brands2 
+ERO Gx
+Share shift in ERO Commercial market1, % TRx
+Overall Commercial market
+ESI Commercial
+SOURCE: IQVIA Plantrak
+1 Market share compared the first three quarters in 2017 and 2018 due to data limitation
+2 Other ERO brands include Avinza, Arymo ER, Embeda, Belbuca, Kadian, Opana ER, Butrans, Morphabond ER, Xartemis XR
+Volu
+me 
+chan
+ge 
+-17.0%
+-20.9%
+61.9
+62.5
+11.9
+9.1
+20.4
+21.1
+2.5
+1.7
+1.1
+2017
+2.8
+2018 
+Current share of Oxycontin 
+at  15.4%
+• The market 
+contraction of EROs at 
+ESI Commercial is 4pp 
+more severe than the 
+overall market, but 
+there is a much lower 
+shift towards 
+generics
+• OxyContin has grown 
+its market share in 
+the past year, along 
+with Xtampza ER and 
+Zohydro ER
+ESI COMMERCIAL
+Source:  https://www.industrydocuments.ucsf.edu/docs/hffg0257
+
+
+=== Page 5 ===
+PROPRIETARY AND 
+CONFIDENTIAL
+PROPRIETARY AND 
+CONFIDENTIAL
+Current formulary coverage: ESI commercial
+OxyContin
+Hysingla ER
+Xtampza ER
+Nucynta ER
+Zohydro ER
+Oxycontin preferred, Xtampza non-preferred
+25% Preferred
+Preferred
+Non-preferred
+Preferred
+Non-preferred
+Oxycontin preferred, Xtampza not covered
+25% Preferred
+Preferred
+Not covered
+Preferred
+Not covered
+Exclusive preferred
+19% Preferred
+Not covered
+Not covered
+Not covered
+Not covered
+No brand covered
+9% Not covered
+Not covered
+Not covered
+Not covered
+Not covered
+Oxycontin preferred, Xtampza non-preferred, others
+7% Preferred
+Not covered
+Non-preferred
+Preferred
+Not covered
+All brands non-preferred
+6% Non-preferred
+Non-preferred
+Non-preferred
+Non-preferred
+Non-preferred
+Others
+10%
+Coverage by product
+Formulary type
+% of lives
+Source:  https://www.industrydocuments.ucsf.edu/docs/hffg0257
+
+
+=== Page 6 ===
+PROPRIETARY AND 
+CONFIDENTIAL
+PROPRIETARY AND 
+CONFIDENTIAL
+ESI commercial 2019 bid grid
+Manufacturer:
+Purdue Pharma
+Channel:
+Retail/Mail/Specialty
+Base
+Managed Medicaid onlRestrictedunUnrestricted
+Product
+Rate Type
+Footnotes
+CPC*
+Controlled  
+1 of Many
+Controlled 
+1 of 2
+Controlled 
+Exclusive
+Closed 
+1 of Many
+Closed 
+1 of 2
+Closed 
+Exclusive
+Non-Preferred 
+Formulary  Access 
+Rate - Restricted
+Non-Preferred 
+Formulary
+Access Rate - 
+Unrestricted
+Footnotes
+Effective 
+Date
+OxyContin
+Unrestricted Rebate
+1
+Narcotic Analgesics Oral
+24.000%
+42.500%
+42.500%
+24.000%
+42.500%
+42.500%
+1/1/2019
+OxyContin
+Unrestricted Rebate
+1, 6 Narcotic Analgesics Oral
+42.500%
+No Bid
+No Bid
+42.500%
+No Bid
+No Bid
+1/1/2019
+OxyContin
+Restricted
+1, 7, 9 Narcotic Analgesics Oral
+42.500%
+42.500%
+42.500%
+42.500%
+42.500%
+42.500%
+No Bid
+No Bid
+1/1/2019
+OxyContin
+Restricted
+Narcotic Analgesics Oral
+No Bid
+No Bid
+No Bid
+No Bid
+No Bid
+No Bid
+No Bid
+20.000%
+1, 10
+1/1/2019
+OxyContin
+base
+1, 8 Narcotic Analgesics Oral
+35.000%
+35.000%
+35.000%
+35.000%
+35.000%
+35.000%
+1/1/2019
+Rebates - Stated as % of WAC
+Rebates - Stated as % of WAC
+Source:  https://www.industrydocuments.ucsf.edu/docs/hffg0257
+
+
+=== Page 7 ===
+PROPRIETARY AND 
+CONFIDENTIAL
+PROPRIETARY AND 
+CONFIDENTIAL
+FOOTNOTES:
+6)  OxyContin (all strengths) must be listed as the only preferred extended release oxycodone Product on formulary.
+Carrier Name
+Formulary Name
+Priority Health
+Priority Health – COMMERCIAL
+Priority Health
+Priority Health – COMM/HCR
+WALT DISNEY COMPANY
+WALT DISNEY
+8) Utilization is eligible for this level of Rebate when OxyContin (all strengths) is subject to a limited prior authorization applied to all extended release opioids (brand and generic, existing and new product entrants) that is mutually 
+agreed upon by both ESI and the Company to not be a restriction for purposes of this level of Rebate.  Any Utilization submitted under Formularies other than those listed here shall not be eligible for this Rebate.  Formulary Names 
+currently eligible for this Rebate are:
+9)  Utilization is eligible for this level of Rebate when (i) OxyContin is Unrestricted on the lowest preferred brand tier, however, a prior authorization on all immediate release opioids (IROs) and extended release opioids (EROs) is 
+permitted,  (ii) Plan has adopted the Express Scripts Advanced Opioid Management program (as described in footnote 7 herein), and (iii) OxyContin is listed as the only preferred extended-release oxycodone Product on formulary.  The 
+Allowed Net WAC  for this rate shall be calculated by: multiplying the Net WAC as of June 30, 2018 by one (1) plus the Inflation Limitation Percentage.
+10)  Utilization is eligible for this level of Rebate when (i) OxyContin is Unrestricted on the non-preferred brand tier, however, a prior authorization on all immediate release opioids (IROs) and extended release opioids (EROs) is 
+permitted,  (ii) Company is the Exclusive manufacturer on formulary with all competitor extended-release opioids not covered and requiring a step edit of either a generic ERO or OxyContin (current products subject to be this 
+requirement include: Avinza®, Kadian®, Duragesic®, Zohydro® ER, Embeda®, Exalgo®, Opana® ER, Belbuca®, Xtampza® ER and Nucynta® ER).  Rebates are only available on eligible claims from Plans with capability to do step 
+edits and prior authorizations.
+1)  Quantity limits placed on Oxycontin of 2/day for all strengths will not be considered a restriction on Oxycontin.
+Pain Severe Enough to Require Daily, Around-the-Clock, Long-Term Opioid Treatment.  Approve for 1 year if the patient meets ONE of the following criteria (A, B or C):
+A) The patient has a cancer diagnosis; OR
+B) The patient is in hospice program, end-of-life care, or palliative care; OR  
+C) The patient has chronic pain but does not have a cancer diagnosis.  Approve for 1 year if the patient meets ALL of the following criteria (i, ii, iii, iv, v, and vi):
+i. Patient is not opioid naïve; AND 
+ii. Patient has a concurrent prescription for a short-acting opioid; AND
+iii. Non-opioid therapies (e.g., non-opioid medications [e.g., nonsteroidal anti-inflammatory drugs {NSAIDs}, tricyclic antidepressants, serotonin and norepinephrine reuptake inhibitors {SNRIs}, anticonvulsants], exercise therapy, 
+weight loss, cognitive behavioral therapy) have been optimized and are being used in conjunction with opioid therapy according to the prescribing physician; AND 
+iv. The patient’s history of controlled substance prescriptions has been checked using the state prescription drug monitoring program (PDMP), unless unavailable in the state, according to the prescribing physician; AND
+v. Risks (e.g., addiction, overdose) and realistic benefits of opioid therapy have been discussed with the patient according to the prescribing physician; AND 
+vi. Treatment plan (including goals for pain and function) is in place and reassessments (including pain levels and function) are scheduled at regular intervals according to the prescribing physician.
+7)  Utilization is eligible for this level of Rebate when OxyContin (all strengths) Unrestricted, however, the following Prior Authorization is permitted on Product provided it's applied equally to all other branded and generic long-
+acting opioids:
+Source:  https://www.industrydocuments.ucsf.edu/docs/hffg0257
+
+
+=== Page 8 ===
+PROPRIETARY AND 
+CONFIDENTIAL
+PROPRIETARY AND 
+CONFIDENTIAL
+▪The ERO market contraction of -7% in 
+CVS Caremark Medicare is nearly half 
+the rate of the broader Medicare ERO 
+contraction of -13% 
+▪Within the overall Caremark ERO market, 
+the share of OxyContin rose by 0.4pp, 
+but within the major ERO brands1, 
+OxyContin’s share fell 3pp (to 88%) while 
+Xtampza ER gained 2pp
+▪Caremark accounts for 53% of 
+OxyContin’s contracted Medicare 
+gross sales, with a above-average 
+rebate rate of 56% total rebate for 
+20192
+▪Purdue ERO portfolio has preferred 
+access in 79% of lives at CVS 
+Caremark Medicare, while only 18% of 
+lives receive non-preferred Xtampza 
+▪If OxyContin is excluded while Xtampza ER 
+is the preferred branded oxycodone ER, 
+OxyContin will lose xx-xx% shares
+▪Given the downside of exclusion, 
+OxyContin should increase rebate no more 
+than xx-xx%
+▪From CVS perspective, the tipping point 
+for excluding OxyContin will be xx-xx%
+▪For every 1pt of share loss, OxyContin will 
+hypothetically be willing to increase 
+rebate by xxpts to maintain current 
+access
+1
+2
+Other components that are 
+critical to the 
+recommendation, but do 
+not require debate
+Key components that 
+require debate and 
+alignment
+Key components of the OxyContin CVS Caremark Medicare bid
+a
+b
+3
+4
+c
+d
+PRELIMINARY
+WIP
+1 OxyContin, Xtampza ER, Hysingla ER, Zohydro ER, Nucynta ER
+2 ~52% base rebate and 4.00% admin fee
+Source:  https://www.industrydocuments.ucsf.edu/docs/hffg0257
+
+
+=== Page 9 ===
+PROPRIETARY AND 
+CONFIDENTIAL
+PROPRIETARY AND 
+CONFIDENTIAL
+Xtampza ER
+OxyContin
+Nucynta ER
+Hysingla ER
+Zohydro ER
+Other ERO brands2 
+ERO Gx
+Share shift in ERO Medicare market1, % TRx
+Overall Medicare market
+CaremarkPCS Medicare
+SOURCE: IQVIA Plantrak
+1 Market share compared the first three quarters in 2017 and 2018 due to data limitation
+2 Other ERO brands include Avinza, Arymo ER, Embeda, Belbuca, Kadian, Opana ER, Butrans, Morphabond ER, Xartemis XR
+Volu
+me 
+chan
+ge 
+76.4
+76.7
+7.4
+5.5
+14.2
+14.1
+0.9
+0.5
+1.1
+1.6
+2017
+1.0
+2018 
+-13.1%
+-7.0%
+At CVS/Caremark, OxyContin holds a larger share of the market and overall volume decline is 
+6pp lower than the overall Medicare market
+a
+65.1
+65.2
+7.9
+24.8
+25.2
+1.1
+0.7
+1.0
+2017
+0.2
+6.2
+2018 
+We will focus on the 
+market dynamics among 
+leading ERO brands for 
+OxyContin’s contracting 
+strategy analysis
+• OxyContin holds a 
+larger and growing 
+share of the ERO 
+market at 
+CVS/Caremark when 
+compared to the overall 
+Part D market
+• Overall volume 
+erosion at 
+CVS/Caremark is 
+nearly half that of the 
+overall Part D market
+CAREMARKPCS
+Source:  https://www.industrydocuments.ucsf.edu/docs/hffg0257
+
+
+=== Page 10 ===
+PROPRIETARY AND 
+CONFIDENTIAL
+PROPRIETARY AND 
+CONFIDENTIAL
+Current coverage at CVS
+OxyContin Hysingla ERXtampza ERNucynta ERZohydro ER
+Oxycontin and Hysingla preferred, Xtampza non-preferred
+53% Preferred
+Preferred
+Non-prefer Preferred
+Non-prefer
+No brand covered
+18% Preferred
+Preferred
+Not covere Preferred
+Not covered
+No Oxycodone ER covered
+15% Preferred
+Not covere Not covere Not coveredNot covered
+Oxycontin preferred, Xtampza not covered
+4% Not coveredNot covere Not covere Not coveredNot covered
+Oxycontin preferred, Xtampza non-preferred
+4% Preferred
+Not covere Non-prefer Preferred
+Not covered
+Others
+6%
+Formulary type
+% of lives
+Coverage by product
+Current rebate rate: 56%
+Ask: maintain fixed net price – increasing 
+effective rebate rate to 60% for the same 
+coverage
+Source:  https://www.industrydocuments.ucsf.edu/docs/hffg0257
+
+
+=== Page 11 ===
+ 
+Developing a path forward for market access 
+November 2018 
+Privileged: This presentation contains draft proposals for discussion by 
+Management and are subject to appropriate Purdue legal and regulatory review 
+before they can be considered final. These materials are confidential and 
+proprietary.
+Source:  https://www.industrydocuments.ucsf.edu/docs/hffg0257
+
+
+=== Page 12 ===
+PROPRIETARY AND 
+CONFIDENTIAL
+PROPRIETARY AND 
+CONFIDENTIAL
+2
+Net sales1
+$M
+10
+11
+5
+43
+21
+31
+11
+5
+7
+5
+1
+1
+1
+10
+1
+1
+159
+53
+63
+113
+111
+73
+17
+18
+9
+15
+10
+6
+6
+17
+13
+6
+4
+545
+2019 contracting
+Market 
+segment
+Commer-
+cial
+Medicare 
+Part D
+Current status (FYE June 2018)
+1 Only account for discretionary rebates to payors, but not other GtN reductions; 2  Includes Admin fee and price protection when applicable; 
+3 Assuming status carries over from 201807 period for 
+those accounts with OxyContin formulary access, status based on majority of lives; 
+4 Excluding BCBS TN               5 Prime Therapeutics - excl HCSC: include BCBS NC, MN, KS Horizon BCBSNJ and other prime accounts 
+21%
+17%
+13%
+21%
+23%
+20%
+4%
+9%
+3%
+5%
+26%
+14%
+14%
+15%
+17%
+14%
+Gross sales
+$M 
+Market 
+Share
+11%
+7%
+6%
+2%
+2%
+1%
+1%
+1%
+1%
+1%
+11%
+5%
+2%
+1%
+1%
+0%
+54%
+% 
+Net sales 
+Account
+Express Scripts4
+Caremark
+OptumRx  - United Healthcare
+Aetna Health Plans
+Prime Therapeutics - excl HCSC5
+Prime Therapeutics - HCSC
+Cigna Healthcare
+Procare
+BCBS FL (Prime Therapeutics)
+Independence BCBS (PA)
+Caremark
+OptumRx  - United Healthcare
+Express Scripts
+Prime Therapeutics
+EnvisionRx Options
+Total
+MedImpact
+2T Preferred
+NOF
+NOF
+2T Preferred
+NOF
+3T Preferred
+3T Pref PDP/MAPD NOF
+Pref MAPD/PDP NOF
+2T Preferred
+2T Preferred
+2T Preferred 
+2T Preferred
+2T Preferred
+2T Preferred
+NOF
+2T Preferred
+42%
+35%
+38%
+21%
+28%
+29%
+0%
+20%
+0%
+0%
+56%
+66%
+38%
+40%
+37%
+28%
+Rebate2
+OxyContin
+Xtampza ER3
+Non-preferred
+Preferred
+Preferred
+Non-preferred
+Preferred
+NOF
+Preferred
+NOF
+NOF
+NOF
+Non-preferred
+Non-preferred
+Preferred
+Non-preferred
+Preferred
+Preferred
+2019 formulary status
+TBD
+TBD
+TBD
+TBD
+TBD
+TBD
+TBD
+TBD
+TBD
+TBD
+12/07/2018
+11/04/2018
+11/16/2018
+12/07/2018
+12/14/2018
+11/19/2018
+2020 Bid 
+due date
+SOURCE: Purdue internal data, MMIT
+Lives 
+992
+191
+5
+112
+26
+102
+21
+21
+12
+11
+7
+6
+258
+155
+26
+20
+8
+Re-
+evaluating 
+2019 bid 
+given the 
+latest event 
+of Excellus 
+BCBS 
+exclusion 
+Overview: top accounts for Oxycontin
+2
+Source:  https://www.industrydocuments.ucsf.edu/docs/hffg0257
+
+
+=== Page 13 ===
+ 
+PROPRIETARY AND 
+CONFIDENTIAL
+PROPRIETARY AND 
+CONFIDENTIAL
+Fact base for ESI modeling 
+ No. of lives: 817 K
+Gross sales: $1.9 Mn
+Net sales: $1.9 Mn
+2018 formulary status: 3T Non-Preferred
+2019 contracting status: asked for 70% rebate to remain 
+current status, then excluded Oxycontin when we didn’t 
+accept the rate; timeline of implementation TBD
+Excellus BCBS 
+Commercial 
+ESI 
+commercial
+ Fact base for modeling:
+No. of lives: 42Mn
+Gross sales: $191 Mn            
+Net sales: $111 Mn
+Blended rebate rate: 41.7%
+2018 formulary status: 2T Preferred - allows for class UM
+2019 contracting status: 42.5% rebate as the only preferred 
+Oxycodone ER, or 20% rebate as the non-preferred (but 
+exclusive)
+ Scenario for modeling
+ESI overall:
+Status quo:
+-
+Maintain current access 
+status with the same rate 
+Exclusive: 
+- 70% rebate for exclusive 
+preferred status
+Source:  https://www.industrydocuments.ucsf.edu/docs/hffg0257
+
+
+=== Page 14 ===
+ 
+PROPRIETARY AND 
+CONFIDENTIAL
+PROPRIETARY AND 
+CONFIDENTIAL
+The ERO market contraction of -21% at ESI Commercial is more severe than the overall market, 
+yet OxyContin has grown its share of TRx in contrast to the broader market
+a
+67.2
+69.6
+10.0
+7.5
+17.7
+16.6
+1.6
+2.4
+2017
+1.5
+2.0
+1.9
+2018 
+Hysingla ER
+OxyContin
+Nucynta ER
+Zohydro ER
+Xtampza ER
+Other ERO brands2 
+ERO Gx
+Share shift in ERO Commercial market1, % TRx
+Overall Commercial market
+ESI Commercial
+SOURCE: IQVIA Plantrak
+1 Market share compared the first three quarters in 2017 and 2018 due to data limitation
+2 Other ERO brands include Avinza, Arymo ER, Embeda, Belbuca, Kadian, Opana ER, Butrans, Morphabond ER, Xartemis XR
+Volu
+me 
+chan
+ge 
+-17.0%
+-20.9%
+61.9
+62.5
+11.9
+9.1
+20.4
+21.1
+2.5
+1.7
+1.1
+2017
+2.8
+2018 
+Current share of Oxycontin
+at  15.4%
+• The market 
+contraction of EROs at 
+ESI Commercial is 4pp 
+more severe than the 
+overall market, but 
+there is a much lower 
+shift towards 
+generics
+• OxyContin has grown 
+its market share in 
+the past year, along 
+with Xtampza ER and 
+Zohydro ER
+ESI COMMERCIAL
+Source:  https://www.industrydocuments.ucsf.edu/docs/hffg0257
+
+
+=== Page 15 ===
+ 
+ 
+ 
+PROPRIETARY AND 
+CONFIDENTIAL
+PROPRIETARY AND 
+CONFIDENTIAL
+Current formulary coverage: ESI commercial
+OxyContin
+Hysingla ER
+Xtampza ER
+Nucynta ER
+Zohydro
+Oxycontin preferred, Xtampza non-preferred
+25% Preferred
+Preferred
+Non-preferred
+Preferred
+Non-pre
+Oxycontin preferred, Xtampza not covered
+25% Preferred
+Preferred
+Not covered
+Preferred
+Not cov
+Exclusive preferred
+19% Preferred
+Not covered
+Not covered
+Not covered
+Not cov
+No brand covered
+9% Not covered
+Not covered
+Not covered
+Not covered
+Not cov
+Oxycontin preferred, Xtampza non-preferred, others
+7% Preferred
+Not covered
+Non-preferred
+Preferred
+Not cov
+All brands non-preferred
+6% Non-preferred
+Non-preferred
+Non-preferred
+Non-preferred
+Non-pre
+Others
+10%
+Coverage by product
+Formulary type
+% of lives
+Source:  https://www.industrydocuments.ucsf.edu/docs/hffg0257
+
+
+=== Page 16 ===
+ 
+ 
+ 
+PROPRIETARY AND 
+CONFIDENTIAL
+PROPRIETARY AND 
+CONFIDENTIAL
+ESI commercial 2019 bid grid
+Manufacturer:
+Purdue Pharma
+Channel:
+Retail/Mail/Specialty
+Base
+Managed Medicaid onlRestrictedunUnrestricted
+Product
+Rate Type
+Footnotes
+CPC*
+Controlled  
+1 of Many
+Controlled 
+1 of 2
+Controlled 
+Exclusive
+Closed 
+1 of Many
+Closed 
+1 of 2
+Closed 
+Exclusive
+Non-Preferred 
+Formulary  Access 
+Rate - Restricted
+Non-Preferred 
+Formulary
+Access Rate - 
+Unrestricted
+Footnotes
+Effective 
+Date
+OxyContin
+Unrestricted Rebate
+1
+Narcotic Analgesics Oral
+24.000%
+42.500%
+42.500%
+24.000%
+42.500%
+42.500%
+1/1/2019
+OxyContin
+Unrestricted Rebate
+1, 6 Narcotic Analgesics Oral
+42.500%
+No Bid
+No Bid
+42.500%
+No Bid
+No Bid
+1/1/2019
+OxyContin
+Restricted
+1, 7, 9 Narcotic Analgesics Oral
+42.500%
+42.500%
+42.500%
+42.500%
+42.500%
+42.500%
+No Bid
+No Bid
+1/1/2019
+OxyContin
+Restricted
+Narcotic Analgesics Oral
+No Bid
+No Bid
+No Bid
+No Bid
+No Bid
+No Bid
+No Bid
+20.000%
+1, 10
+1/1/2019
+OxyContin
+base
+1, 8 Narcotic Analgesics Oral
+35.000%
+35.000%
+35.000%
+35.000%
+35.000%
+35.000%
+1/1/2019
+Rebates - Stated as % of WAC
+Rebates - Stated as % of WAC
+Source:  https://www.industrydocuments.ucsf.edu/docs/hffg0257
+
+
+=== Page 17 ===
+ 
+ 
+ 
+PROPRIETARY AND 
+CONFIDENTIAL
+PROPRIETARY AND 
+CONFIDENTIAL
+FOOTNOTES:
+6)  OxyContin (all strengths) must be listed as the only preferred extended release oxycodone Product on formulary.
+Carrier Name
+Formulary Name
+Priority Health
+Priority Health – COMMERCIAL
+Priority Health
+Priority Health – COMM/HCR
+WALT DISNEY COMPANY
+WALT DISNEY
+8) Utilization is eligible for this level of Rebate when OxyContin (all strengths) is subject to a limited prior authorization applied to all extended release opioids (brand and generic, existing and new product entrants) that is mutually 
+agreed upon by both ESI and the Company to not be a restriction for purposes of this level of Rebate.  Any Utilization submitted under Formularies other than those listed here shall not be eligible for this Rebate.  Formulary Names 
+currently eligible for this Rebate are:
+9)  Utilization is eligible for this level of Rebate when (i) OxyContin is Unrestricted on the lowest preferred brand tier, however, a prior authorization on all immediate release opioids (IROs) and extended release opioids (EROs) is 
+permitted,  (ii) Plan has adopted the Express Scripts Advanced Opioid Management program (as described in footnote 7 herein), and (iii) OxyContin is listed as the only preferred extended-release oxycodone Product on formulary.  The 
+Allowed Net WAC  for this rate shall be calculated by: multiplying the Net WAC as of June 30, 2018 by one (1) plus the Inflation Limitation Percentage.
+10)  Utilization is eligible for this level of Rebate when (i) OxyContin is Unrestricted on the non-preferred brand tier, however, a prior authorization on all immediate release opioids (IROs) and extended release opioids (EROs) is 
+permitted,  (ii) Company is the Exclusive manufacturer on formulary with all competitor extended-release opioids not covered and requiring a step edit of either a generic ERO or OxyContin (current products subject to be this 
+requirement include: Avinza®, Kadian®, Duragesic®, Zohydro® ER, Embeda®, Exalgo®, Opana® ER, Belbuca®, Xtampza® ER and Nucynta® ER).  Rebates are only available on eligible claims from Plans with capability to do step 
+edits and prior authorizations.
+1)  Quantity limits placed on Oxycontin of 2/day for all strengths will not be considered a restriction on Oxycontin.
+Pain Severe Enough to Require Daily, Around-the-Clock, Long-Term Opioid Treatment.  Approve for 1 year if the patient meets ONE of the following criteria (A, B or C):
+A) The patient has a cancer diagnosis; OR
+B) The patient is in hospice program, end-of-life care, or palliative care; OR  
+C) The patient has chronic pain but does not have a cancer diagnosis.  Approve for 1 year if the patient meets ALL of the following criteria (i, ii, iii, iv, v, and vi):
+i. Patient is not opioid naïve; AND 
+ii. Patient has a concurrent prescription for a short-acting opioid; AND
+iii. Non-opioid therapies (e.g., non-opioid medications [e.g., nonsteroidal anti-inflammatory drugs {NSAIDs}, tricyclic antidepressants, serotonin and norepinephrine reuptake inhibitors {SNRIs}, anticonvulsants], exercise therapy, 
+weight loss, cognitive behavioral therapy) have been optimized and are being used in conjunction with opioid therapy according to the prescribing physician; AND 
+iv. The patient’s history of controlled substance prescriptions has been checked using the state prescription drug monitoring program (PDMP), unless unavailable in the state, according to the prescribing physician; AND
+v. Risks (e.g., addiction, overdose) and realistic benefits of opioid therapy have been discussed with the patient according to the prescribing physician; AND 
+vi. Treatment plan (including goals for pain and function) is in place and reassessments (including pain levels and function) are scheduled at regular intervals according to the prescribing physician.
+7)  Utilization is eligible for this level of Rebate when OxyContin (all strengths) Unrestricted, however, the following Prior Authorization is permitted on Product provided it's applied equally to all other branded and generic long-
+acting opioids:
+Source:  https://www.industrydocuments.ucsf.edu/docs/hffg0257
+
+
+=== Page 18 ===
+ 
+ 
+ 
+PROPRIETARY AND 
+CONFIDENTIAL
+PROPRIETARY AND 
+CONFIDENTIAL
+▪The ERO market contraction of -7% in 
+CVS Caremark Medicare is nearly half 
+the rate of the broader Medicare ERO 
+contraction of -13% 
+▪Within the overall Caremark ERO market, 
+the share of OxyContin rose by 0.4pp, 
+but within the major ERO brands1, 
+OxyContin’s share fell 3pp (to 88%) while 
+Xtampza ER gained 2pp
+▪Caremark accounts for 53% of 
+OxyContin’s contracted Medicare 
+gross sales, with a above-average 
+rebate rate of 56% total rebate for 
+20192
+▪Purdue ERO portfolio has preferred 
+access in 79% of lives at CVS 
+Caremark Medicare, while only 18% of 
+lives receive non-preferred Xtampza 
+▪If OxyContin is excluded while Xtampza ER 
+is the preferred branded oxycodone ER, 
+OxyContin will lose xx-xx% shares
+▪Given the downside of exclusion, 
+OxyContin should increase rebate no more 
+than xx-xx%
+▪From CVS perspective, the tipping point 
+for excluding OxyContin will be xx-xx%
+▪For every 1pt of share loss, OxyContin will 
+hypothetically be willing to increase 
+rebate by xxpts to maintain current 
+access
+1
+2
+Other components that are 
+critical to the 
+recommendation, but do 
+not require debate
+Key components that 
+require debate and 
+alignment
+Key components of the OxyContin CVS Caremark Medicare bid
+a
+b
+3
+4
+c
+d
+PRELIMINARY
+WIP
+1 OxyContin, Xtampza ER, Hysingla ER, Zohydro ER, Nucynta ER
+2 ~52% base rebate and 4.00% admin fee
+Source:  https://www.industrydocuments.ucsf.edu/docs/hffg0257
+
+
+=== Page 19 ===
+ 
+ 
+ 
+PROPRIETARY AND 
+CONFIDENTIAL
+PROPRIETARY AND 
+CONFIDENTIAL
+Xtampza ER
+OxyContin
+Nucynta ER
+Hysingla ER
+Zohydro ER
+Other ERO brands2 
+ERO Gx
+Share shift in ERO Medicare market1, % TRx
+Overall Medicare market
+CaremarkPCS Medicare
+SOURCE: IQVIA Plantrak
+1 Market share compared the first three quarters in 2017 and 2018 due to data limitation
+2 Other ERO brands include Avinza, Arymo ER, Embeda, Belbuca, Kadian, Opana ER, Butrans, Morphabond ER, Xartemis XR
+Volu
+me 
+chan
+ge 
+76.4
+76.7
+7.4
+5.5
+14.2
+14.1
+0.9
+0.5
+1.1
+1.6
+2017
+1.0
+2018 
+-13.1%
+-7.0%
+At CVS/Caremark, OxyContin holds a larger share of the market and overall volume decline is 
+6pp lower than the overall Medicare market
+a
+65.1
+65.2
+7.9
+24.8
+25.2
+1.1
+0.7
+1.0
+2017
+0.2
+6.2
+2018 
+We will focus on the 
+market dynamics among 
+leading ERO brands for 
+OxyContin’s contracting 
+strategy analysis
+• OxyContin holds a 
+larger and growing 
+share of the ERO 
+market at 
+CVS/Caremark when 
+compared to the overall 
+Part D market
+• Overall volume 
+erosion at 
+CVS/Caremark is 
+nearly half that of the 
+overall Part D market
+CAREMARKPCS
+Source:  https://www.industrydocuments.ucsf.edu/docs/hffg0257
+
+
+=== Page 20 ===
+ 
+PROPRIETARY AND 
+CONFIDENTIAL
+PROPRIETARY AND 
+CONFIDENTIAL
+Current coverage at CVS
+OxyContin Hysingla ERXtampza ERNucynta ERZohydro ER
+Oxycontin and Hysingla preferred, Xtampza non-preferred
+53% Preferred
+Preferred
+Non-prefer Preferred
+Non-prefer
+No brand covered
+18% Preferred
+Preferred
+Not coveredPreferred
+Not covered
+No Oxycodone ER covered
+15% Preferred
+Not covere Not coveredNot coveredNot covered
+Oxycontin preferred, Xtampza not covered
+4% Not covere Not covere Not coveredNot coveredNot covered
+Oxycontin preferred, Xtampza non-preferred
+4% Preferred
+Not covere Non-prefer Preferred
+Not covered
+Others
+6%
+Formulary type
+% of lives
+Coverage by product
+Current rebate rate: 56%
+Ask: maintain fixed net price – increasing 
+effective rebate rate to 60% for the same 
+coverage
+Source:  https://www.industrydocuments.ucsf.edu/docs/hffg0257

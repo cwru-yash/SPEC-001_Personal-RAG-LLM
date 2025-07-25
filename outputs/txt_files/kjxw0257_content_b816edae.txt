@@ -1,0 +1,8 @@
+Document: Documents/kjxw0257.zip/kjxw0257.pdf
+Category: Documents
+Processed: 2025-06-12T11:26:54.536434
+Method: pymupdf+ocr
+==================================================
+
+=== Page 1 ===
+Source:  https://www.industrydocuments.ucsf.edu/docs/kjxw0257

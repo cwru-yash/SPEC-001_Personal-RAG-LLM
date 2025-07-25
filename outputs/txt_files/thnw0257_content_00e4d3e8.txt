@@ -1,0 +1,8 @@
+Document: Images/thnw0257.zip/thnw0257.pdf
+Category: Images
+Processed: 2025-06-11T22:37:51.906354
+Method: pymupdf+ocr
+==================================================
+
+=== Page 1 ===
+Source:  https://www.industrydocuments.ucsf.edu/docs/thnw0257

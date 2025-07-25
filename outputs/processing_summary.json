@@ -1,0 +1,20 @@
+{
+  "processing_summary": {
+    "processed_zips": 50,
+    "failed_zips": 0,
+    "document_pairs": 40,
+    "by_category": {
+      "Images": 10,
+      "Emails": 10,
+      "Spreadsheets": 10,
+      "Presentations": 10,
+      "Documents": 10
+    }
+  },
+  "processed_at": "2025-06-12T11:26:54.580962",
+  "output_directories": {
+    "txt_files": "/Users/yashm/Documents/GitHub/SPEC-001_Personal-RAG-LLM/SPEC-001_Personal-RAG-LLM/outputs/txt_files",
+    "json_files": "/Users/yashm/Documents/GitHub/SPEC-001_Personal-RAG-LLM/SPEC-001_Personal-RAG-LLM/outputs/json_files",
+    "metadata": "/Users/yashm/Documents/GitHub/SPEC-001_Personal-RAG-LLM/SPEC-001_Personal-RAG-LLM/outputs/metadata"
+  }
+}

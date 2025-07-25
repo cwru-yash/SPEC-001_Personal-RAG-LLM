@@ -1,0 +1,42 @@
+# VLM Configuration - Single Model Setup
+vlm:
+  enabled: true  # Set to false to disable VLM processing
+  
+  # Single model for all document types (resource-friendly)
+  primary_model: "llava"
+  
+  # LLaVA configuration
+  llava:
+    model: "llava:7b"  # Lighter model for development
+    api_endpoint: "http://ollama:11434"  # Docker service name
+    timeout: 60
+    max_retries: 2
+    
+  # Processing strategy
+  strategy: "vlm_first"  # Options: vlm_first, hybrid, traditional_first
+  
+  # Fallback settings
+  fallback:
+    enabled: true
+    timeout_threshold: 30  # Fall back to traditional if VLM takes >30s
+    confidence_threshold: 0.5  # Fall back if confidence <0.5
+    
+  # Universal prompts (since using single model)
+  prompts:
+    universal: |
+      Analyze this document page and provide:
+      1. Content type (email, presentation, report, chart, table, mixed)
+      2. Layout description 
+      3. All text content with structure preserved
+      4. Visual elements (tables, charts, images)
+      5. Confidence level (0.0-1.0)
+      
+      Format as JSON:
+      {
+        "content_type": "...",
+        "confidence": 0.0,
+        "layout": "...", 
+        "text_content": "...",
+        "visual_elements": [...],
+        "metadata": {...}
+      }

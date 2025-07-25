@@ -1,0 +1,288 @@
+Document: Emails/nxcw0256.zip/nxcw0256.pdf
+Category: Emails
+Processed: 2025-06-12T11:51:07.257003
+Method: pymupdf+enhanced_ocr
+Text Length: 9037 chars
+==================================================
+
+=== Page 1 ===
+Source:  https://www.industrydocuments.ucsf.edu/docs/nxcw0256
+
+=== Page 1 Image 1 (OCR) ===
+Message
+
+From:
+
+account @seekingalpha.com [account @seekingalpha.com]
+
+on behalf of
+
+Seeking Alpha [account@seekingalpha.com]
+
+Sent:
+
+8/5/2020 11:24:00 AM
+
+To
+
+Arnab Ghatak [/o=ExchangeLabs/ou=Exchange Administrative Group
+
+(FYDIBOHF23SPDLT)/cn=Recipients/cn=eeS107d994d14d18b8ece4c0e247cc7b-Arnab Ghata]
+
+Subject:
+
+{EXT]Wall Street Breakfast: Gold, Stimulus, Trade
+
+Listen on the go! A daily podcast of Wall Street Breakfast will be available by 8:00 a.m. on Seeking Alpha,
+
+iTunes, Stitcher and Spotify.
+
+The precious metals rally gathered pace overnight as spot gold rose as much as 0.6% to a record $2,031.14 per ounce,
+
+while spot silver advanced as much as 1.3% to $26.3473/oz. The printers are running... Investors are counting on even more
+
+spending in the U.S. to combat the pandemic's fallout as White House negotiators work "around the clock" to reach a stimulus
+
+deal by the end of the week, while markets also latched on to comments from San Francisco Fed President Mary Daly that the
+
+U.S. economy will need more support than initially thought. Search for a new reserve currency? Goldman Sachs says gold may
+
+climb to $2,300/o0z. and RBC Capital puts the odds ofa rally to $3,000/oz. at 40%,
+
+Learn, act,
+
+and donate
+
+to fight against
+
+racial injustice.
+
+fe
+
+— oe ee ee
+
+~
+
+| love
+
+| has
+
+Bow
+
+no
+
+| labels
+
+—_—
+
+|
+
+Powered by |S Livelntent
+
+AdChoices [>
+
+Rally continues
+
+U.S. stock index futures are looking to extend gains as traders await progress from Washington on a new coronavirus aid
+
+package. "I think the expectation for the market 1s that we are going to get that stimulus,” Ally Invest's Lindsay Bell told CNBC.
+
+Better-than-expected camings from Disney (NYSE:DIS) are also helping sentiment (see below), while closely-watched
+
+Moderna (NASDAQ:MRNA) will report before the opening bell. On the trade front, reports suggest that U.S. trade
+
+representative Robert Lighthizer and Chinese Vice Premier Liu will meet in mid-August to discuss the Phase Once trade deal
+
+between the U.S. and China.
+
+MCK-MAAG-2608752
+
+=== Page 2 ===
+Source:  https://www.industrydocuments.ucsf.edu/docs/nxcw0256
+
+=== Page 2 Image 1 (OCR) ===
+100 million streaming subscribers
+
+While Disney (DIS) continued to feel the impact of the COVID-19 pandemic on sectors like its parks business, where revenue
+
+tanked 85% from a year earlier, CEO Bob Chapek announced a new streaming service that will launch in fiscal 2021 under the
+
+Star brand acquired from Fox (NASDAQ:FOX). In total, Disney now has 100M paid subscribers across its streaming services,
+
+which include Disney+, Hulu and ESPN+. Disney+ reached 60.5M paid subscribers, hitting a goal of 6(0M-90M subscriptions
+
+by 2024, four years carly.
+
+Go deeper: Disney call: Cinemas slip on ‘Mulan’ news.
+
+Wild ride for Novavax
+
+At one point in after-hours trading on Tuesday, Novavax (NASDAQ:NVAX) was down 32% after STAT News reported that
+
+eight participants in a Phase | clinical trial evaluating COVID-19 vaccine candidate NVX-CoV2373 had to be hospitalized.
+
+That data was later found to be erroneous and shares are now up 17% premarket (the stock has rallied 3,800% YTD). Novavax's
+
+two-injection regimen when administered with its immune-boosting technology generated antibody responses that were four
+
+times higher than those seen in people who had recovered from the disease.
+
+Beirut blast
+
+Lebanon 1s cyeing a state of emergency following a massive explosion that rocked Beirut with the force of a 3.5 magnitude
+
+earthquake on Tuesday and caused widespread damage across the capital. At least 100 people were killed and more than 4,000
+
+wounded, while local officials linked the blast to some 2,750 tons of confiscated ammonium nitrate that were being stored at a
+
+port warehouse for the past six years. It's been a rough ride for the country's economy. Lebanon's GDP fell 6.9% in 2019, while
+
+the Lebanese pound has lost over 60% of its value in just the past month, and 80% of its value since October.
+
+Opioid epidemic
+
+The U.S. Department of Justice is demanding OxyContin maker Purdue Pharma pay as much as $18.1B in penalties as part of
+
+its bankruptcy reorganization plan, WS/ reports. On the civil side, the DOJ is secking $2.8B - which could be tripled under the
+
+law - for tax dollars spent battling the U.S. opioid epidemic, as well as kickbacks to doctors and pharmacies and transferring
+
+cash to hide money from creditors. On the criminal side, federal prosecutors want Purdue to pay a $6.2B fine and the forfeiture
+
+of potentially $3.5B more over marketing and distribution that violated criminal statutes including anti-kickback laws,
+
+misbranding under the Food, Drug and Cosmetic Act and conspiracy.
+
+Tale of two companies
+
+Sir Richard Branson plans to fly on a Virgin Galactic (NYSE:SPCE) spaceship next year after the company settled on an carly
+
+2021 date for its first passenger flight. That assumes both demonstration flights go as planned in the fall and yield the "expected
+
+results." Meanwhile, Virgin Atlantic 1s seeking Chapter 15 bankruptcy protection in the Southern District of New York as it
+
+trics to nail down a £1.2B rescue plan. Under the proposal, Virgin Group will retain its 51% controlling stake in the airline,
+
+while partner Delta (NYSE:DAL) will continue to hold the remaining 49%.
+
+Meet the teenager allegedly behind the Twitter hack
+
+Graham Ivan Clark, 17, of Tampa, Fla., convinced a Twitter (NYSE:TWTR) employee that he was a co-worker, according to
+
+prosecutors, and seized control of a phone number via SIM-swapping. He also sct up several fake phishing pages, including one
+
+MCK-MAAG-2608752.000001
+
+=== Page 3 ===
+Source:  https://www.industrydocuments.ucsf.edu/docs/nxcw0256
+
+=== Page 3 Image 1 (OCR) ===
+that resembled the company’s Okta login portal, a destination used for securely logging into company systems. Once inside,
+
+Clark, who entered a not-guilty plea in court Monday, allegedly gained the ability to bypass Twitter's security protections,
+
+setting the stage for an hourslong hack on July 15 that held hostage the main communications tool of some of the most powerful
+
+people on the planet.
+
+More misconduct
+
+One of the most prominent trade secret cases in recent years has come to a close as Anthony Levandowski was sentenced to 18
+
+months in prison (his incarceration will be delayed until after the COVID-19 pandemic). Levandowski had been a key engineer
+
+at Google's (GOOG, GOOGL) Waymo before starting his own self-driving truck company called Otto. The latter was
+
+eventually bought by Uber Technologies (NYSE:UBER), where he became the head of its self-driving unit, but Levandowski
+
+eventually pleaded guilty to taking thousands of files from his former employer when he left in 2016.
+
+What else is happening...
+
+Fed 1s expected to commit to push inflation higher.
+
+Kodak (NYSE:KODK) reportedly under SEC investigation over drug deal disclosure.
+
+Ford (NYSE:F) elevates COO Jim Farley to CEO position.
+
+Booking Holdings (NASDAQ:BKNG) to lay off 25% of employees in pandemic measure.
+
+Another delay for Walmart's (NYSE: WMT) same-day delivery service.
+
+EU launches probe into Google's (GOOG, GOOGL) Fitbit (NYSE:FIT) acquisition.
+
+Tuesday's Key Earnings
+
+Activision Blizzard (NASDAQ:ATVI) -1.4% AH despite strong Q2, upbeat guidance.
+
+Beyond Meat (NASDAQ:BYND) -9.9% AH weighed down by heavy costs.
+
+Nikola (NASDAQ:NKLA) -13.4% AH reporting wider loss, light on details.
+
+Square (NYSE:SQ) +9.6% AH posting a 64% jump in revenue.
+
+Twilio (NYSE: TWLO) -4.1% AH despite beating expectations.
+
+Walt Disney (DIS) +6.1% AH reporting 100M paid streaming subscribers.
+
+Today's Markets
+
+In Asia, Japan -0.3%. Hong Kong +0.6%. China +0.2%. India -0.1%.
+
+In Europe, at midday, London +1%. Paris +0.8%. Frankfurt +0.8%.
+
+Futures at 6:20, Dow +0.7%. S&P +0.5%. Nasdaq +0.4%. Crude +2.5% to $42.72. Gold +1.7% to $2056.20.
+
+Bitcoin +1.4% to $11384.
+
+Ten-year Treasury Yield +2 bps to 0.53%
+
+MCK-MAAG-2608752.000002
+
+=== Page 4 ===
+Source:  https://www.industrydocuments.ucsf.edu/docs/nxcw0256
+
+=== Page 4 Image 1 (OCR) ===
+Today's Economic Calendar
+
+7:00 MBA Mortgage Applications
+
+8:15 ADP Jobs Report
+
+8:15 International Trade
+
+9:45 PMI Services Index
+
+10:00 ISM Non-Manufacturing Index
+
+10:30 EIA Petroleum Inventories
+
+5:00 PM Fed's Mester: Economic Outlook
+
+Companies reporting earnings today »
+
+To View Online:
+
+https: seekingalpha.com market-news wall-street-breakfast
+
+Download Seeking Alpha for your Phone or Tablet
+
+a
+
+Download on the
+
+GET IT ON
+
+@ App Store
+
+Google Play
+
+Why are you receiving this great newsletter? You subscribed to [Fall Street Breakfast at Secking Alpha.
+
+Unsubscribe trom this email or manage all your Seeking Alpha email choices here.
+
+To ensure you receive these emails in the future, please add account@ seekingalpha.com to your address book, contacts or list of safe senders.
+
+Sent by Seeking Alpha, $2 Vanderbilt Avenue. 13th floor, New York, NY 10017
+
+MCK-MAAG-2608752.000003

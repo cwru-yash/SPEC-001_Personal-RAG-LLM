@@ -1,0 +1,9 @@
+STATUS: SUCCESS
+Document: Emails/ltcf0256.zip/ltcf0256.pdf
+Category: Emails
+Processed: 2025-06-12T13:49:41.360569
+Method: pymupdf+ocr
+==================================================
+
+=== Page 1 ===
+Source:  https://www.industrydocuments.ucsf.edu/docs/ltcf0256

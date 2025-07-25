@@ -1,0 +1,9 @@
+STATUS: SUCCESS
+Document: Documents/nqbg0257.zip/nqbg0257.pdf
+Category: Documents
+Processed: 2025-06-12T12:01:02.061789
+Method: pymupdf+ocr
+==================================================
+
+=== Page 1 ===
+Source:  https://www.industrydocuments.ucsf.edu/docs/nqbg0257

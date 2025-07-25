@@ -1,0 +1,23 @@
+{
+  "document_id": "e8a00635",
+  "zip_file": "jhgp0256.zip",
+  "category": "Images",
+  "content_file": {
+    "file_name": "jhgp0256.pdf",
+    "file_path": "Images/jhgp0256.zip/jhgp0256.pdf",
+    "extracted_text": "=== Page 1 ===\nSource:  https://www.industrydocuments.ucsf.edu/docs/jhgp0256\n",
+    "extraction_method": "pymupdf+ocr",
+    "errors": [],
+    "success": true
+  },
+  "metadata_file": {
+    "file_name": "jhgp0256-info.pdf",
+    "file_path": "Images/jhgp0256.zip/jhgp0256-info.pdf",
+    "extracted_text": "=== Page 1 ===\nnull - jhgp0256 - Downloaded 31/03/2025 11:13:05 AM\nDocument Information\nTitle: 1.1 Plant Map 2014.vsd\nURL: https://www.industrydocuments.ucsf.edu/docs/jhgp0256\nAuthor: jim.wrigley\nDocument Date: 2014 February 20; 2019 May 03\nType: Document; Image\nGenre: Edoc;Microsoft Visio Drawing\nPages: 1\nID: jhgp0256\nCollection: McKinsey Documents\nDrug: Alfentanil; Buprenorphine; Fentanyl; Hydrocodone Bitartrate; Hydromorphone; \nLevorphanol; Methadone; Morphine; Nalbuphine; Oxycodone; Oxymorphone; Sufentanil\nAvailability: public; no restrictions\nBates Number: MCK-MAAG-1035463\nDate Added UCSF: 2022 June 06\nCite This Document\nAuthor. Title. Date. Year. Collection. Source. https://www.industrydocuments.ucsf.edu/docs/[ID]\njim.wrigley. 1.1 Plant Map 2014.vsd. 2014 February 20; 2019 May 03. McKinsey Documents. \nUnknown. https://www.industrydocuments.ucsf.edu/docs/jhgp0256\n",
+    "extraction_method": "pymupdf+ocr",
+    "errors": [],
+    "success": true
+  },
+  "processed_at": "2025-06-12T12:01:01.393940",
+  "overall_success": true
+}

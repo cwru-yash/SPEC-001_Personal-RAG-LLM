@@ -1,0 +1,11 @@
+{
+  "file_path": "/Users/yashm/Documents/GitHub/SPEC-001_Personal-RAG-LLM/SPEC-001_Personal-RAG-LLM/data/input/Images/lkdg0257/lkdg0257-info.pdf",
+  "file_name": "lkdg0257-info.pdf",
+  "file_extension": "pdf",
+  "file_size": 1651,
+  "processed_at": "2025-06-11T17:04:47.395013",
+  "extracted_text": "=== Page 1 ===\nnull - lkdg0257 - Downloaded 31/03/2025 11:12:21 AM\nDocument Information\nTitle: image.png\nURL: https://www.industrydocuments.ucsf.edu/docs/lkdg0257\nDocument Date: 2020 September 15; 2020 September 30\nType: Document; Image\nGenre: E-DOC ATTACHMENT;Portable Network Graphics\nPages: 1\nID: lkdg0257\nCollection: McKinsey Documents\nDrug: opioids\nAvailability: public; no restrictions\nBates Number: MCK-MAAG-4772040\nDate Added UCSF: 2022 June 06\nCite This Document\nAuthor. Title. Date. Year. Collection. Source. https://www.industrydocuments.ucsf.edu/docs/[ID]\nUnknown. image.png. 2020 September 15; 2020 September 30. McKinsey Documents. \nUnknown. https://www.industrydocuments.ucsf.edu/docs/lkdg0257\n",
+  "extraction_method": "pymupdf+ocr",
+  "success": true,
+  "errors": []
+}

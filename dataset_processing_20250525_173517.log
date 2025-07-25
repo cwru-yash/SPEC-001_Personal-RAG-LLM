@@ -1,0 +1,99 @@
+2025-05-25 17:35:17,484 - __main__ - INFO - Starting standalone document processor
+2025-05-25 17:35:17,484 - __main__ - INFO - Using temporary directory: /var/folders/q_/w29h3cts0gv3f_5r904qxn0w0000gn/T/zip_dataset_pslll6u8
+2025-05-25 17:35:17,484 - __main__ - INFO - Using default input path: /Users/yashm/Documents/GitHub/SPEC-001_Personal-RAG-LLM/SPEC-001_Personal-RAG-LLM/data/input
+2025-05-25 17:35:17,484 - __main__ - INFO - Using default output path: /Users/yashm/Documents/GitHub/SPEC-001_Personal-RAG-LLM/SPEC-001_Personal-RAG-LLM/data/processed
+2025-05-25 17:35:17,484 - __main__ - INFO - Starting dataset processing from: /Users/yashm/Documents/GitHub/SPEC-001_Personal-RAG-LLM/SPEC-001_Personal-RAG-LLM/data/input
+2025-05-25 17:35:17,485 - __main__ - INFO - Category 'Images': 10 zip files
+2025-05-25 17:35:17,485 - __main__ - INFO - Category 'Emails': 10 zip files
+2025-05-25 17:35:17,485 - __main__ - INFO - Category 'Spreadsheets': 10 zip files
+2025-05-25 17:35:17,485 - __main__ - INFO - Category 'Presentations': 10 zip files
+2025-05-25 17:35:17,485 - __main__ - INFO - Category 'Documents': 10 zip files
+2025-05-25 17:35:17,485 - __main__ - INFO - Found 50 zip files across 5 categories
+2025-05-25 17:35:17,485 - __main__ - INFO - Processing 10 zip files in category: Images
+2025-05-25 17:35:17,617 - __main__ - WARNING - Partial processing for zip: lkdg0257.zip
+2025-05-25 17:35:17,617 - __main__ - WARNING - Errors: No content file found
+2025-05-25 17:35:17,618 - __main__ - WARNING - Partial processing for zip: jhgp0256.zip
+2025-05-25 17:35:17,618 - __main__ - WARNING - Errors: No content file found
+2025-05-25 17:35:17,618 - __main__ - WARNING - Partial processing for zip: mkdg0257.zip
+2025-05-25 17:35:17,618 - __main__ - WARNING - Errors: No content file found
+2025-05-25 17:35:17,618 - __main__ - WARNING - Partial processing for zip: nkdg0257.zip
+2025-05-25 17:35:17,618 - __main__ - WARNING - Errors: No content file found
+2025-05-25 17:35:17,622 - __main__ - WARNING - Partial processing for zip: spww0257.zip
+2025-05-25 17:35:17,623 - __main__ - WARNING - Errors: No content file found
+2025-05-25 17:35:17,675 - __main__ - WARNING - Partial processing for zip: qkdg0257.zip
+2025-05-25 17:35:17,686 - __main__ - WARNING - Errors: No content file found
+2025-05-25 17:35:17,707 - __main__ - WARNING - Partial processing for zip: qydw0257.zip
+2025-05-25 17:35:17,707 - __main__ - WARNING - Errors: No content file found
+2025-05-25 17:35:17,707 - __main__ - WARNING - Partial processing for zip: pkdg0257.zip
+2025-05-25 17:35:17,707 - __main__ - WARNING - Errors: No content file found
+2025-05-25 17:35:17,723 - __main__ - WARNING - Partial processing for zip: ykdg0257.zip
+2025-05-25 17:35:17,723 - __main__ - WARNING - Errors: No content file found
+2025-05-25 17:35:17,726 - __main__ - WARNING - Partial processing for zip: thnw0257.zip
+2025-05-25 17:35:17,727 - __main__ - WARNING - Errors: No content file found
+2025-05-25 17:35:17,728 - __main__ - INFO - Processing 10 zip files in category: Emails
+2025-05-25 17:35:17,751 - __main__ - INFO - Successfully processed zip: lkdw0256.zip
+2025-05-25 17:35:17,751 - __main__ - INFO - Successfully processed zip: htjw0256.zip
+2025-05-25 17:35:17,754 - __main__ - INFO - Successfully processed zip: ltcf0256.zip
+2025-05-25 17:35:17,755 - __main__ - INFO - Successfully processed zip: mxcw0256.zip
+2025-05-25 17:35:17,759 - __main__ - INFO - Successfully processed zip: rpww0256.zip
+2025-05-25 17:35:17,764 - __main__ - INFO - Successfully processed zip: sknw0257.zip
+2025-05-25 17:35:17,777 - __main__ - INFO - Successfully processed zip: yxcw0256.zip
+2025-05-25 17:35:17,777 - __main__ - INFO - Successfully processed zip: yldx0256.zip
+2025-05-25 17:35:17,792 - __main__ - INFO - Successfully processed zip: trbw0256.zip
+2025-05-25 17:35:17,792 - __main__ - INFO - Successfully processed zip: nxcw0256.zip
+2025-05-25 17:35:17,792 - __main__ - INFO - Processing 10 zip files in category: Spreadsheets
+2025-05-25 17:35:17,800 - __main__ - INFO - Extracted nested ZIP: lxnw0257.zip
+2025-05-25 17:35:17,800 - __main__ - INFO - Extracted nested ZIP: jrxf0257.zip
+2025-05-25 17:35:17,800 - __main__ - INFO - Extracted nested ZIP: mjnw0257.zip
+2025-05-25 17:35:17,808 - __main__ - INFO - Extracted nested ZIP: kxnw0257.zip
+2025-05-25 17:35:18,348 - __main__ - INFO - Successfully processed zip: jrxf0257.zip
+2025-05-25 17:35:18,374 - __main__ - INFO - Extracted nested ZIP: mxnw0257.zip
+2025-05-25 17:35:18,397 - __main__ - INFO - Successfully processed zip: mjnw0257.zip
+2025-05-25 17:35:18,397 - __main__ - INFO - Successfully processed zip: kxnw0257.zip
+2025-05-25 17:35:18,397 - __main__ - INFO - Successfully processed zip: lxnw0257.zip
+2025-05-25 17:35:18,441 - __main__ - INFO - Extracted nested ZIP: qgjf0257.zip
+2025-05-25 17:35:18,441 - __main__ - INFO - Extracted nested ZIP: phnw0257.zip
+2025-05-25 17:35:18,441 - __main__ - INFO - Extracted nested ZIP: nxnw0257.zip
+2025-05-25 17:35:18,441 - __main__ - INFO - Successfully processed zip: mxnw0257.zip
+2025-05-25 17:35:18,450 - __main__ - INFO - Successfully processed zip: qgjf0257.zip
+2025-05-25 17:35:18,459 - __main__ - INFO - Extracted nested ZIP: qhnw0257.zip
+2025-05-25 17:35:18,488 - __main__ - INFO - Successfully processed zip: phnw0257.zip
+2025-05-25 17:35:18,492 - __main__ - INFO - Extracted nested ZIP: yxnw0257.zip
+2025-05-25 17:35:18,499 - __main__ - INFO - Successfully processed zip: nxnw0257.zip
+2025-05-25 17:35:18,510 - __main__ - INFO - Successfully processed zip: qhnw0257.zip
+2025-05-25 17:35:18,532 - __main__ - INFO - Successfully processed zip: yxnw0257.zip
+2025-05-25 17:35:18,532 - __main__ - INFO - Processing 10 zip files in category: Presentations
+2025-05-25 17:35:18,539 - __main__ - INFO - Extracted nested ZIP: gygg0257.zip
+2025-05-25 17:35:18,545 - __main__ - INFO - Extracted nested ZIP: hffg0257.zip
+2025-05-25 17:35:18,555 - __main__ - INFO - Extracted nested ZIP: ffgg0257.zip
+2025-05-25 17:35:18,565 - __main__ - WARNING - Partial processing for zip: fjnw0257.zip
+2025-05-25 17:35:18,565 - __main__ - WARNING - Errors: No content file found
+2025-05-25 17:35:18,585 - __main__ - INFO - Extracted nested ZIP: hgfg0257.zip
+2025-05-25 17:35:18,995 - __main__ - INFO - Successfully processed zip: gygg0257.zip
+2025-05-25 17:35:19,034 - __main__ - WARNING - Partial processing for zip: hjnw0257.zip
+2025-05-25 17:35:19,034 - __main__ - WARNING - Errors: No content file found
+2025-05-25 17:35:19,053 - __main__ - INFO - Extracted nested ZIP: hyfg0257.zip
+2025-05-25 17:35:19,177 - __main__ - INFO - Successfully processed zip: hffg0257.zip
+2025-05-25 17:35:19,198 - __main__ - WARNING - Partial processing for zip: kjnw0257.zip
+2025-05-25 17:35:19,198 - __main__ - WARNING - Errors: No content file found
+2025-05-25 17:35:19,218 - __main__ - WARNING - Partial processing for zip: qxnw0257.zip
+2025-05-25 17:35:19,218 - __main__ - WARNING - Errors: No content file found
+2025-05-25 17:35:19,246 - __main__ - WARNING - Partial processing for zip: txnw0257.zip
+2025-05-25 17:35:19,246 - __main__ - WARNING - Errors: No content file found
+2025-05-25 17:35:19,323 - __main__ - INFO - Successfully processed zip: hgfg0257.zip
+2025-05-25 17:35:19,515 - __main__ - INFO - Successfully processed zip: ffgg0257.zip
+2025-05-25 17:35:19,599 - __main__ - INFO - Successfully processed zip: hyfg0257.zip
+2025-05-25 17:35:19,599 - __main__ - INFO - Processing 10 zip files in category: Documents
+2025-05-25 17:35:19,614 - __main__ - INFO - Successfully processed zip: kjxw0257.zip
+2025-05-25 17:35:19,621 - __main__ - INFO - Successfully processed zip: kjvf0257.zip
+2025-05-25 17:35:19,631 - __main__ - INFO - Successfully processed zip: klcg0257.zip
+2025-05-25 17:35:19,631 - __main__ - INFO - Successfully processed zip: frdx0256.zip
+2025-05-25 17:35:19,635 - __main__ - INFO - Successfully processed zip: gqwg0257.zip
+2025-05-25 17:35:19,640 - __main__ - INFO - Successfully processed zip: nqbg0257.zip
+2025-05-25 17:35:19,650 - __main__ - INFO - Successfully processed zip: ykcg0257.zip
+2025-05-25 17:35:19,765 - __main__ - INFO - Successfully processed zip: qxwd0282.zip
+2025-05-25 17:35:19,779 - __main__ - INFO - Successfully processed zip: mqbg0257.zip
+2025-05-25 17:35:19,803 - __main__ - INFO - Successfully processed zip: shnw0257.zip
+2025-05-25 17:35:19,818 - __main__ - INFO - Results saved to: /Users/yashm/Documents/GitHub/SPEC-001_Personal-RAG-LLM/SPEC-001_Personal-RAG-LLM/data/processed/dataset_processing_summary_20250525_173519.json
+2025-05-25 17:35:19,818 - __main__ - INFO - Dataset processing complete. Processed 50 document pairs
+2025-05-25 17:35:19,819 - __main__ - INFO - Cleaned up temporary directory: /var/folders/q_/w29h3cts0gv3f_5r904qxn0w0000gn/T/zip_dataset_pslll6u8

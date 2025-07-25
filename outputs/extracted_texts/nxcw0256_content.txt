@@ -1,0 +1,10 @@
+Format: pdf
+Method: pymupdf
+==================================================
+Source:  https://www.industrydocuments.ucsf.edu/docs/nxcw0256
+
+Source:  https://www.industrydocuments.ucsf.edu/docs/nxcw0256
+
+Source:  https://www.industrydocuments.ucsf.edu/docs/nxcw0256
+
+Source:  https://www.industrydocuments.ucsf.edu/docs/nxcw0256

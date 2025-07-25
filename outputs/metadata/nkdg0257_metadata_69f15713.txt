@@ -1,0 +1,23 @@
+Metadata for: Images/nkdg0257.zip/nkdg0257.pdf
+Category: Images
+==================================================
+
+=== Page 1 ===
+null - nkdg0257 - Downloaded 31/03/2025 11:12:26 AM
+Document Information
+Title: image.png
+URL: https://www.industrydocuments.ucsf.edu/docs/nkdg0257
+Document Date: 2020 September 15; 2020 September 30
+Type: Document; Image
+Genre: E-DOC ATTACHMENT;Portable Network Graphics
+Pages: 1
+ID: nkdg0257
+Collection: McKinsey Documents
+Drug: opioids
+Availability: public; no restrictions
+Bates Number: MCK-MAAG-4772042
+Date Added UCSF: 2022 June 06
+Cite This Document
+Author. Title. Date. Year. Collection. Source. https://www.industrydocuments.ucsf.edu/docs/[ID]
+Unknown. image.png. 2020 September 15; 2020 September 30. McKinsey Documents. 
+Unknown. https://www.industrydocuments.ucsf.edu/docs/nkdg0257

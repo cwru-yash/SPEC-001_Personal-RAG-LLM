@@ -1,0 +1,8 @@
+Document: Emails/sknw0257.zip/sknw0257.pdf
+Category: Emails
+Processed: 2025-06-11T22:37:52.016156
+Method: pymupdf+ocr
+==================================================
+
+=== Page 1 ===
+Source:  https://www.industrydocuments.ucsf.edu/docs/sknw0257

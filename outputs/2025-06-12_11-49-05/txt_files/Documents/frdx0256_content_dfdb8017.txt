@@ -1,0 +1,332 @@
+Document: Documents/frdx0256.zip/frdx0256.pdf
+Category: Documents
+Processed: 2025-06-12T12:21:38.209730
+Method: pymupdf+enhanced_ocr
+Text Length: 3368 chars
+==================================================
+
+=== Page 1 ===
+Source:  https://www.industrydocuments.ucsf.edu/docs/frdx0256
+
+=== Page 1 Image 1 (OCR) ===
+From:
+
+Holly Spreeman
+
+To:
+
+Holly Spreeman
+
+Subject:
+
+FW: URGENT - Payments Needed
+
+Date:
+
+Tuesday, September 15, 2020 1:40:47 PM
+
+Attachments:
+
+Image.pnq
+
+imaoge.ona
+
+Image.onq
+
+image.ona
+
+Image.pnq
+
+image001.ong
+
+Holly Spreeman, CPA | Senior Accountant
+
+Mckinsey & Company, Inc. | 240 Fountain Parkway N
+
+ul
+
+800 | St. Petersbury
+
+JEL 33726 | United Sta
+
+S
+
+Direct A237
+
+‘
+
+of | Internal 404
+
+ae
+
+>
+
+holly sproer ar
+
+mckinsey.corm
+
+From: Sathya M <Sathya_M@mckinsey.com> On Behalf Of XSC-LockBox
+
+Sent: Tuesday, September 15, 2020 12:53 PM
+
+To: Holly Spreeman <Holly_Spreeman@mckinsey.com>
+
+Cc: Katie Raible <Katie_Raible@mckinsey.com>
+
+Subject: Re: URGENT - Payments Needed
+
+Hi Holly,
+
+Kindly find the receipt information below. Kindly let us know if you have any questions
+
+1.35799
+
+Bank Reference
+
+21900714099 1
+
+Customer Reference
+
+NONREF
+
+Value Date
+
+01/07/2019
+
+Entry Date
+
+01/07/2019
+
+Posted Time
+
+03:23
+
+Transaction Amount
+
+265,875.00
+
+Product Type
+
+Funds Transfer
+
+Transaction Description
+
+ACH CREDIT
+
+Payment Details
+
+ACH CREDIT RECEIVED SENDING CO REF # 021000023254098RCVR NAME MCKINSEY & CO
+
+IN SENDING CO AUDIT #2000150855 SENDING PERSON/CO PURDUE PHARMA L. ENTRY
+
+DESCRIPTION PAYMENTS
+
+Batch/Track Number
+
+534338820865
+
+2.36217
+
+Bank Reference
+
+21903114424
+
+1
+
+Customer Reference
+
+NONREF
+
+Value Date
+
+01/31/2019
+
+Entry Date
+
+01/31/2019
+
+Posted Time
+
+03:24
+
+Transaction Amount
+
+797,625.00
+
+Product Type
+
+Funds Transfer
+
+Transaction Description
+
+ACH CREDIT
+
+Payment Details
+
+ACH CREDIT RECEIVED SENDING CO REF # 021000025623235RCVR NAME MCKINSEY & CO
+
+IN SENDING CO AUDIT #2000151707 SENDING PERSON/CO PURDUE PHARMA L. ENTRY
+
+DESCRIPTION PAYMENTS
+
+Batch/Track Number
+
+535160801865
+
+3.36833
+
+MCK-MAAG-4772038
+
+=== Page 2 ===
+Source:  https://www.industrydocuments.ucsf.edu/docs/frdx0256
+
+=== Page 2 Image 1 (OCR) ===
+Bank Reference
+
+21906314874
+
+1
+
+Customer Reference
+
+NONREF
+
+Value Date
+
+03/04/2019
+
+Entry Date
+
+03/04/2019
+
+Posted Time
+
+03:26
+
+Transaction Amount
+
+824,212.50
+
+Product Type
+
+Funds Transfer
+
+Transaction Description
+
+ACH CREDIT
+
+Payment Details
+
+ACH CREDIT RECEIVED SENDING CO REF # 021000022911505RCVR NAME MCKINSEY & CO
+
+IN SENDING CO AUDIT #2000152642 SENDING PERSON/CO PURDUE PHARMA L. ENTRY
+
+DESCRIPTION PAYMENTS
+
+Batch/Track Number
+
+533182488865
+
+4.37425
+
+Bank Reference
+
+21909415334
+
+1
+
+Customer Reference
+
+NONREF
+
+Value Date
+
+04/04/2019
+
+Entry Date
+
+04/04/2019
+
+Posted Time
+
+03:24
+
+Transaction Amount
+
+824,212.50
+
+Product Type
+
+Funds Transfer
+
+Transaction Description
+
+ACH CREDIT
+
+Payment Details
+
+ACH CREDIT RECEIVED SENDING CO REF # 021000028456264RCVR NAME MCKINSEY & CO:
+
+IN SENDING CO AUDIT #2000153770 SENDING PERSON/CO PURDUE PHARMA L. ENTRY
+
+DESCRIPTION PAYMENTS
+
+Batch/Track Number
+
+530155446865
+
+5.37714
+
+Bank Reference
+
+21911215557
+
+1
+
+Customer Reference
+
+NONREF
+
+Value Date
+
+04/22/2019
+
+Entry Date
+
+04/22/2019
+
+Posted Time
+
+06:37
+
+Transaction Amount
+
+212,700.00
+
+Product Type
+
+Funds Transfer
+
+Transaction Description
+
+ACH CREDIT
+
+Payment Details
+
+ACH CREDIT RECEIVED SENDING CO REF # 021000022354099RCVR NAME MCKINSEY & CO
+
+IN SENDING CO AUDIT #2000154399 SENDING PERSON/CO PURDUE PHARMA L. ENTRY
+
+DESCRIPTION PAYMENTS
+
+Batch/Track Number
+
+530934648865
+
+Thank you
+
+Best regards
+
+Sathya M
+
+MCK-MAAG-4772038.000001

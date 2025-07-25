@@ -1,0 +1,1754 @@
+Document: Documents/shnw0257.zip/shnw0257.pdf
+Category: Documents
+Processed: 2025-06-12T12:21:24.889598
+Method: pymupdf+enhanced_ocr
+Text Length: 54911 chars
+==================================================
+
+=== Page 1 ===
+Source:  https://www.industrydocuments.ucsf.edu/docs/shnw0257
+
+=== Page 1 Image 1 (OCR) ===
+Journal of the American Medical Informatics Association, 27(7), 2020, 1037-1045
+doi: 10.1093/jamia/ocaa052 IN A ] IN
+Advance Access Publication Date: 10 June 2020 —srorsunce morasmone tarowe rat way
+Research and Applications OXFORD
+Research and Applications
+S
+. , . . .
+The bird’s-eye view: A data-driven approach to under- 5
+fe)
+. . . . ry
+standing patient journeys from claims data 3
+: - 4. : : , - we 3
+Katherine Bobroske @,' Christine Larish,? Anita Cattrell,? Margret V. Bjarnadottir,? and 3
+a
+Lawrence Huan’ s
+wn
+‘Cambridge Centre for Health and Leadership Enterprise, University of Cambridge, Cambridge, United Kingdom, *Research and x
+Development, Evolent Health, Arlington, Virginia, USA, and “Robert H. Smith School of Business, University of Maryland, College a
+®
+Park, Maryland, USA 3
+[o)
+Corresponding Author: Katherine Bobroske, MPhil, Cambridge Centre for Health & Leadership Enterprise, University of 2
+Cambridge, Judge Business School, Trumpington Street, Cambridge CB2 1AG, UK; kab80@jbs.cam.ac.uk 8
+3
+Received 3 January 2020; Revised 31 March 2020; Editorial Decision 2 April 2020; Accepted 9 April 2020 ZS
+3.
+»
+ABSTRACT =I
+=
+Objective: In preference-sensitive conditions such as back pain, there can be high levels of variability in the tra- o
+jectory of patient care. We sought to develop a methodology that extracts a realistic and comprehensive under- N
+standing of the patient journey using medical and pharmaceutical insurance claims data. 3
+Materials and Methods: We processed a sample of 10 000 patient episodes (comprised of 113 215 back pain- 8
+related claims) into strings of characters, where each letter corresponds to a distinct encounter with the health- a
+care system. We customized the Levenshtein edit distance algorithm to evaluate the level of similarity between g
+each pair of episodes based on both their content (types of events) and ordering (sequence of events). We then y
+used clustering to extract the main variations of the patient journey. gg
+Results: The algorithm resulted in 12 comprehensive and clinically distinct patterns (clusters) of patient jour- oO
+. . . . . ©
+neys that represent the main ways patients are diagnosed and treated for back pain. We further characterized =
+demographic and utilization metrics for each cluster and observed clear differentiation between the clusters in 3
+terms of both clinical content and patient characteristics. Oo
+Discussion: Despite being a complex and often noisy data source, administrative claims provide a unique longi- a
+tudinal overview of patient care across multiple service providers and locations. This methodology leverages =
+claims to capture a data-driven understanding of how patients traverse the healthcare system. o
+Conclusions: When tailored to various conditions and patient settings, this methodology can provide accurate &
+overviews of patient journeys and facilitate a shift toward high-quality practice patterns. &
+°
+Key words: Claims data, patient journey, clustering, edit distance, sequence alignment 3
+©
+—SSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS >
+a
+Cc
+INTRODUCTION a
+. _. ly . . }
+Medical researchers have long pointed to the importance of under- from standard clinical guidelines. However, in a fragmented health- S
+standing the realistic picture of the patient journey: the chronologi- care system, it can be difficult to derive a comprehensive under-
+cal sequence of how a patient seeks and receives care from the standing patient journeys based on real utilization patterns.
+healtheare system.'? Capturing an accurate overview of the patient Understanding the patient journey is especially important: for
+journey can help identify sources of variability, evaluate why highly variable, preference-sensitive conditions such as back pain.” >
+patients respond differently to the same overarching treatment plan, Because back pain has numerous clinically acceptable therapeutic
+and compare how actual realizations of the treatment plan differ options, the trajectory of patient care can be highly variable and
+£° The Author{s) 2020. Published by Oxford University Press on behalf of the American Medical Informatics Association.
+All rights reserved. For permissions, please email: journals.permissions@oup.com
+1037
+MCK-MAAG-2368609
+
+=== Page 2 ===
+Source:  https://www.industrydocuments.ucsf.edu/docs/shnw0257
+
+=== Page 2 Image 1 (OCR) ===
+1038
+
+Journal of the American Medical Informatics Association, 2020, Vol. 27, No.7
+
+influenced by the severity of the condition, access to healthcare serv-
+
+When studying the patient journey using administrative claims,
+
+ices, provider preferences, and the patient's medical history.”
+
+Add-
+
+analyses typically limit the analysis to specific elements of the patient
+
+ing to this complexity, treatment for back pain often occurs across
+
+journey, for instance, categorizing the first-line treatment after condi-
+
+service locations (eg, primary care, emergency services, physical
+
+tion onset, or looking at the first 3 events of the treatment path-
+
+31.32
+
+therapy). While significant effort has been placed on extracting and
+
+way.
+
+Claims have
+
+also
+
+been
+
+used to measure outcomes
+
+of
+
+analyzing patient journeys from electronic medical records and clini-
+
+pathway effectiveness, without being leveraged to create an under-
+
+cal workflows, these data sources tend to be centered around a sin-
+
+standing, of the patient journey itself.°**" Other work identified com-
+
+1¢
+
+gle healthcare provider.”
+
+mon pathways by frequency, but this inherently biases the outputs to
+
+To obtain a more comprehensive overview of the patient journey
+
+display the shortest and simplest patient pathways.*> In contrast, our
+
+across various providers and locations, we propose a data-driven
+
+proposed methodology uses a data-driven approach to identify simi-
+
+methodology based on medical and pharmaceutical claims data. In
+
+larities between patient journeys and understand the main patterns
+
+the ULS. healthcare system, administrative claims data from insur-
+
+across the patient's full set of interactions with the healthcare system.
+
+ance providers offer a uniquely detailed retrospective account of
+
+how individual patients receive medical treatment.!! 1* Claims data
+
+contain date, diagnostic, procedural, and provider information,
+
+MATERIALS AND METHODS
+
+which, when strung together, create an overview of services pro-
+
+There are 3 analytical steps to the proposed data-driven approach to ex-
+
+vided by a collection of clinicians.
+
+tract the patient journeys: claims processing, sequence alignment, and
+
+Compared with electronic health records, insurance claims are a
+
+journey clustering, Details of all clinical assumptions, including codes
+
+useful platform to study longitudinal utilization and conditions that
+
+used to process the data, are provided in the Supplementary Appendix.
+
+are treated across multiple locations. However, claims data are often
+
+inherently noisy, have duplicated information, and may not accu-
+
+LATS
+
+rately identify a complete list of services provided to the patient.
+
+Claims processing
+
+With these challenges, to our knowledge, automatic detection of
+
+This research utilized a nationwide U.S. dataset that included medi-
+
+representative patient journey patterns from claims data has not
+
+cal and pharmaceutical claims from 29 different provider networks
+
+been successfully completed at scale.
+
+across 23 states and the District of Columbia. While not a nationally
+
+The proposed data-driven methodology uniquely combines and
+
+representative dataset, the patients were insured through commer-
+
+builds on tools leveraged elsewhere in healthcare informatics to de-
+
+cial, Medicare Advantage, and Medicaid plans and represent a vari-
+
+velop an algorithmic approach to extract and understand patient
+
+ety of patient demographics and comorbidities. The research was
+
+16--2
+
+journeys from claims data.
+
+* We represent the back pain-related
+
+approved by the Ethics Committee at the University of Cambridge
+
+events of the patient's journey as a string of letters, in which each
+
+Judge Business School as a nonhuman subject study.
+
+letter corresponds to a distinct encounter with the healthcare system.
+
+We analyzed all back pain-related claims between September
+
+We then evaluate the similarities between the strings based on both
+
+2012 and March 2019, in which back pain was broadly defined to
+
+their content and their ordering (with a dynamic sequence alignment
+
+encompass patients expected to follow conservative back pain
+
+algorithm), and finally cluster the patient journeys together (using,
+
+guidelines, such as those released by the American College of Practi-
+
+ensemble clustering) to identify representative patterns. Applied to-
+
+tioners.*
+
+Following the related back pain literature, patients were
+
+gether, using careful data modeling, these analytic elements create a
+
+excluded if they had a history of cancer, congenital abnormalities,
+
+data-driven understanding of the patient journey.
+
+or certain autoimmune conditions, or if they were being treated in
+
+The proposed methodology to extract patient journey patterns
+
+end-of-life care, as the care for these patients is often medically justi-
+
+36 9
+
+from claims data combines and customizes techniques from sequence
+
+fied to deviate from the general guidelines.
+
+alignment and clustering. Applications of sequence alignment (such as
+
+We identified a random sample of 10 000 back pain episodes
+
+the Levenshtein edit distance) have been successfully implemented
+
+(corresponding to 998 | unique patients) in which the patient had an
+
+within informatics to map laboratory text into a standardized medical
+
+initial back pain-related claim after a minimum 6-month clean pe-
+
+vocabulary, identify duplications in electronic medical records, and
+
+38410 p
+
+lo 19
+
+riod without back pain-related claims.
+
+atients were required
+
+normalize terms in clinical text.
+
+Clustering has been shown to be
+
+to be fully eligible in the dataset for at least 12 months before the
+
+effective at compressing large clinical datasets; techniques including, k-
+
+start of the episode and for 6 months after the index back pain
+
+means clustering, are commonly applied to image processing in the
+
+claim. We then extracted the first 6 months of back pain claims for
+
+2
+
+ys
+
+3
+
+context of radiology scans and skin tissue samples.-°
+
+each episode, totaling 113 215 claims.
+
+There is a large prior literature that focuses on understanding
+
+The claims processing stage uses clinical assumptions to group
+
+or extracting patient journey patterns from event logs, such as
+
+the medical and pharmaceutical claims into 14 event types (see
+
+810.262
+
+electronic medical record systems.
+
+When patient journey
+
+Table 1). For each event type, we identified the set of diagnosis, pro-
+
+data are organized into event logs or time stamps, process mining
+
+cedure, revenue, service location, and clinician specialty codes that
+
+0z0z IsnBny g1 uo sasn Asesqi7 ey6ig eluoyeD Aq GzZ1G698S//E01/2/2Z/elole/elwel/wuoo dno‘ olwapeoe//:sdjjy Wold) papeojumMOog
+
+can discover a single process map (or set of maps) that shows
+
+could be used to classify the claims. For some event types such as
+
+how entities transfer from the beginning to the end of the sys-
+
+back pain surgery (coded as event letter “S”), the event is clearly de-
+
+4
+
+tem.”
+
+*8 Even though noise reduction techniques have been devel-
+
+fined and the codes used to identify claims are directly drawn from
+
+oped to address challenges such as missing data and repeated
+
+the medical literature."
+
+events, the frequency of such occurrences in claims data makes it
+
+Other event types require a more knowledge-driven approach to
+
+9.2930
+
+difficult to apply process discovery within the claims setting.
+
+identify the combination of characteristics that classify claims into
+
+Furthermore, in conditions like back pain, in which it is appropri-
+
+events. For instance, the unplanned care event (coded as event letter
+
+ate fo revisit or repeat events such as physical therapy, it may not
+
+“E”) looks for claims related to an emergency department visit (rev-
+
+be appropriate to conceptualize the patient journey as an end-to-
+
+enue code starting with 045, service location code 23, or Current
+
+end process.
+
+Procedural Terminology code between 99 281 and 99 285) or
+
+MCK-MAAG-2368609.000001
+
+=== Page 3 ===
+Source:  https://www.industrydocuments.ucsf.edu/docs/shnw0257
+
+=== Page 3 Image 1 (OCR) ===
+Journal of the American Medical Informatics Association, 2020, Vol. 27, No. 7 1039
+
+Table 1. Back pain episode event categories and event type descriptions
+Event category Event tvpe description Event letter
+
+General medical interactions Surgery (eg, fusion or laminectomy) S
+Invasive pain management (eg, epidural or facet injection) M
+Inpatient admission (withour surgery) A
+Unplanned care (eg, emergency or urgent care visit) E.
+Surgeon appointment G
+Pain medicine specialist appointment (without procedure) D
+Nonprocedural specialist appointment N
+Primary care physician or advanced care practitioner appointment P i
+Physical or occupational therapy appointment T =
+Alternative medicine (chiropractor or acupuncture) Cc fe)
+Diagnostic imaging Advanced imaging (magnetic resonance imaging or computer tomography scan) I ©
+X-ray xX o
+Prescriptions Opioid prescription oO Q
+Nonopioid prescription R =
+Time Wait period berween events (of 4. weeks) or end of episode Ww s
+
+Within the back pain setting. the order of the table from top to bottom reflects a decreasing clinical importance of the events. °O
+
+urgent care visit (revenue code starting with 0516 or 0526, service to 33 820 events (a 52.5% reduction in distinct data points), repre- =.
+location code 20, or Current Procedural Terminology code of senting 2863 unique variations of the 6-month back pain patient Q
+$90088 or $9083). Further description of how we arrived at the journey. Figure | contains a visual representation of the first 4 back
+code classification can be found in the Supplementary Appendix. pain-related events across the patient sample. 3
+
+Once the claims are assigned to an event type, the claims within ®
+
+each event category are aggregated based on overlapping dates into Sequence alignment 2
+
+distinet interactions with the health system. For example, if a physi- . - . ae ;
+: : For preference-sensitive conditions such as back pain, the treatment =
+
+cal therapy appointment generated more than 1 medical claim, these lecisi “y. whether the patient w -escribed opioid ‘ell 2
+: : : : . decisions (eg, whether the patient was prescribed opioids) as well as
+claims would be grouped together into a single “physical therapy he order of treatment decisi wo. whether the patient w . S
+T Likewi f heal lai vated witt lid the order of treatment decisions (eg, whether the patient was sent
+event. Likewise, all medical claims associated with a multiday . . . . - . . Ni
+. . : oo for advanced imaging before or after attempting physical therapy) =
+inpatient hospital stay would be grouped together into a_ single . ae . . . 4.37.40,42.43 +)
+: : lissi \ i ; ; can substantially impact patient outcomes. The next stage o
+“inpatient admission” (A) event. : . oye . og
+pe ‘ ; ; Id be classified lift of our proposed algorithm assesses the similarity between pairs of Gi
+If an event contained claims that could be classified into different . . , .
+: : : : : patient journey sequences based on both content and order, without Gq
+event types, the event is labeled according to the claim with the high- . . :. _.
+cee : is : a requiring researchers to explicitly define clinical rules. N
+ot nelatiy ¢ MPOrANee. Hor example,.if-a patient-saw a surgeon (C3) Levenshtein’s edit distance algorithm aligns 2 sequences using a og
+while admitted to the hospital (I), the event would be labeled as an ‘ombinati edits: shes. inserti ~ equivalently, dele-
+. . _ ., .. oo combination of edits: matches, insertions (or, equivalently, dele fe)
+inpatient admission (I). The order of importance of various events, . eee ee Cee epee ay
+a : : ; tions), and substitutions.”” For example, the sequences G-T-T-T-1 =
+also known as a clinical hierarchy, is represented from top to bottom 1 P-T-P could be aligned by substituting the G for P at the fr :
+in Tabl ith hivher i listed fi ‘i and could be aligned by substituting the G tor P at the front of 3
+in Table 1, with higher importance events listed first.” . . ne | ;
+; ip P : ; a the string, and inserting 2 T's into the middle of the second sequence
+Because combining claims into a single event only occurs within Bi aca: Fi I lard Levenshtein alporit! | | &
+-_ . " " . : _ (see Figure 2). In the standard Levenshtein algorithm, each match
+the partitions of an event category (eg, diagnostic imaging), it is pos- between the 2 sequences is awarded a value of 1 and each insertion =
+sible that events from different categories occur on the same day. tk ; F - 4 2S _
+. | : iat - : or substitution is penalized with a value of -1.°° As such, aligning fou
+We also apply the clinical hierarchy from Table 1 to order these G-T-I-I-P and P-I-P as described previously (substitute |
+; h that tt | fica j : ; and as described previously (substitute { match 4 5
+same-day events, such that the general medical interactions are or- . . . . .
+: ae pme per — : insert ¢ insert + match) with the Levenshtein edit costs would result c
+dered ahead of diagnostic imaging or prescriptions. This logic . . :
+a cee” oe in an alignment score of | 1. s
+assumes that the clinician associated with the general medical inter- Oi algoritim #élies ori J expansions of the Levenshrein algo g
+oo , . . z i r algor relies on 2 expansions ¢ e Levenshtein algo-
+action likely ordered the diagnostic imaging or prescription drugs. . a . .. ) ) " =
+: : : ° _ :o rithm. First, we allow for transpositions, such that O-P and P-O could ©
+Events are each assigned a letter and then strung together in con- . . 7 . . .
+. . i oo : . me . be aligned by swapping the last 2 characters instead of applying the f=
+secutive order to form a longitudinal view of the patient journey for . . dGar- . .
+. . am : a a insert-match-insert sequence.” This is important in the back pain con- 5
+back pain across distinct specialty appointments, prescriptions, facil- xt because Il changes in the order of patient acti -e filling -
+es | di : \ fe. tt ” TLO text because small changes in the order of patient actions (eg, filling a N
+ity visits, and diagnostic tests. As an example, the string P-T-T-I-O- _ a . . :
+re : , . i” : : i pres TB ; . prescription and getting an x-ray) are often due to scheduling con- S
+' is a potential patient journey. It represents a patient that first . re ae . :
+i. : . I J ; ce I back pai I >). had 2 physi straints and are of little consequence to the patient's overall pattern of
+went to their primary care physician for back pain had 2 physi- . 4: . ; : . :
+/ ot - 2 : : J ( Is . P ; care. Second, unlike in the Levenshtein algorithm, in which all edits
+cal therapy appointments (T-T), was given diagnostic imaging in the -e penalized with a value of | -alvorithm c es the edit val-
+; ; : . . are penalized with a value of 1, our algorithm customizes the edit va
+form of magnetic resonance imaging, or a computed tomography ws based both the tvpe of editi | the event bei
+: ) : : ues based on both the type of editing action and the event being
+sean (I), and then was prescribed an opioid (QO). A time-spacing, . vp: 4
+a — : i edited.” For instance, transposing 2 letters may be awarded a smaller
+event (W’) indicates that significant time has elapsed between events . . . 7
+ks t | of wad edit value compared with matching on the same 2 letters.
+or marks the end of an episode. . . . . . .
+: I : Assigning edit values can be data-driven, involve the input of med-
+Depending on the specific study context, the preprocessing stage ical ; a combinati ‘both.’ For back pai .
+an : : : . : : : ical experts, or a combination of both.” For back pain patients, some
+can make a significant impact in reducing the dimensionality of the coe tent, . | -oery, can be a defini ae
+: : aie . : rarer treatment options, such as surgery, can be a defining aspect of
+dataset. In our illustration, 113 215 back pain claims were reduced he ient journey. Therefore, instead of weighting |
+the patient journey. Therefore, instead of weighting a match on
+
+MCK-MAAG-2368609.000002
+
+=== Page 4 ===
+Source:  https://www.industrydocuments.ucsf.edu/docs/shnw0257
+
+=== Page 4 Image 1 (OCR) ===
+1040 Journal of the American Medical Informatics Association, 2020, Vol. 27, No.7
+Event 1 Event 2 Event 3 Event 4 eee
+— . — . :
+Se - AS . fe RN, LI a ae
+a* LP ’ T SS Up A T SS
+SS ge Nae £ LLZ
+= 8 SS eS _ Se SSS Oo
+=> st RS _ i —_ SS -
+Sal SS Ee
+: x he ss a ee Se —— FINISH o
+P <A . > Pm. or — ak Sx l 3°
+_—— oo - == TF 5
+a lo — yg ——_ iw 2
+Sy a 8
+= > : R tM hip, 2
+= yi: L | = >
+- 2 = FINISH °
+ae — FINISH 3
+-- z
+FINISH Ss
+a
+=
+©
+fe)
+©
+o
+Figure 1. Variation in the first 4 events of the patient back pain journey. Because back pain is a preference-sensitive condition, high variation exists in the first 6 3
+months of the patient journey. The letters in this Sankey chart correspond to the event types displayed in Table 1. Of the patient back pain episodes, 74% contain oO
+4 or fewer events; 89% are completed within 6 months. 2
+ae}
+Q
+is)
+3
+=
+®
+3.
+‘ter lor + sequence - opti ‘ore before ®
+Sequence Alignment Option 1 letter(s) of I or both the sequences and the optimal score before that >
+action. Specifically, we define s,,°(v.2) to represent the maximum =
+Lo, score of aligning the first v elements of patient journey ¢ (where oO
+vm (IQ@OO000 inh ees of en es re
+1 < v < flen, the number of elements in sequence #) with the first ie
+x z elements of patient journey j (where |< z < jen. the number =
+(Patient j) @ ( TeJc) 60d of elements in sequence j). The v luc of the vth element of # is desig g
+= = nated asiv and the zth element of jasjz. si
+Y y :
+Substitution —_ Insertion Transposition The values (v7) associated with each potential edit operation are a
+Un (match), Voub (substitution), v,,< (insertion), and 0,,;< (transposi- Y
+. . tion). The dynamic optimization problem to maximize similarity fea
+Sequence Alignment Option 2 ) : I I . a oo <
+score §,)° (V2) can be expressed through the following formulation: (?)
+] : z ©
+(Patient 7) 6: @ © { }){ fol ®) Su (We) — Max {S.) (voaz byt eyez) g
+4: ©
+Subject to: is)
+(Patient /) ( ~ ] \ ; ] ; S1° (0,0) — 0 a
+c
+Ss
+Figure 2. Example of sequence alignment. Our adaption of Levenshtein’s edit levis ilen 1 < 2 < jlen 2
+distance maximizes the total score of aligning 2 sequences using matches, s
+substitutions, insertions, and transpositions. Because multiple possible align (ab) < {O.1). (LOL. (2.2): a ove bee &
+ments exist for any 2 strings, dynamic optimization is applied to maximize °
+the sequence alignment score based on the given edit values. 3
+eCy(ve 2) a
+surgery equal to a match on a primary care visit, we assign the value Vo ticlit) when a — 0; b= 1 Pa
+of matching events in proportion to the rareness of the event (which 5 F [=
+: - . . 2 tiy(iv) when a— 1: b—0 @
+we refer to as rareness weighting). With match values scaled berween ND
+1 and 10 in our dataset, A (inpatient admission), which makes up 3 tin iv) when a—b— ls iv —fez S
+0.1% of events, has a match edit value of 10.0, while P (primary care venliv) t vepli 2)
+- - ee . - Publ! feublf © oo :
+visits), Which makes up 11.7% of events, has a match edit value of 4 a when a boli iv Afe
+2.2. See the Supplementary Appendix for a complete list of edit values
+. mas 5 maxtor, iv), G2) ata. iy rtp yt
+and the corresponding sensitivity analyses. MAX Ving (EV) Vin USEF MULVEY). Prad Z)Y
+As each pair of sequences may be aligned with multiple sets of when —b 2: iv LV afes iv aj: 1
+edit actions, we utilize dynamic optimization to efficiently calculate
+the highest possible alignment score. The dynamic program is based 6 x when a—b—2hiv Leis) Uv 4is WV)
+on the principle that the maximum alignment score of strings i and j Where [1] inserts letter jz into string i, [2] inserts letter iv into
+must be some combination of an action (eg, substitution) on the last string j, [3] matches letter iv — jz, [4] substitutes letter iv for jz,
+
+=== Page 5 ===
+Source:  https://www.industrydocuments.ucsf.edu/docs/shnw0257
+
+=== Page 5 Image 1 (OCR) ===
+Journal of the American Medical Informatics Association, 2020, Vol. 27, No. 7 1041
+ccccw EXWIW ERPW EROW PXOW PXOOW POWPRO GWIGW we
+ccccw 0.09 0.09 0.08 0.09 0.08 0.00 0.08
+EXWIW 0.09 =| 100 = 037 0.34 0.37 0.32 0.06 0.41 .
+ERPW 0.09 037 (WO 0.70 0.21 0.16 0.35 0.09 .
+EROW 0.08 0.34 0.70 FO 0.46 0.38 0.49 0.08 .
+Pxow | 0.09 0.37 0.21 046 STO oxi 0.47 0.08 .
+Pxoow | 0.08 0.32 0.16 0.38 081 TO 0.60 0.07 .
+POWPRO | 0.00 0.06 0.35 0.49 0.47 0.60 TO 0.06 .
+io)
+Gwicw | 0.08 0.41 0.09 0.08 0.08 0.07 oo «6 g
+J
+oe — we vse = ws ee = Liss fe)
+©
+a
+®
+Figure 3. Sample of the n-by-n similarity matrix. The matrix is populated using the normalized similarity scores. The index [i, /] in the similarity matrix s corre- °
+sponds to the similarity score between patient journey / and patient journey j. Note that diagonal entries all have a normalized similarity score of 1 (as a given pa- g
+tient journey is identical to itself), and the lower diagonal is a reflection of the upper diagonal scores (because s;; $j). _
+g
+[5] transposes letters iv lsv with fz 1:2, and [6] indicates 5
+that a transposition between y ol: veandyz 1: isnot valid. 3
+
+After obtaining the optimal similarity score, we calculate the — , g
+minimum (scale yin.) and maximum (seule mux,) scores that could / SS a
+have been generated for the given pair of strings i, / (see Supplemen- FOWRO LY *s, eee 2
+tary Appendix for calculation). We then transform the optimal value / foe ‘ ‘\ 8
+of aligning the 2 complete strings s,,° (den. j_len) into a normalized / oy mee, MY 3
+similarity score s,,, Where 0 represents no similarity between strings Fs a nee SON S
+and | implies the strings are identical: 1,7 A - tee A o
+
+, o-association Percentage rs)
+yo, PPRW 8 EPOPW 5
+
+8.4 Uden.jlen) scale min, ———- >- 009% a
+a a = ®
+‘ scale max, scale min, —----— >70% S
+
+oi : . . oy . ~orr7-7- > 50% 5
+
+The algorithm thus assigns high similarity scores to similar pa- =
+tient journeys (eg, P-X-O-W and P-X-O-O-W have a similarity score @
+of 0.81) and lower scores to less similar journeys (eg, P-X-O-W and &>- ee Le E> a
+F-R-P-W have a similarity score of 0.21). The similarity scores s,; _— a
+for each pair of journeys are compiled into a similarity matrix (see S
+Figure 3). fez
+
+gure 3) g
+
+&
+
+Figure 4. Aggregating k-means results using ensemble clustering. A single- =
+
+Journey clustering link method partitions the outputs from multiple iterations of k means into 3
+
+1 loft lusteri a ive th : 7 ft the final patient journey clusters C,. When the minimum threshold tis set to a
+he goal of the clustering is to summarize the main patterns of the .
+
+: 5 : _. 5 . I 90%, 2 clusters form: POWPO-POWPRO and GWGIGW-GXIGW; the other 4 is)
+patient journeys. As it is important for the methodology to scale to patient journeys drop out as “noise.” When t 70%, patient journeys are cat- 2
+large patient samples, we leverage k-means clustering, an effective egorized into 1 of 3 clusters: GWGIGW-GXIGW-GXIW, POWPO-POWPRO- 7
+approach when classifying, objects within large datasets.”' The basic PPRW, or EOXW-EPOPW. When ft 50%, 2 clusters merge, resulting in 2 o
+k-means algorithm (1) chooses & objects to be cluster centers, (2) more heterogeneous clusters: POWPO-POWPRO-PPRW-EOXW-EPOPW and &
+assigns all other objects to their nearest cluster center, and (3) re- GWGIGW-GXIGW-GXIW. 5
+evaluates the center of the cluster. Steps 2 and 3 are repeated until g
+
+. . - °
+
+the algorithm converges and no reassignments are made. have been clustered together with | (or more) of the patient journeys 3
+To choose the cluster centers, we leverage the “k-means t+ +” j in the final data partition ©, for patient journey i to be added @
+
+j ; Hh pe “eae hae the >
+seeding technique, an approach that encourages starting seeds to be into Cy. In the example illustrated in Figure 4, higher thresholds &
+widely spread across the sample."* After the first center K is ran- (eg, 90%) yield smaller and more homogenous clusters, whereas 5
+domly chosen, the next center is chosen by assigning a probability lower thresholds (eg, 50%) yield larger and more diverse clusters. IN
+based on the squared distance between K and the other objects. The chosen threshold ¢ should balance the specificity of the chis- S
+
+Then, because k-means clustering can be sensitive to its initiali- ters (to focus on specific sets of patients) with the cluster size (to
+zation, we aggregate the results from multiple iterations of k-means gain enough “power” for any subsequent interpretations, regres-
+using ensemble clustering. Ensemble clustering forms more stable sions or analyses). To gain an overview of the main patient journey
+clusters, with improved robustness and less distortion” !77"” After patterns in this study, clinicians selected a threshold of 50% to ex-
+the k-means algorithm is run with different values of & and starting tract 12 main patient journey patterns from the data. As detailed in
+seeds, we calculate the percentage of times that patient journey / has the Supplementary Appendix, this threshold is appropriate for this
+been clustered together with patient journey j. These percentages are study context in gathering a comprehensive overview of the first 6
+populated into what is called a co-association matrix. months of back pain treatment; setting t to higher thresholds
+
+Researchers can then choose the single-link threshold t, which resulted in more, smaller partitions appropriate for studying more
+represents the minimum percentage that a patient journey / must detailed clinical questions.
+
+=== Page 6 ===
+Source:  https://www.industrydocuments.ucsf.edu/docs/shnw0257
+
+=== Page 6 Image 1 (OCR) ===
+1042 Journal of the American Medical Informatics Association, 2020, Vol. 27, No. 7
+
+Table 2. Back pain patient journey clusters
+
+Cluster Journeys Example sequences Clinical description
+I 17.0% — PXWPW, PXPTW, PXPW, PW, PPXWPW, PXPPW, PPX TW, PWPX WW, PPW Primary care + x-ray or wait
+2 16.0%  FWEXW, EXEW, FEXW, EXERW, EXWEW, EEWXW, EWXW, EFEXRW, EXEWTTW Emergency + x-ray
+3 9.7% TET, TTT EW, TEW TTT Wa, TTT WT Wa TE WET, TW We Short therapy series
+4 9.3%  CCCCWCOW, CCCCWCCCW, CCCOWCCOCCW, CCCCCCOW Alternative medicine
+5 9.1%  PRWPRW, PRPRW, PRPRTW, PRTWPRW, PRPRPW, PRRPW, PXRPRW, PRWPRRW Primary care - nonopioid prescriptions
+6 8.1% PEPE ETTE TTT EW, TEE Te TT, 7 TEWTETT EW, TETTTW TTT W Long therapy series
+7 5.7% — POWPOW, PORPOW, POPOW, POR WPOW, PWPOPOW, POROW, PKOWPOW Primary care + opioids
+8 5.78% MEME, MEW MEME, MMW, MET MAE, TM WEA, META ME MEW? Pain medicine procedure 9
+9 3.5%  GXIWKW, GXIGW, GXWIGW, PGXIGW, GXIGWTEW, GXGW, GXWGIGW Surgeon + imaging, =
+10 3.3% EXTW, EXWIW, EWTW, EIWIW, EXWIEW, ETT WW, EIW, EIT TW, ED EDW Emergeney - advanced imaging S
+1 5.08%  DDDWDW, DDD WDDW, DWDDWDW, DDDDWDW, DWDDDW, DDDDW Pain medicine specialist ey
+12 2.0% NIWNW, NINW, NWNW, NRINW, NITTNTTW, NRNW, NNW, NINRTTW Nonprocedural specialist eS
+3
+Noise 17% — Other g
+3
+=
+s
+RESULTS For example, high rates of back pain surgery are concentrated S
+. i. . . %)
+. : . among the patients whose initial starting encounter is a surgeon re)
+Using the proposed data-driven methodology, the 10 000 patient & ] ; : nh & 2
+. . cous . . _ (cluster 9 at 9.1%), compared with patients who enter the system ®
+journeys were reduced into 12 primary patient journey clusters. The _ ; a : a 3
+. . oo. 4 oy . though other clinical entry points. Episodes in cluster 8 (invasive =.
+resulting clusters displayed in Table 2 show the distribution of pa- : . . . 2
+. : . . pain management procedures) average 10.1 times higher medical fe)
+tient episodes between diagnosis and treatment pathways, along a : - — of a 5
+. so: costs than episodes in cluster 1. In cluster 7, in which the patient's :
+with example patient journey sequences that make up each cluster. 7 : : : : : . ; Q
+oe P . : ; = Vor : _ first point of contact is typically the primary care physician, 91.2% 3
+The highest proportion of patients (17.0% in cluster 1) visit a ae ot : a a : . z=
+. i . . of patients are prescribed and fill opioids within the first 6 weeks of a
+primary care practitioner and are directed to a low-acuity next step Soo ana rn 3
+. .. . . . the start of their episode. This opioid fill rate in this primary care re
+that may include waiting at least 4 weeks, getting an x-ray diagnosis, . : . 7 2
+. : . oe . cluster even exceeds that of clusters 2 and 10, in which patients seek 2
+ora physical or occupational therapy appointment. Patients in clus- . ; =
+. a yy. . care in emergency or urgent care settings. a
+ter | appear to closely follow clinical guidelines that promote nonin- vo " : re . . Oo
+. . re . - 3643 oe: Although early advanced imaging within 6 weeks of onset of S
+vasive, nonopioid care after initial onset of back pain. Patients oF aa : : ae : N
+. < = . . ae . : pain is considered a major contributor to overtreatment and inap- x
+in clusters 5 and 7 also begin their back pain episode in the primary : ; : a : . =
+. . . se , -_ propriate medical spending, 89.8% of the patients in cluster 10, °
+care setting; however, most patients fill prescriptions (either opioid : " . : @
+. re who seek care in an emergency or urgent care setting, receive mag- 2
+or nonopioid) as their first-line treatment. : : : z : z z _ OO F a
+os . . - netic resonance imaging or a computed tomography scan within 6 a
+The second most common cluster is comprised of patients who eens moe : . aa - : Gq
+. weeks of their index back pain claim.” Despite the high cost associ- N
+make an unplanned visit to an emergency or urgent care center and : ; : oe oe N
+. or: 4 seg ated with this cluster, the episodes appear short-lived, with 93.4% a
+receive an x-ray (16.0% in cluster 2). In 9.7% of episodes (cluster . ; : . i . fox
+> - . . . of patients ceasing treatment for back pain within the first 6 weeks <
+3), we observe a self-referral to physical or occupational therapy, in : z : ; Oo
+. . . _ .. compared with the overall rate of 88.9% across the sample. An ad- o
+which the patient proceeds to have approximately 3-5 additional - Bo ; =
+: 3 ; . ditional 27.8% of patients who seek care from a surgeon (cluster 9) iS)
+therapy appointments. There also exist small, well-defined clusters : : : se . " maw 3
+De se g . . . . receive advanced imaging within the first 6 weeks, as do 17.3% of D>
+such as cluster 8 (3.7% of episodes in which patients are primarily : a |
+ae . -. depo og patients whose care is managed by nonprocedural specialists (cluster 9
+treated with facet or epidural injections) and cluster 12 (5.0% of - a Stee es ; a
+; : . . 1 Lis 12). Although they jointly comprise only 23.4% of episodes in the a
+episodes in which pain medicine specialists are consulted but do not - ? * of a =
+_. : : ae sample, clusters 8-12, which rely heavily on specialists, procedures, Cc
+administer epidural or facet injections). 1; : k 43.9% 2 rf I k pai i fou
+. . . a and imaging, make up 43.2% of overall back pain spending. 0
+As described in the Materials and Methods, patient journeys Bins I ° ! / & &
+were clustered solely on the sequence of the patient’s back pain 5
+events without considering the patient's comorbidities or demo- DISCUSSION g
+. oa . . or °
+graphics. However, as seen in Table 3, there is a high level of vari- 5
+ability between clusters in terms of patient characteristics. While claims data have been touted as having the potential to pro- ©
+. ; ; _ . , >
+For example, patients in chister 6 (who receive 10 or more physi- vide a bird's-eye view of a patient's healthcare records and of health- &
+cal or occupational therapy sessions) or clusters 9, 11, and 12 (who care utilization at the population level, studies have often fallen a
+obtain care from specialists) are more likely to live in areas with short of that goal. Claims data are notoriously noisy (owing to, for IN
+higher average salaries compared with patients who follow different example, variation in medical coding) and are not generated for re- S
+patient journeys. Meanwhile, the lowest average salaries within the search purposes.'! |’ The proposed methodology effectively used a
+sample are associated with clusters 2 and 10 (seeking care from the combination of data processing, sequence alignment, and ensemble
+emergency room) or cluster 7 (being prescribed opioids by a primary clustering to identify primary patient journey patterns in the highly
+care physician). The alternative medicine cluster (cluster 4) is associ- variable, preference-sensitive condition of back pain.
+ated with the youngest average age of the sample, whereas cluster When a group of primary care providers in a large multispecialty
+8 (invasive pain management procedures) is associated with the clinic were presented with the preliminary cluster outputs using the
+highest average age. group’s own data, they initially voiced concerns about the validity
+Driven largely by our use of rareness-weighted edit values, there of the treatment pathways. However, within a short time of review-
+is a high level of diversity between clusters in terms of the key back ing the outputs, the clinicians moved beyond their own recollections
+pain outcomes such as early advanced imaging and surgical rates.’ of individual patient cases to. a more objective discussion treatment
+
+MCK-MAAG-2368609.000005
+
+=== Page 7 ===
+Source:  https://www.industrydocuments.ucsf.edu/docs/shnw0257
+
+=== Page 7 Image 1 (OCR) ===
+Journal of the American Medical Informatics Association, 2020, Vol. 27, No. 7
+
+1043
+
+Table 3. Cluster summary statistics
+
+Patient characteristics
+
+Within 6 weeks of episode start
+
+Within 6 months of episode start
+
+Cluster
+
+Average age (Vv)
+
+Average annual income*
+
+Advanced imaging
+
+Opioids filled
+
+Unplanned emergency
+
+Surgery
+
+Average toral cost?
+
+47
+
+2.2%
+
+0.0%
+
+1.0%
+
+O.1%%
+
+1.0x
+
+$73,900
+
+az)
+
+s
+
+$62,700
+
+0.0%
+
+1
+
+100.0%
+
+0.0%
+
+2
+
+2x
+
+$80,000
+
+O.8%
+
+0
+
+0%
+
+0.0%
+
+0.0%
+
+8x
+
+-
+
+$2
+
+i
+
+fea}
+
+$77,400
+
+O.8%
+
+0
+
+)
+
+o
+
+0
+
+1.0%
+
+0.0%
+
+2x
+
+-
+
+>
+
+wm tw Ie
+
+x
+
+$69,400
+
+)
+
+oy
+
+0
+
+y
+
+1%
+
+0.2%
+
+Ox
+
+5.0 ‘i
+
+Pw
+
+=
+
+6
+
+wm
+
+vy
+
+$84,000
+
+Iowa
+
+D%
+
+1
+
+0%
+
+3.5%
+
+O.1%%
+
+x
+
+wm
+
+$68,800
+
+11.8%
+
+91.
+
+2%
+
+23.5%
+
+2.3%
+
++
+
+2x
+
+>
+
+0.
+
+8
+
+a
+
+wi
+
+$71,900
+
+12.4%
+
+y
+
+0
+
+6.4%
+
+1.4%
+
+10
+
+Ix
+
+a
+
+9
+
+s
+
+$85,500
+
+27.8
+
+0)
+
+9.4%
+
+8.2%
+
+IAS
+
+10
+
+Sx
+
+’
+
+Pwewniy & ly
+
+10
+
+vi
+
+Ks
+
+$67,200
+
+89.8%
+
+7.9%
+
+97 AC
+
+2.5%
+
+Sx
+
+I
+
+S11
+
+$81,700
+
+10.8%
+
+S.8%
+
+0%
+
+0.8%
+
+wm
+
+3x
+
+12
+
+S18
+
+1
+
+= 0
+
+y
+
+0
+
+5.6%
+
+3.0%
+
+3.0%
+
+wm
+
+3x
+
+$84,400
+
+Noise
+
+50.4
+
+36.
+
+az)
+
+1.2%
+
+14.3%
+
+1.8%
+
+)
+
+-
+
+x
+
+$70,600
+
+“As estimated using the census trace data provided by the U.S. Census Bureaus salary estimates are based on the patient’s census tract area.
+
+*Compared with least expensive cluster 1.
+
+options within the context of real-life complexities. In addition to
+
+Finally, we have not yet explored techniques used in other appli-
+
+engaging with an overview of care plans, clinicians leveraged the
+
+cations of data science and sequence alignment, including the trace-
+
+outputs to better understand variability between outcomes and in-
+
+back method that identifies sources of deviations along pairs of
+
+form future medical research into how patients and providers inter-
+
+sequences.”! In the context of preference-sensitive conditions, the
+
+act to create high-quality care.
+
+trace-back method could allow researchers to isolate key discrepan-
+
+This study is the result of a close collaboration between health-
+
+cies between journeys that may have led to variation in outcome
+
+care informatics researchers and clinicians. Medical expertise on
+
+measures. The resulting clusters can also be combined with predic-
+
+back pain was instrumental in designing an objective with clinical
+
+tion algorithms to identify patients who should be targeted for early
+
+relevance and informing the patient sample criteria. Clinicians also
+
+intervention. For example, certain patterns in the beginning of the
+
+helped define event types, set edit value assumptions, and interpret
+
+journey may signal that a patient is at elevated risk for aggressive
+
+cluster results. While not used directly in this research, standardized
+
+opioid prescribing or for a low-quality procedure.
+
+logics, such as SNOMED CT (Systematized Nomenclature of Medi-
+
+Despite the clinically relevant results, we acknowledge that this
+
+cine Clinical Terms), can aid informatics researchers when translat-
+
+study has several limitations. We used a very broad definition of
+
+ing clinical assumptions into corresponding diagnosis codes.”
+
+back pain that captured most patients presenting new general back
+
+There are multiple opportunities to expand this methodology in
+
+pain symptoms. The purpose of this definition was to identify pa-
+
+future work, First, the methodology could be adapted to study longi-
+
+tient episodes typically expected to follow a conservative care route,
+
+tudinal healthcare events such as chronic conditions or the patient
+
+as outlined by the American College of Physicians, and to under-
+
+experience at the end of life. Doing so may require researchers to ad-
+
+stand
+
+population-level
+
+deviation
+
+from
+
+clinical
+
+recommenda-
+
+tions.”
+
+tG
+
+just the preprocessing steps such that the patient journey is repre-
+
+It is not known how well our selected population reflect
+
+sented in blocks of time instead of as a string of distinct events.
+
+all patients who present with back pain, as claims data were not sup-
+
+Second, researchers could consider different methods of assign-
+
+plemented by other data sources such as hospital notes or psycho-
+
+ing edit values. For instance, the rareness-weighting method of
+
+logic evaluations. Additionally, while patients are geographically
+
+assigning edit values was developed when clinicians identified that
+
+dispersed throughout the United States, the sample is not nationally
+
+the Levenshtein edit values caused insufficient differentiation of
+
+representative; thus, the breakdown of patient episodes into clusters
+
+journeys with rare, high-cost events. In other research contexts that
+
+may not represent national trends.
+
+have well-established guidelines, a weighting strategy could assign
+
+edit values based on which events are recommended as first-line or
+
+second-line therapies.
+
+CONCLUSION
+
+Third, the methodology could be adjusted based on the size of
+
+the dataset. The sequence alignment step can be computationally in-
+
+Compared to clinical guidelines that represent a top-down picture of
+
+0z0z IsnBny g1 uo sasn Asesqi7 jey6ig eluoyeD Aq Gz1G698S//E01/2/2Z/elole/elwel/woo dno olwapeses/:sdjjy Wold) papeojumMOGg
+
+tensive as it compares each pair of patient journeys to obtain the full
+
+patient behavior, the outputs from this methodology reveal a data-
+
+matrix of similarity scores. In comparison, conformance checking in
+
+driven understanding of how patients traverse the healthcare system.
+
+process mining uses sequence alignment to compare event-log data
+
+£9.24
+
+Using a limited set of assumptions, the methodology is particularly
+
+to a single, predetermined understanding of the process map.
+
+effective in analyzing conditions with high levels of variability in pa-
+
+While the conformance checking approach anchors the analysis to
+
+tient
+
+care
+
+and
+
+those
+
+treated
+
+across service
+
+locations.
+
+In
+
+the
+
+prior, potentially biased knowledge of the system, there likely exists
+
+preterence-sensitive condition of back pain, we observed that treat-
+
+a balance between its limited comparisons and our methodology
+
+ment choices are associated with patient characteristics and proce-
+
+that lets patterns emerge fully from the data. Researchers could also
+
+dure rates, thereby highlighting the potential public health impact of
+
+compare the efficiency of the presented clustering method to techni-
+
+related future studies based on this methodology. When tailored to
+
+ques such as spectral clustering.
+
+various care settings, this methodology can provide the medical
+
+MCK-MAAG-2368609.000006
+
+=== Page 8 ===
+Source:  https://www.industrydocuments.ucsf.edu/docs/shnw0257
+
+=== Page 8 Image 1 (OCR) ===
+1044
+
+Journal of the American Medical Informatics Association, 2020, Vol. 27, No. 7
+
+9
+
+community with an accurate overview of the current state of patient
+
+Maeng D, Boscarino J. Steware We ef al A comparison of electronic
+
+care and facilitate a shift toward high-quality practice patterns.
+
+medical records vs. claims data for rheumatoid arthritis patients in a
+
+large healthcare system: an exploratory analysis. Cla: Med Res 2014: 12:
+
+108.
+
+FUNDING
+
+10
+
+Huang 7. Ge Z, Dong W. et al. Probabilistic modeling personalized treat
+
+mene pathways using electronic health records. f Biomed Inform 2018:
+
+This research received no specific grant from any funding agency in the pub-
+
+So: 33-48.
+
+lic. commercial or not-for-profit sector. [tf was supported internally by Evo-
+
+11
+
+Bertsimas D, Bjarnadottir MV, Kane MA, ef al. Algorithmic prediction of
+
+lene Healeh.
+
+health-care costs. Oper Res 2008: 56 (6): 1382-92.
+
+12
+
+Bjarnadoceir MV, Czerwinski D, Guan Y. The history and modern appli-
+
+canon of insurance claims data in healthcare research: from data to
+
+AUTHOR CONTRIBUTIONS
+
+knowledge to healthcare improvement. In: Yang Hi. Lee Beds. Healthcare
+
+All authors were involved in revising the work for intellectual content and ap-
+
+Analytics: From Data to Knowledge to Healthcare Improvement, Hobo-
+
+proved the manuscript. KB. AC. and LH made substantial contributions to
+
+ken, NJ: Wiley: 2016: 561-91.
+
+the original study design. KB developed the algorithm,
+
+contributed to data
+
+we
+
+Simon GE, Shortreed SM, Johnson EF, ef al, What health records data are
+
+contributed to data
+
+required for accurate prediction of suicidal behavior? f Anz Med Inform
+
+analysis, interpretation, and writing the manuscript. Cl
+
+contributed to data
+
+Assoc 2019; 26 (12): 1458-65.
+
+analysis, interpretation, and writing the manuscript. AC
+
+I4
+
+Heintzman J. Bailey SR, Hoopes MJ. ef al. Agreement of Medicaid claims
+
+acquisidon and revising the manuscript. MB refined the
+
+algorithm and con-
+
+and electronic health records for assessing preventive care quality among
+
+tributed to data interpretation, writing, and revising the manuscript. LH
+
+adules. f An: Med Inform Assoc 2014221 (4): 720-4.
+
+served as the primary contact with provider groups during algorithm develop-
+
+1s
+
+Zhang Y. Koru G. Understanding and detecting defects in healthcare ad-
+
+mene and contributed to clinical assumptions, data interpretation, and revis-
+
+Ne the MLUNUSCTIpt.
+
+ministration data: Toward higher data quality to better support healthcare
+
+operations and decisions. f Ant Med Inform Assoc 2020; 27 (3): 386-95,
+
+16
+
+Sun J. Sun Y. A system for automated lexical mapping. | An: Med Inform
+
+SUPPLEMENTARY APPENDIX
+
+Assoc 2006: 13 (3): 334-443.
+
+17
+
+Wrenn JO, Stein DM. Bakken S. ef al. Quantifying clinical narrative re-
+
+Supplementary Appendix is available at Journal of the American Medical In-
+
+dundancy in an electronic health record. f Au: Med Inform
+
+oc OVO:
+
+formatics Association online.
+
+17 (1): 49-53
+
+18
+
+Kate RJ. Normalizing clinical terms using learned edit distance patterns. |
+
+Am Med Infornt Assoc 2016: 23 (2): 380-6.
+
+ACKNOWLEDGMENTS
+
+19
+
+Van der Aalst W. Adriansyah A, Van Dongen B. Replaying history on pro-
+
+cess models for conformance checking and performance analysis, WIRES
+
+The authors gratefully acknowledge the following individuals for their contri-
+
+Data Mining Knowl Discov 2012: 2 (2): 182-92.
+
+butions: Rich King, Malcolm Charles, and Michael Freeman who advised on
+
+20,
+
+Li P. Jiang X. Wang S. et al HUGO: Hierarchical muleti-reterence genome
+
+algorithm development: Madina Bram who provided administrative support
+
+on the project: Feryal Erhun, Stefan Scholtes, Nico Lewine, Matthias Wei-
+
+compression for aligned reads. J Ant Med Inform Assoc 2014221 (2): 363-73.
+
+21
+
+dlich, and Jenny Wang who provided valuable feedback and suggestions to
+
+Jain AK. Data clustering: 50 years beyond K-means. Pattern Recognit Lett
+
+the development and framing of this research. The authors also thank the
+
+20102 31 (8): 635 1-66,
+
+JAMIA review team for their constructive and encouraging comments, as well
+
+im)
+
+i]
+
+Fodeh SJ. Brande C. Luong TB, ef al. Complementary ensemble clustering
+
+as the clinicians who participated in discussions on the back pain assumptions
+
+of biomedical data. f Biomed Inform 2013: 46 (3): 436-43.
+
+and ourputs.
+
+in]
+
+we
+
+Zhang Y.Padman R, Levin JE. Paving the COW path: data-driven design
+
+of pediatric order sets. f Ant Med Inform Assoc 2014: 21 (e2): e304-L 1.
+
+24
+
+Rojas FE, Munoz-Gama J. Sepulveda M. ef al. Process mining in healthcare:
+
+CONFLICT OF INTEREST STATEMENT
+
+a literature review. | Biomed Inform 2016; 61: 224-36.
+
+2
+
+s
+
+Wellner BL Huyck M. Mardis S. et a. Rapidly retargetable approaches to de
+
+None declared.
+
+identification in medical records. | Ani Med Inform: Assoc 2007: 14 (5): 564-73.
+
+26
+
+Zhang Y. Padman R. Innovations in chronic care delivery using data-
+
+driven clinical pathways. An f Marag Care 2015: 21 (12): e66 1-668.
+
+REFERENCES
+
+47
+
+Chen JH. Podchiyska IT. Alanan RB. OrderRex: clinical order decision
+
+!
+
+Trebble TM. Hansi N. Hydes Tet al. Process mapping the patient jour-
+
+support and outcome predictions by data-mining electronic medical
+
+ney: an introduction. BML 2010: 341 (1): c4 078,
+
+records. | Am: Med Infornt Assoc 20 16:23 (2): 339-48.
+
+i]
+
+Fline LA, David DJ. Smith AK, ef al. Rehabbed to death: breaking the cy-
+
+28
+
+Ghasemi M. Amyor D. Process mining in healthcare: a systematised ltera-
+
+cle. f Am Geriatr Soc 2019: 67 (11): 2398-9,
+
+ture review. Tat | Electron Healthe 20 16:9 (1): 60-88.
+
+ws
+
+Wennberg JE. Unwarranted variations in healthcare delivery: implications
+
+9
+
+Delias P, Doumpos M, Grigoroudis EF. ef al. Supporting healthcare man-
+
+for academic medical centres. Br Med | 2002; 325 (7370): 961-4.
+
+agement decisions via robuse clustering of event logs. Krorel Based Svst
+
+Deyo R. Mirza S. Turner J. ef al. Overtreating chronic back pain: time to
+
+2015: 84: 203-13
+
+back off? f Av Board Fant Med 2009; 22 (1): 62-8.
+
+0
+
+Song M. Ginther CW, Van Der Aalst W. Trace chistering in process mining.
+
+0z0z IsnBny g1 uo sasn Asesqi7 jey6ig eluoyeD Aq Gz1G698S//E01/2/2Z/elole/elwel/woo dno olwapeses/:sdjjy Wold) papeojumMOGg
+
+wh
+
+In: BPM 2008: Business Process Management Workshops: 2008: 109-20.
+
+Heyward J. Jones CM, Compton WML, ef al. Coverage of nonpharmaco-
+
+logic treatments for low back pain among US public and private insurers.
+
+Hripesak G. Ryan PB. Duke JD, ef ai. Characterizing treatment pathways
+
+TAMA Netw: Open 2018: 1 (6): 6183044.
+
+at scale using the OHDSI network. Proc Natl Acad Scr US A 2016: 113
+
+6
+
+(27): 7329-36.
+
+The Daremouth Adas of Healthcare: Understanding Efficiency and Effec-
+
+ws
+
+i)
+
+tiveness of the Health Care System. 2018. heep://Avww-.dartmouthactlas.
+
+Kuwornn JP. Lix LM. Quail JM. ef al. Identifying distiner healthcare path-
+
+org/ Accessed November 19, 2018.
+
+ways during episodes of chronic obstructive pulmonary disease exacerba-
+
+Wood A, Marula SR. Huan 1. ef af Improving the value of medical care
+
+tions. Medicine (Baltunore} 2016: 95: ¢2888.
+
+for patients with back pain. Pus: Med 2019: 20 (4): 664-7,
+
+oe
+
+Hoverman JR. Carewright TH, Pare DA, ef al. Pathways, outcomes, and
+
+8
+
+Huang Z. Du X.Duan H. On mining clinical pathway patterns from medi-
+
+costs in colon cancer: retrospective evaluations in 2 distinct databases. Av
+
+cal behaviors. Artif latell Med 2012: 56 (1): 35-50.
+
+1 Masnaig Care 2011.7: 52-9.
+
+MCK-MAAG-2368609.000007
+
+=== Page 9 ===
+Source:  https://www.industrydocuments.ucsf.edu/docs/shnw0257
+
+=== Page 9 Image 1 (OCR) ===
+Journal of the American Medical Informatics Association, 2020, Vol. 27, No. 7
+
+1045
+
+34. Tessier JE. Rupp G, Gera JV et af, Physiguins with defined clear care path-
+
+42
+
+Gellhorn AC. Chan f. Maren Bo ef a. Management Patterns in Acute
+
+ways have better discharge disposition and lower cose. J Arthroplasty
+
+Low Back Pain: Uhe Role of Physical Therapy. Spine (Phila Pa 1976)
+
+yo
+
+2016. FE E9): 54-8.
+
+2012:
+
+By
+
+ts
+
+TS-82.
+
+s
+
+~
+
+Toth Ky Kosa 1. Vathy-Fogarassy
+
+\
+
+Frequent treatment: sequence
+
+Devo RA Von Kortf M. Duhrkoop D. Opioids for low back pam. BM
+
+mnining from imiedical databases. Stead Health Vecknol Infornt 2017: 236:
+
+2015: 350: 26380-13.
+
+211-8.
+
+44
+
+fevenshtem V. Binary codes capable of correcting deletions, insertions,
+
+Ts)
+
+Qascem AL Wile Tf. MeLean RM. et al Noninvasive treatments for
+
+and reversals. Cybern Control Theory 1966: 10: 707-10.
+
+acute, subacute, and chronic low back pain: a clinical practice guideline
+
+43
+
+Pendand BE. Concepmalizing and measuring variety in the execution of
+
+trom the American College of Physicuins. Ave hater Med 2017, 166 071
+
+organizadonal work processes. Miarnage Sei 2003: 49 (71: 857-70,
+
+S14-30.
+
+do
+
+Dameran FJ. A technique for computer detection and correction of spell-
+
+I
+
+Bernstein TA, Malik Q. Carville 8. ef ad. Low back pain and sciatica: sum-
+
+ing errovs, Cova ACM 196425 i: LT l-6,
+
+mary of NICE guidance. BMP 2017: 386: 10-3.
+
+47
+
+Bose R. van der Aalse WMP. Context aware trace clustering: towards im-
+
+38
+
+Sinnote PL. Siroka AM, Shane AC. ef al. Identifying neck and back pain in
+
+proving process mining results. In: proceedinys of the 2009 SIAM Diterna-
+
+admunistrative data: defining the right cohort. Spine (Phila Pa b976) 2012:
+
+tional Conference on Data Mori: 2009, 401-12.
+
+37 £10): 860-74.
+
+48
+
+Arthur D. Vassily ipskil S. K-means
+
+-: the advantages of careful seeding.
+
+39
+
+Devo RA, Cherkin DC, Ciol MA. Adapting a clinical comorbidity index
+
+in: proceedaigs of the bigbhteenth Annual ACM-SIAM Svaipositin on Dis-
+
+for use with [CD-9-CM administrative databases. | Chaz bpidennol 1992:
+
+crete Algortthiis: 2007: 1027-35.
+
+45 (6): 613-9,
+
+49
+
+bred ALN, Jain AK. Robuse data clustering. In: proceedings of Lobb Con-
+
+40
+
+Jarvik JG. Gold TS. Comstock BA. ef ad Association of early imaging for
+
+ference on Computer Vision and Pattern Recognition (CVPR: 2003,
+
+SO
+
+back pain with chnical outcomes in older adults, JAMA 2015. 313 (EL:
+
+Lee D. Corner R. Lau Foetal A survey of SNOMED CT implementations.
+
+143-53
+
+If Bromed Inform 2013.46 (1): 87-96,
+
+41
+
+Sl
+
+Shah AY Hayes Co Martin B. Factors inthiencing long-term opioid use
+
+Haque Wy Aravind A. Reddy B. Pairwise sequence alignment algorithin.
+
+among opioid TUE patients: an cXxanMnaon ot initial preseripnon char-
+
+In: ISTACO9: Proceedings of the 2009 Conference on Inforniition Science.
+
+acteristics and pain etiologies. J Pag 2017. ES CEE: b374-8 3.
+
+Technology and Applications: 2009: 96-103,
+
+ie
+
+ay
+
+n
+
+Y
+
+wea
+
+$y LEE a3
+
+MCK-MAAG-2368609.000008

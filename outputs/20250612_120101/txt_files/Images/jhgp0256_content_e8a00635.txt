@@ -1,0 +1,9 @@
+STATUS: SUCCESS
+Document: Images/jhgp0256.zip/jhgp0256.pdf
+Category: Images
+Processed: 2025-06-12T12:01:01.393940
+Method: pymupdf+ocr
+==================================================
+
+=== Page 1 ===
+Source:  https://www.industrydocuments.ucsf.edu/docs/jhgp0256

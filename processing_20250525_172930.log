@@ -1,0 +1,2 @@
+2025-05-25 17:29:30,887 - __main__ - INFO - Starting document processing pipeline
+2025-05-25 17:29:33,735 - __main__ - ERROR - Processing failed: No module named 'src'

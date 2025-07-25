@@ -1,0 +1,8 @@
+2025-07-22 17:24:07,990 - __main__ - INFO - 🚀 Starting CPU-Optimized VLM Test Suite
+2025-07-22 17:24:07,990 - __main__ - INFO - ============================================================
+2025-07-22 17:24:08,068 - __main__ - INFO - ✅ Configuration loaded successfully
+2025-07-22 17:24:08,068 - __main__ - ERROR - ❌ Configuration loading failed: Key 'enabled' is not in struct
+    full_key: vlm.enabled
+    object_type=dict
+2025-07-22 17:24:08,068 - __main__ - ERROR -    Make sure you're running this from the processor directory
+2025-07-22 17:24:08,068 - __main__ - ERROR -    and that conf/vlm/cpu_optimized.yaml exists

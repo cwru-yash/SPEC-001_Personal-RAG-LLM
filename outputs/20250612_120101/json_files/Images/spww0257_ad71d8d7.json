@@ -1,0 +1,23 @@
+{
+  "document_id": "ad71d8d7",
+  "zip_file": "spww0257.zip",
+  "category": "Images",
+  "content_file": {
+    "file_name": "spww0257.pdf",
+    "file_path": "Images/spww0257.zip/spww0257.pdf",
+    "extracted_text": "=== Page 1 ===\nSource:  https://www.industrydocuments.ucsf.edu/docs/spww0257\n",
+    "extraction_method": "pymupdf+ocr",
+    "errors": [],
+    "success": true
+  },
+  "metadata_file": {
+    "file_name": "spww0257-info.pdf",
+    "file_path": "Images/spww0257.zip/spww0257-info.pdf",
+    "extracted_text": "=== Page 1 ===\nnull - spww0257 - Downloaded 31/03/2025 11:12:59 AM\nDocument Information\nTitle: image001.png\nURL: https://www.industrydocuments.ucsf.edu/docs/spww0257\nDocument Date: 2016 October 25; 2019 August 24\nType: Image\nGenre: Portable Network Graphics\nPages: 1\nID: spww0257\nCollection: McKinsey Documents\nDrug: opioids\nAvailability: public; no restrictions\nBates Number: MCK-MAAG-1357415\nDate Added UCSF: 2022 June 06\nCite This Document\nAuthor. Title. Date. Year. Collection. Source. https://www.industrydocuments.ucsf.edu/docs/[ID]\nUnknown. image001.png. 2016 October 25; 2019 August 24. McKinsey Documents. Unknown. \nhttps://www.industrydocuments.ucsf.edu/docs/spww0257\n",
+    "extraction_method": "pymupdf+ocr",
+    "errors": [],
+    "success": true
+  },
+  "processed_at": "2025-06-12T12:01:01.385384",
+  "overall_success": true
+}

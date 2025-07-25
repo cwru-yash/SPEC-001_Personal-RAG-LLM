@@ -1,0 +1,24 @@
+{
+  "document_id": "ffaa37c3",
+  "zip_file": "qkdg0257.zip",
+  "category": "Images",
+  "content_file": {
+    "file_name": "qkdg0257.pdf",
+    "file_path": "Images/qkdg0257.zip/qkdg0257.pdf",
+    "extracted_text": "=== Page 1 ===\nSource:  https://www.industrydocuments.ucsf.edu/docs/qkdg0257\n\n=== Page 1 Image 1 (OCR) ===\nBank Reference\n\n21911215557\n\n1\n\nCustomer Reference\n\nNONREF\n\nValue Date\n\n04/22/2019\n\nEntry Date\n\n04/22/2019\n\nPosted Time\n\n05:37\n\nTransaction Amount\n\n212,700.00\n\nProduct Type\n\nFunds Transfer\n\nACH CREDIT\n\nTransaction Description\n\nPayment Details\n\nACH CREDIT RECEIVED SENDING CO REF # 021000022354099RCVR NAME MCKINSEY & CO\n\nIN SENDING CO AUDIT #2000154399 SENDING PERSON/CO PURDUE PHARMA L. ENTRY\n\nDESCRIPTION PAYMENTS\n\nBatch/Track Number\n\n530934648865\n\nMCK-MAAG-4772045\n\n=== Page 1 (Full Page OCR) ===\nBank Reference\n\n21911215557\n\n1\n\nCustomer Reference\n\nNONREF\n\nValue Date\n\n04/22/2019\n\nEntry Date\n\n04/22/2019\n\nPosted Time\n\n05:37\n\nTransaction Amount\n\n212,700.00\n\nFunds Transfer\n\nProduct Type\n\nTransaction Description\n\nACH CREDIT\n\nPayment Details\n\nACH CREDIT RECEIVED SENDING CO REF # 0210000223540S9RCVR NAME MCKINSEY & CO\n\nIN SENDING CO AUDIT #2000154399 SENDING PERSON/CO PURDUE PHARMA L. ENTRY\n\nDESCRIPTION PAYMENTS\n\nBatch/Track Number\n\n530934648865\n\nSoi\n\nhttps://www. industrydocuments.ucsf.edu/docs/qkdg0257\n\nMCK-MAAG-4772045",
+    "extraction_method": "pymupdf+enhanced_ocr",
+    "text_length": 1134,
+    "errors": [],
+    "success": true
+  },
+  "metadata_file": {
+    "file_name": "qkdg0257-info.pdf",
+    "file_path": "Images/qkdg0257.zip/qkdg0257-info.pdf",
+    "extracted_text": "=== Page 1 ===\nnull - qkdg0257 - Downloaded 31/03/2025 11:12:31 AM\nDocument Information\nTitle: image001.png\nURL: https://www.industrydocuments.ucsf.edu/docs/qkdg0257\nDocument Date: 2020 September 15; 2020 September 30\nType: Document; Image\nGenre: E-DOC ATTACHMENT;Portable Network Graphics\nPages: 1\nID: qkdg0257\nCollection: McKinsey Documents\nDrug: opioids\nAvailability: public; no restrictions\nBates Number: MCK-MAAG-4772045\nDate Added UCSF: 2022 June 06\nCite This Document\nAuthor. Title. Date. Year. Collection. Source. https://www.industrydocuments.ucsf.edu/docs/[ID]\nUnknown. image001.png. 2020 September 15; 2020 September 30. McKinsey Documents. \nUnknown. https://www.industrydocuments.ucsf.edu/docs/qkdg0257",
+    "extraction_method": "pymupdf+enhanced_ocr",
+    "text_length": 714,
+    "errors": [],
+    "success": true
+  },
+  "processed_at": "2025-06-12T11:49:12.489123"
+}

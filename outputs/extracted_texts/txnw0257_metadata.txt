@@ -1,0 +1,20 @@
+null - txnw0257 - Downloaded 31/03/2025 11:11:10 AM
+Document Information
+Title: Use ML to identify unlabeled Endometriosis patients
+URL: https://www.industrydocuments.ucsf.edu/docs/txnw0257
+Author: Ting Li
+Document Date: 2020 March 30
+Type: Presentation
+Genre: Microsoft Office PowerPoint Open XML Format
+Pages: 46
+ID: txnw0257
+Collection: McKinsey Documents
+Drug: opioids
+Availability: public; no restrictions
+Bates Number: MCK-MAAG-2595500
+Redacted: yes
+Date Added UCSF: 2022 June 06
+Cite This Document
+Author. Title. Date. Year. Collection. Source. https://www.industrydocuments.ucsf.edu/docs/[ID]
+Ting Li. Use ML to identify unlabeled Endometriosis patients. 2020 March 30. McKinsey 
+Documents. Unknown. https://www.industrydocuments.ucsf.edu/docs/txnw0257

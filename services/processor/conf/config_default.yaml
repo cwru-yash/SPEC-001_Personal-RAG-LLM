@@ -1,0 +1,88 @@
+# config_default.yaml
+
+# CRITICAL: The defaults section tells Hydra which configuration groups to include
+# This is like a table of contents that tells Hydra where to find each piece of config
+#  This is the Main configuration file for the document processor since it includes all the links to the sub config files
+defaults:
+  - _self_                    # Include this file's content
+  - extractors: default       # Include conf/extractors/default.yaml
+  - classifiers: default      # Include conf/classifiers/default.yaml (if it exists)
+  - embedders: default        # Include conf/embedders/default.yaml (if it exists)
+  - storage: default          # Include conf/storage/default.yaml (if it exists)
+  - vlm: cpu_optimized        # Include conf/vlm/cpu_optimized.yaml
+
+# Application configuration
+app_name: "personal-rag-llm"
+app_version: "0.2.0"
+data_dir: "${oc.env:DATA_DIR,/data}"
+cache_dir: "${oc.env:CACHE_DIR,/data/cache}"
+log_level: "${oc.env:LOG_LEVEL,INFO}"
+
+# Processing configuration
+max_workers: 4
+
+# Pipeline configuration
+pipeline:
+  # PDF processing
+  pdf:
+    engine: "pymupdf"
+    extract_images: true
+    perform_ocr: true
+    enable_document_extractor: true
+    enable_email_extractor: true
+    enable_presentation_extractor: true
+  
+  # OCR settings
+  ocr:
+    engine: "tesseract"
+    languages: "eng"
+    tesseract_config: "--psm 3"
+  
+  # Office document settings
+  office:
+    excel:
+      max_rows_per_sheet: 1000
+      include_formulas: false
+    word:
+      extract_tables: true
+    powerpoint:
+      extract_slide_notes: true
+  
+  # Text/CSV settings
+  text:
+    encoding_fallbacks: ["utf-8", "latin-1", "cp1252"]
+    csv:
+      max_preview_rows: 100
+      auto_detect_delimiter: true
+  
+  # Chunking strategy
+  chunker:
+    default_chunk_size: 500
+    default_chunk_overlap: 50
+    email_chunk_size: 300
+    spreadsheet_chunk_size: 400
+  
+  # Classification
+  classifier:
+    enabled: true
+
+# Storage configuration (these can be overridden by storage/default.yaml if it exists)
+storage:
+  duckdb:
+    database: "${data_dir}/metadata.db"
+  vector_store:
+    host: "localhost"
+    port: 8000
+  graph_db:
+    uri: "bolt://localhost:7687"
+    user: "neo4j"
+    password: "password"
+    database: "neo4j"
+
+# IMPORTANT: Don't redefine 'vlm' here if you're using defaults
+# The VLM configuration comes from conf/vlm/cpu_optimized.yaml
+# and will be automatically merged by Hydra
+
+# Environment-based overrides can be done using Hydra's override syntax
+# For example, you can set VLM_ENABLED=true in your environment
+# and then use: python script.py vlm.enabled=true

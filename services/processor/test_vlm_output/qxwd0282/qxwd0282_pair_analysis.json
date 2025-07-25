@@ -1,0 +1,26 @@
+{
+  "pair_id": "2c7ebf41-81b9-4996-8455-9df5b51bb9fd",
+  "base_name": "qxwd0282",
+  "category": "Documents",
+  "zip_file": "/Users/yashm/Documents/GitHub/SPEC-001_Personal-RAG-LLM/SPEC-001_Personal-RAG-LLM/data/input/Documents/qxwd0282.zip",
+  "pair_analysis": {
+    "content_type_match": true,
+    "confidence_comparison": {
+      "content_confidence": 0.8166666666666668,
+      "metadata_confidence": 1.0,
+      "average_confidence": 0.9083333333333334
+    },
+    "size_comparison": {
+      "content_size": 1520123,
+      "metadata_size": 1711,
+      "size_ratio": 888.4412624196376
+    },
+    "processing_comparison": {
+      "content_method": "vlm_enhanced",
+      "metadata_method": "vlm_enhanced",
+      "both_vlm_success": true
+    }
+  },
+  "errors": [],
+  "processing_timestamp": "2025-07-24T16:45:25.365316"
+}

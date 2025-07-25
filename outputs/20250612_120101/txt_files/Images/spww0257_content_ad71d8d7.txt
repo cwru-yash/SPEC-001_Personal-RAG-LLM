@@ -1,0 +1,9 @@
+STATUS: SUCCESS
+Document: Images/spww0257.zip/spww0257.pdf
+Category: Images
+Processed: 2025-06-12T12:01:01.385384
+Method: pymupdf+ocr
+==================================================
+
+=== Page 1 ===
+Source:  https://www.industrydocuments.ucsf.edu/docs/spww0257

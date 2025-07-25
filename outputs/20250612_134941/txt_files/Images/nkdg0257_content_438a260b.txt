@@ -1,0 +1,9 @@
+STATUS: SUCCESS
+Document: Images/nkdg0257.zip/nkdg0257.pdf
+Category: Images
+Processed: 2025-06-12T13:49:41.291599
+Method: pymupdf+ocr
+==================================================
+
+=== Page 1 ===
+Source:  https://www.industrydocuments.ucsf.edu/docs/nkdg0257

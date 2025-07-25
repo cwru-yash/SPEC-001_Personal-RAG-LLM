@@ -1,0 +1,23 @@
+{
+  "document_id": "ce1caa6e",
+  "zip_file": "sknw0257.zip",
+  "category": "Emails",
+  "content_file": {
+    "file_name": "sknw0257.pdf",
+    "file_path": "Emails/sknw0257.zip/sknw0257.pdf",
+    "extracted_text": "=== Page 1 ===\nSource:  https://www.industrydocuments.ucsf.edu/docs/sknw0257\n",
+    "extraction_method": "pymupdf+ocr",
+    "errors": [],
+    "success": true
+  },
+  "metadata_file": {
+    "file_name": "sknw0257-info.pdf",
+    "file_path": "Emails/sknw0257.zip/sknw0257-info.pdf",
+    "extracted_text": "=== Page 1 ===\nnull - sknw0257 - Downloaded 31/03/2025 11:04:48 AM\nDocument Information\nTitle: StandardConfirmation.pdf.htm\nURL: https://www.industrydocuments.ucsf.edu/docs/sknw0257\nDocument Date: 2018 February 15; 2020 September 27\nType: Text\nGenre: Text - Western European\nPages: 1\nID: sknw0257\nCollection: McKinsey Documents\nDrug: opioids\nAvailability: public; no restrictions\nBates Number: MCK-MAAG-2775836\nDate Added UCSF: 2022 June 06\nCite This Document\nAuthor. Title. Date. Year. Collection. Source. https://www.industrydocuments.ucsf.edu/docs/[ID]\nUnknown. StandardConfirmation.pdf.htm. 2018 February 15; 2020 September 27. McKinsey \nDocuments. Unknown. https://www.industrydocuments.ucsf.edu/docs/sknw0257\n",
+    "extraction_method": "pymupdf+ocr",
+    "errors": [],
+    "success": true
+  },
+  "processed_at": "2025-06-12T13:49:41.355215",
+  "overall_success": true
+}

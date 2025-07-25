@@ -1,0 +1,11 @@
+{
+  "file_path": "/Users/yashm/Documents/GitHub/SPEC-001_Personal-RAG-LLM/SPEC-001_Personal-RAG-LLM/data/input/Images/lkdg0257/lkdg0257.pdf",
+  "file_name": "lkdg0257.pdf",
+  "file_extension": "pdf",
+  "file_size": 294755,
+  "processed_at": "2025-06-11T22:37:07.859066",
+  "extracted_text": "=== Page 1 ===\nSource:  https://www.industrydocuments.ucsf.edu/docs/lkdg0257\n\n\n=== Page 1 Image 1 (OCR) ===\nBank Reference\n\n21900714099\n\n1\n\nCustomer Reference\n\nNONREF\n\nValue Date\n\n01/07/2019\n\nEntry Date\n\n01/07/2019\n\nPosted Time\n\n03:23\n\nTransaction Amount\n\n265,875.00\n\nProduct Type\n\nFunds Transfer\n\nTransaction Description\n\nACH CREDIT\n\nPayment Details\n\nACH CREDIT RECEIVED SENDING CO REF # 021000023254098RCVR NAME MCKINSEY & CO\n\nIN SENDING CO AUDIT #2000150855 SENDING PERSON/CO PURDUE PHARMA L. ENTRY\n\nDESCRIPTION PAYMENTS\n\nBatch/Track Number\n\n534338820865\n\nMCK-MAAG-4772040",
+  "extraction_method": "pymupdf+ocr",
+  "success": true,
+  "errors": []
+}

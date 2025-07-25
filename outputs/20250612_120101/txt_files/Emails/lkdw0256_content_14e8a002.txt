@@ -1,0 +1,9 @@
+STATUS: SUCCESS
+Document: Emails/lkdw0256.zip/lkdw0256.pdf
+Category: Emails
+Processed: 2025-06-12T12:01:01.466353
+Method: pymupdf+ocr
+==================================================
+
+=== Page 1 ===
+Source:  https://www.industrydocuments.ucsf.edu/docs/lkdw0256

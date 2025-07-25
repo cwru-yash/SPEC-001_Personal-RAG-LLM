@@ -1,0 +1,23 @@
+Metadata for: Images/spww0257.zip/spww0257.pdf
+Category: Images
+==================================================
+
+=== Page 1 ===
+null - spww0257 - Downloaded 31/03/2025 11:12:59 AM
+Document Information
+Title: image001.png
+URL: https://www.industrydocuments.ucsf.edu/docs/spww0257
+Document Date: 2016 October 25; 2019 August 24
+Type: Image
+Genre: Portable Network Graphics
+Pages: 1
+ID: spww0257
+Collection: McKinsey Documents
+Drug: opioids
+Availability: public; no restrictions
+Bates Number: MCK-MAAG-1357415
+Date Added UCSF: 2022 June 06
+Cite This Document
+Author. Title. Date. Year. Collection. Source. https://www.industrydocuments.ucsf.edu/docs/[ID]
+Unknown. image001.png. 2016 October 25; 2019 August 24. McKinsey Documents. Unknown. 
+https://www.industrydocuments.ucsf.edu/docs/spww0257

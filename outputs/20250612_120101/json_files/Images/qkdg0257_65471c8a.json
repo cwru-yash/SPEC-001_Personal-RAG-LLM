@@ -1,0 +1,23 @@
+{
+  "document_id": "65471c8a",
+  "zip_file": "qkdg0257.zip",
+  "category": "Images",
+  "content_file": {
+    "file_name": "qkdg0257.pdf",
+    "file_path": "Images/qkdg0257.zip/qkdg0257.pdf",
+    "extracted_text": "=== Page 1 ===\nSource:  https://www.industrydocuments.ucsf.edu/docs/qkdg0257\n",
+    "extraction_method": "pymupdf+ocr",
+    "errors": [],
+    "success": true
+  },
+  "metadata_file": {
+    "file_name": "qkdg0257-info.pdf",
+    "file_path": "Images/qkdg0257.zip/qkdg0257-info.pdf",
+    "extracted_text": "=== Page 1 ===\nnull - qkdg0257 - Downloaded 31/03/2025 11:12:31 AM\nDocument Information\nTitle: image001.png\nURL: https://www.industrydocuments.ucsf.edu/docs/qkdg0257\nDocument Date: 2020 September 15; 2020 September 30\nType: Document; Image\nGenre: E-DOC ATTACHMENT;Portable Network Graphics\nPages: 1\nID: qkdg0257\nCollection: McKinsey Documents\nDrug: opioids\nAvailability: public; no restrictions\nBates Number: MCK-MAAG-4772045\nDate Added UCSF: 2022 June 06\nCite This Document\nAuthor. Title. Date. Year. Collection. Source. https://www.industrydocuments.ucsf.edu/docs/[ID]\nUnknown. image001.png. 2020 September 15; 2020 September 30. McKinsey Documents. \nUnknown. https://www.industrydocuments.ucsf.edu/docs/qkdg0257\n",
+    "extraction_method": "pymupdf+ocr",
+    "errors": [],
+    "success": true
+  },
+  "processed_at": "2025-06-12T12:01:01.366789",
+  "overall_success": true
+}

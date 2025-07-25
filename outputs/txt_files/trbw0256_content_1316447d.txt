@@ -1,0 +1,12 @@
+Document: Emails/trbw0256.zip/trbw0256.pdf
+Category: Emails
+Processed: 2025-06-11T22:37:52.099385
+Method: pymupdf+ocr
+==================================================
+
+=== Page 1 ===
+Source:  https://www.industrydocuments.ucsf.edu/docs/trbw0256
+
+
+=== Page 2 ===
+Source:  https://www.industrydocuments.ucsf.edu/docs/trbw0256

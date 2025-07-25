@@ -14,25 +14,25 @@ print("=" * 60)
 sys.path.append('src')
 
 # Step 1: Check if the class is actually defined in the file
-print("\n1. 📝 Checking if VLMIntegratedProcessor class is defined...")
+print("\n1. 📝 Checking if Qwen25VLProcessor class is defined...")
 
-vlm_file_path = "src/pipeline/vlm_integrated_processor.py"
+vlm_file_path = "src/pipeline/routing/document_router.py"
 
 try:
     with open(vlm_file_path, 'r') as f:
         file_content = f.read()
     
-    if "class VLMIntegratedProcessor" in file_content:
-        print("   ✅ VLMIntegratedProcessor class found in file")
+    if "class Qwen25VLProcessor" in file_content:
+        print("   ✅ Qwen25VLProcessor class found in file")
         
         # Find the line number where the class is defined
         lines = file_content.split('\n')
         for i, line in enumerate(lines, 1):
-            if "class VLMIntegratedProcessor" in line:
+            if "class Qwen25VLProcessor" in line:
                 print(f"   📍 Class defined at line {i}: {line.strip()}")
                 break
     else:
-        print("   ❌ VLMIntegratedProcessor class NOT found in file")
+        print("   ❌ Qwen25VLProcessor class NOT found in file")
         print("   💡 This is likely the problem - the class definition is missing")
         
         # Check what classes are defined

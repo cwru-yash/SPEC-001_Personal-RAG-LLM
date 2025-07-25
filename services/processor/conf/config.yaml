@@ -1,12 +1,12 @@
 # services/processor/conf/config.yaml
-# Alternative approach: self-contained configuration
+# Enhanced configuration for multi-model VLM architecture
 
 defaults:
   - _self_
 
 # Application configuration
-app_name: "personal-rag-llm"
-app_version: "0.2.0"
+app_name: "personal-rag-llm-enhanced"
+app_version: "0.3.0"
 data_dir: "${oc.env:DATA_DIR,/data}"
 cache_dir: "${oc.env:CACHE_DIR,/data/cache}"
 log_level: "${oc.env:LOG_LEVEL,INFO}"
@@ -14,7 +14,152 @@ log_level: "${oc.env:LOG_LEVEL,INFO}"
 # Processing configuration
 max_workers: 4
 
-# Pipeline configuration
+# Enhanced VLM Configuration with Multi-Model Support
+vlm:
+  # Master VLM control
+  enabled: ${oc.env:VLM_ENABLED,false}
+  
+  # Processing strategy
+  strategy: "intelligent_routing"  # intelligent_routing, local_only, cloud_preferred
+  
+  # Document routing configuration
+  document_routing:
+    enabled: true
+    analysis_timeout: 30  # Time to analyze document characteristics
+    
+    # Routing thresholds
+    complexity_thresholds:
+      simple: 0.3
+      moderate: 0.5
+      complex: 0.7
+      very_complex: 0.9
+    
+    # Performance-based routing adjustments
+    adaptive_routing: true
+    performance_weight: 0.3  # How much to weight historical performance
+  
+  # Local VLM Models
+  local_models:
+    # Primary local model - Qwen 2.5 VL
+    qwen25vl:
+      enabled: true
+      model: "qwen2.5-vl:32b"  # Change to qwen2.5-vl:7b for resource constraints
+      api_endpoint: "http://localhost:11434"
+      timeout: 120
+      max_retries: 2
+      image_size_limit: [1024, 1024]
+      max_pages_per_document: 5
+      
+      # Qwen-specific optimizations
+      model_options:
+        temperature: 0.1
+        top_p: 0.9
+        repeat_penalty: 1.1
+        num_ctx: 4096
+        num_predict: 1024
+    
+    # Backup local model - LLaVA
+    llava:
+      enabled: true
+      model: "llava:7b"
+      api_endpoint: "http://localhost:11434"
+      timeout: 90
+      max_retries: 2
+      image_size_limit: [800, 800]
+      max_pages_per_document: 3
+      
+      # LLaVA optimizations for speed
+      model_options:
+        temperature: 0.1
+        top_p: 0.9
+        num_ctx: 2048
+        num_predict: 512
+  
+  # Cloud VLM Models
+  cloud_models:
+    # GPT-4 Vision for complex visual analysis
+    gpt4v:
+      enabled: ${oc.env:OPENAI_ENABLED,false}
+      api_key: ${oc.env:OPENAI_API_KEY,none}
+      model: "gpt-4-vision-preview"
+      max_tokens: 2000
+      timeout: 120
+      max_pages_per_document: 5
+      
+      # Cost management
+      cost_limit_per_document: 1.00  # Maximum cost per document
+      daily_cost_limit: 50.00       # Daily spending limit
+    
+    # Claude Vision for text-heavy document analysis
+    claude:
+      enabled: ${oc.env:ANTHROPIC_ENABLED,false}
+      api_key: ${oc.env:ANTHROPIC_API_KEY,none}
+      model: "claude-3-5-sonnet-20241022"
+      max_tokens: 2000
+      timeout: 120
+      max_pages_per_document: 8  # Claude handles more pages efficiently
+      
+      # Cost management
+      cost_limit_per_document: 0.80
+      daily_cost_limit: 40.00
+  
+  # Enhanced fallback configuration
+  fallback:
+    enabled: true
+    strategy: "cascade"  # cascade through multiple methods
+    
+    # Fallback triggers
+    triggers:
+      timeout: true
+      low_confidence: true
+      api_error: true
+      cost_limit_exceeded: true
+    
+    # Quality thresholds for fallback decisions
+    quality_thresholds:
+      minimum_acceptable: 0.4
+      prefer_fallback_below: 0.6
+      excellent_threshold: 0.8
+    
+    # Enhanced OCR fallback
+    enhanced_ocr:
+      enabled: true
+      preprocessing:
+        enhance_contrast: true
+        noise_reduction: true
+        deskew: true
+      
+      # OCR engine configuration
+      tesseract_config: "--psm 1 -c tessedit_char_whitelist=0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz.,;:!?-()[]{}/@#$%^&*+=<>\"' "
+  
+  # Document-specific processing strategies
+  document_strategies:
+    legal_documents:
+      preferred_processors: ["cloud_claude", "local_qwen25vl"]
+      quality_threshold: 0.7
+      max_cost_per_page: 0.15
+    
+    corporate_communications:
+      preferred_processors: ["local_qwen25vl", "cloud_gpt4v"]
+      quality_threshold: 0.6
+      max_cost_per_page: 0.10
+    
+    research_reports:
+      preferred_processors: ["cloud_gpt4v", "local_qwen25vl"]
+      quality_threshold: 0.8
+      max_cost_per_page: 0.20
+    
+    financial_documents:
+      preferred_processors: ["cloud_claude", "cloud_gpt4v"]
+      quality_threshold: 0.8
+      max_cost_per_page: 0.25
+    
+    regulatory_filings:
+      preferred_processors: ["cloud_claude", "local_qwen25vl"]
+      quality_threshold: 0.9
+      max_cost_per_page: 0.30
+
+# Traditional processing configuration (preserved for compatibility)
 pipeline:
   pdf:
     engine: "pymupdf"
@@ -42,93 +187,65 @@ storage:
     password: "password"
     database: "neo4j"
 
-# VLM Configuration - directly embedded instead of using defaults
-vlm:
-  # Environment-controlled enable/disable
-  enabled: ${oc.env:VLM_ENABLED,false}
-  processor_type: "cpu_optimized"
-  
-  # Timeout configuration optimized for CPU processing
-  base_timeout: 180
-  min_timeout: 60
-  max_timeout: 600
-  adaptive_timeouts: true
-  timeout_multiplier: 1.8
-  
-  # Retry configuration
-  max_retries: 2
-  retry_backoff_base: 2
-  retry_backoff_max: 30
-  
-  # CPU-specific optimizations
-  max_pages_per_document: 3
-  max_documents_parallel: 1
-  image_size_limit: [1024, 1024]
-  image_compression_quality: 85
-  use_simplified_prompts: true
-  max_response_tokens: 512
-  
-  # Progress monitoring
-  enable_progress_logging: true
-  log_performance_metrics: true
-  log_timeout_adjustments: true
-  
-  # LLaVA configuration
-  llava:
-    model: "llava:7b"
-    api_endpoint: "http://localhost:11434"
-    model_options:
-      temperature: 0.1
-      top_p: 0.9
-      repeat_penalty: 1.1
-      num_ctx: 2048
-      num_predict: 512
-      num_thread: 4
-  
-  # Fallback configuration
-  fallback:
-    enabled: true
-    confidence_threshold: 0.3
-    timeout_fallback: true
-    error_fallback: true
-    min_content_length: 20
-    max_processing_time_ratio: 2.0
-  
-  # Prompt configuration
-  prompts:
-    simplified: |
-      Analyze this document page and respond with JSON only:
-      
-      {
-        "type": "email|report|presentation|chart|table|mixed",
-        "confidence": 0.8,
-        "content": "main content summary in 1-2 sentences"
-      }
-      
-      Keep response brief.
-    
-    standard: |
-      Analyze this document page and provide structured information.
-      
-      Return JSON format:
-      {
-        "content_type": "email|presentation|report|chart|table|mixed",
-        "confidence": 0.8,
-        "layout": "brief layout description",
-        "text_content": "key text content",
-        "visual_elements": [{"type": "table", "description": "brief description"}]
-      }
-      
-      Focus on accuracy over detail.
+# Enhanced monitoring and analytics
+monitoring:
+  enabled: true
   
   # Performance tracking
-  performance_tracking:
-    enabled: true
-    track_response_times: true
-    track_success_rates: true
-    track_timeout_effectiveness: true
-    target_success_rate: 0.8
-    target_avg_response_time: 120
-    adjust_timeouts_after: 5
-    increase_timeout_if_success_below: 0.6
-    decrease_timeout_if_success_above: 0.9
+  track_processing_times: true
+  track_cost_per_document: true
+  track_quality_scores: true
+  track_routing_decisions: true
+  
+  # Cost monitoring
+  cost_alerts:
+    daily_limit_warning: 80  # Warn at 80% of daily limit
+    document_cost_warning: 1.5  # Warn if document costs exceed this
+  
+  # Quality monitoring
+  quality_alerts:
+    low_confidence_threshold: 0.4
+    frequent_fallback_threshold: 0.3  # Alert if fallback rate exceeds 30%
+  
+  # Performance optimization
+  auto_routing_optimization: true
+  learning_rate: 0.1
+  
+# Development vs Production configurations
+development:
+  vlm:
+    local_models:
+      qwen25vl:
+        model: "qwen2.5-vl:7b"  # Smaller model for development
+        max_pages_per_document: 2
+    
+    cloud_models:
+      gpt4v:
+        cost_limit_per_document: 0.50  # Lower cost limits for development
+      claude:
+        cost_limit_per_document: 0.30
+    
+    # More aggressive fallback for faster development iteration
+    fallback:
+      quality_thresholds:
+        minimum_acceptable: 0.3
+        prefer_fallback_below: 0.5
+
+production:
+  vlm:
+    local_models:
+      qwen25vl:
+        model: "qwen2.5-vl:32b"  # Full model for production
+        max_pages_per_document: 10
+    
+    cloud_models:
+      gpt4v:
+        cost_limit_per_document: 2.00  # Higher cost limits for production quality
+      claude:
+        cost_limit_per_document: 1.50
+    
+    # Higher quality standards for production
+    fallback:
+      quality_thresholds:
+        minimum_acceptable: 0.6
+        prefer_fallback_below: 0.7
